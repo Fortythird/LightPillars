@@ -395,7 +395,14 @@ void Game::DrawShadows()
 
 void Game::DrawPillars()
 {
-	//ConstData 
+	ConstData constData;
+
+	constData.worldViewProj = camera.at(0)->GetModelMatrix() * camera.at(0)->viewMatrix * camera.at(0)->projectionMatrix;
+	constData.worldViewProj = constData.worldViewProj.Transpose();
+
+	constData.world = DirectX::SimpleMath::Matrix::CreateTranslation(camera.at(0)->position);
+	constData.world = camera.at(0)->GetModelMatrix().Transpose();
+	constData.invertedWorldTransform = camera.at(0)->GetModelMatrix().Transpose().Invert().Transpose();
 
 	ID3D11BlendState* blendState = nullptr;
 	D3D11_BLEND_DESC blendDesc = {};
