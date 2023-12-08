@@ -1,0 +1,443 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'Bar::isLeft' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/RTCG/CG_SolarSystem/CGLab1/Pong.cpp"
+                },
+                "region": {
+                  "startLine": 90,
+                  "startColumn": 6,
+                  "endLine": 90,
+                  "endColumn": 6
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Bar::{ctor}",
+                  "decoratedName": "??0Bar@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "Bar::isLeft"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'Bar::game' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/RTCG/CG_SolarSystem/CGLab1/Pong.cpp"
+                },
+                "region": {
+                  "startLine": 90,
+                  "startColumn": 6,
+                  "endLine": 90,
+                  "endColumn": 6
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Bar::{ctor}",
+                  "decoratedName": "??0Bar@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "Bar::game"
+          }
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/RTCG/CG_SolarSystem/CGLab1/Pong.cpp"
+                },
+                "region": {
+                  "startLine": 199,
+                  "startColumn": 46,
+                  "endLine": 199,
+                  "endColumn": 46
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Pong::PrepareCircle",
+                  "decoratedName": "?PrepareCircle@Pong@@AEAA?AUTriangleComponentParameters@@MM@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/RTCG/CG_SolarSystem/CGLab1/Pong.cpp"
+                },
+                "region": {
+                  "startLine": 200,
+                  "startColumn": 33,
+                  "endLine": 200,
+                  "endColumn": 33
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Pong::PrepareCircle",
+                  "decoratedName": "?PrepareCircle@Pong@@AEAA?AUTriangleComponentParameters@@MM@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'TriangleComponentParameters::numIndeces' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/RTCG/CG_SolarSystem/CGLab1/TriangleComponent.h"
+                },
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 1,
+                  "endLine": 14,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TriangleComponentParameters::{ctor}",
+                  "decoratedName": "??0TriangleComponentParameters@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "TriangleComponentParameters::numIndeces"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'TriangleComponentParameters::numPoints' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/RTCG/CG_SolarSystem/CGLab1/TriangleComponent.h"
+                },
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 1,
+                  "endLine": 14,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TriangleComponentParameters::{ctor}",
+                  "decoratedName": "??0TriangleComponentParameters@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "TriangleComponentParameters::numPoints"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'TriangleComponentParameters::indeces' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/RTCG/CG_SolarSystem/CGLab1/TriangleComponent.h"
+                },
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 1,
+                  "endLine": 14,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TriangleComponentParameters::{ctor}",
+                  "decoratedName": "??0TriangleComponentParameters@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "TriangleComponentParameters::indeces"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'TriangleComponentParameters::points' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/RTCG/CG_SolarSystem/CGLab1/TriangleComponent.h"
+                },
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 1,
+                  "endLine": 14,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TriangleComponentParameters::{ctor}",
+                  "decoratedName": "??0TriangleComponentParameters@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "TriangleComponentParameters::points"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::Buffer' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/RTCG/CG_SolarSystem/CGLab1/Delegates.h"
+                },
+                "region": {
+                  "startLine": 409,
+                  "startColumn": 3,
+                  "endLine": 409,
+                  "endColumn": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "InlineAllocator<32>::{ctor}",
+                  "decoratedName": "??0?$InlineAllocator@$0CA@@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::Buffer"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::pPtr' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/RTCG/CG_SolarSystem/CGLab1/Delegates.h"
+                },
+                "region": {
+                  "startLine": 409,
+                  "startColumn": 3,
+                  "endLine": 409,
+                  "endColumn": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "InlineAllocator<32>::{ctor}",
+                  "decoratedName": "??0?$InlineAllocator@$0CA@@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::pPtr"
+          }
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.34.31937.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/RTCG/CG_SolarSystem/CGLab1/Pong.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "d65111b967cbe409b60674c2d36805a1e5b8f49cf5d342968277eee018c30118"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/RTCG/CG_SolarSystem/CGLab1/TriangleComponent.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "ce8f5e44574494e077f2b3b94b0b7f9325e8cddca36e2852a9f3d3ed4bba6a3f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/RTCG/CG_SolarSystem/CGLab1/Delegates.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "f79a65cdd6691ba5fed2c92500583ce61e4c36eed5491395ecd9ad7ca851e3f8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/evgen/onedrive/документы/github/rtcg/cg_solarsystem/cglab1/export.h"
+          },
+          "hashes": {
+            "sha-256": "f788a9b26c3d0bfada82395a7324b3038cded7197c9910569c2b9c3bf46b331a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/evgen/onedrive/документы/github/rtcg/cg_solarsystem/packages/directxtk_uwp.2022.7.30.1/include/simplemath.h"
+          },
+          "hashes": {
+            "sha-256": "a28b17c2ade6e3e1b100a7603cd8b0dc3c03df2a0fd3924e6b118a107618be64"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/evgen/onedrive/документы/github/rtcg/cg_solarsystem/packages/directxtk_uwp.2022.7.30.1/include/simplemath.inl"
+          },
+          "hashes": {
+            "sha-256": "c2f52420fc682dbce209780d47c8b657ab8adbc26e6ed129bcfe1f3998d81707"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/evgen/onedrive/документы/github/rtcg/cg_solarsystem/cglab1/game.h"
+          },
+          "hashes": {
+            "sha-256": "cddeb727279a74223de80237dd35f259e15cf8020a17c209d4ec01ad4e9c46dc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/evgen/onedrive/документы/github/rtcg/cg_solarsystem/cglab1/displaywin.h"
+          },
+          "hashes": {
+            "sha-256": "4cf1397bed12fc582e8d105f53b9ca09315b7235acb16109b0317bcc58145b56"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/evgen/onedrive/документы/github/rtcg/cg_solarsystem/cglab1/inputdevice.h"
+          },
+          "hashes": {
+            "sha-256": "e65a06562d1502f238f959c991cd2d1536bd6a6e70f1f6bbea848d337324f827"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/evgen/onedrive/документы/github/rtcg/cg_solarsystem/cglab1/keys.h"
+          },
+          "hashes": {
+            "sha-256": "be57f346a231c1e1acf6487c8598d487b014caed19574c581eef10b4618f9065"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/evgen/onedrive/документы/github/rtcg/cg_solarsystem/cglab1/gamecomponent.h"
+          },
+          "hashes": {
+            "sha-256": "3a1626ad4afe9e0a94f8ba872931dde8c24b33a016daf2123693433a0f01eb89"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/evgen/onedrive/документы/github/rtcg/cg_solarsystem/cglab1/camera.h"
+          },
+          "hashes": {
+            "sha-256": "f0e59a929c02bcfedf390ae6932bb30391226302dd25729ebff060234424ab7e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/evgen/onedrive/документы/github/rtcg/cg_solarsystem/cglab1/pong.h"
+          },
+          "hashes": {
+            "sha-256": "6170fa8d3bccdbcb35e0ffacae45025c740b985518b39c573489fe0be2e8c982"
+          }
+        }
+      ]
+    }
+  ]
+}

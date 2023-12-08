@@ -1,0 +1,67 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.38.33130.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/pointlight.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "15959a06a7531056494ee9bd561d1ae013243235e52adc34be18a44587d5abaf"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/pointlight.h"
+          },
+          "hashes": {
+            "sha-256": "b8d8eb276b54c7d86c4ef9eb6330e837e81d711ce1324b4221f47f550796393e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/export.h"
+          },
+          "hashes": {
+            "sha-256": "f788a9b26c3d0bfada82395a7324b3038cded7197c9910569c2b9c3bf46b331a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/packages/directxtk_uwp.2022.7.30.1/include/simplemath.h"
+          },
+          "hashes": {
+            "sha-256": "a28b17c2ade6e3e1b100a7603cd8b0dc3c03df2a0fd3924e6b118a107618be64"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/packages/directxtk_uwp.2022.7.30.1/include/simplemath.inl"
+          },
+          "hashes": {
+            "sha-256": "c2f52420fc682dbce209780d47c8b657ab8adbc26e6ed129bcfe1f3998d81707"
+          }
+        }
+      ]
+    }
+  ]
+}

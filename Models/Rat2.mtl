@@ -1,0 +1,14 @@
+# Blender 3.3.1 MTL File: 'None'
+# www.blender.org
+
+newmtl RatPlushy
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Ns C:/Users/sch0i/Desktop/models/2023/Rat-Plushie/texture/0.2/RatPlushy_Roughness.png
+map_refl C:/Users/sch0i/Desktop/models/2023/Rat-Plushie/texture/0.2/RatPlushy_Metallic.png
+map_Bump -bm 1.000000 C:/Users/sch0i/Desktop/models/2023/Rat-Plushie/texture/0.2/RatPlushy_Normal_OpenGL.png

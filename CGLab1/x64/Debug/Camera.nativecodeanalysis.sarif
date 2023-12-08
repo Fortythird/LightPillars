@@ -1,0 +1,241 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'Camera::pitchAxis' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Camera.cpp"
+                },
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 9
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Camera::{ctor}",
+                  "decoratedName": "??0Camera@@QEAA@PEAUVector3@SimpleMath@DirectX@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "Camera::pitchAxis"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'Camera::inputDeviceCameraInstance' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Camera.cpp"
+                },
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 9
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Camera::{ctor}",
+                  "decoratedName": "??0Camera@@QEAA@PEAUVector3@SimpleMath@DirectX@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "Camera::inputDeviceCameraInstance"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'Camera::yawAxis' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Camera.cpp"
+                },
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 9
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Camera::{ctor}",
+                  "decoratedName": "??0Camera@@QEAA@PEAUVector3@SimpleMath@DirectX@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "Camera::yawAxis"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::pPtr' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Delegates.h"
+                },
+                "region": {
+                  "startLine": 409,
+                  "startColumn": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "InlineAllocator<32>::{ctor}",
+                  "decoratedName": "??0?$InlineAllocator@$0CA@@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::pPtr"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::Buffer' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Delegates.h"
+                },
+                "region": {
+                  "startLine": 409,
+                  "startColumn": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "InlineAllocator<32>::{ctor}",
+                  "decoratedName": "??0?$InlineAllocator@$0CA@@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::Buffer"
+          }
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.38.33130.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Camera.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "e826311ae08d64ac1edbcbbfdbc46ce2ba50b5dd9282653322423f43cea680ae"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Delegates.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "f79a65cdd6691ba5fed2c92500583ce61e4c36eed5491395ecd9ad7ca851e3f8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/export.h"
+          },
+          "hashes": {
+            "sha-256": "f788a9b26c3d0bfada82395a7324b3038cded7197c9910569c2b9c3bf46b331a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/packages/directxtk_uwp.2022.7.30.1/include/simplemath.h"
+          },
+          "hashes": {
+            "sha-256": "a28b17c2ade6e3e1b100a7603cd8b0dc3c03df2a0fd3924e6b118a107618be64"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/packages/directxtk_uwp.2022.7.30.1/include/simplemath.inl"
+          },
+          "hashes": {
+            "sha-256": "c2f52420fc682dbce209780d47c8b657ab8adbc26e6ed129bcfe1f3998d81707"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/camera.h"
+          },
+          "hashes": {
+            "sha-256": "a1643301dd36f5c1860b73021f624efa87d703021dc224d61802e5c5c67f9f7e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/inputdevice.h"
+          },
+          "hashes": {
+            "sha-256": "e65a06562d1502f238f959c991cd2d1536bd6a6e70f1f6bbea848d337324f827"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/keys.h"
+          },
+          "hashes": {
+            "sha-256": "be57f346a231c1e1acf6487c8598d487b014caed19574c581eef10b4618f9065"
+          }
+        }
+      ]
+    }
+  ]
+}
