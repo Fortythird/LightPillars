@@ -237,6 +237,35 @@
           }
         },
         {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'Game::pointLightBuffer' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                },
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 7
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Game::{ctor}",
+                  "decoratedName": "??0Game@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "Game::pointLightBuffer"
+          }
+        },
+        {
           "ruleId": "C6387",
           "message": {
             "text": "'sceneDepthTexture' could be '0':  this does not adhere to the specification for the function 'ID3D11Device::CreateDepthStencilView'. See line 0 for an earlier location where this can occur"
@@ -4167,7 +4196,7 @@
             "resultFile"
           ],
           "hashes": {
-            "sha-256": "8eaa01bc066535856c2230632e81f06de6d1d1f59f0353613d76d82357f2a911"
+            "sha-256": "d9d7ad134076dac24f5eb208da7cea9c0d656566404cd373f233bac793c5b6c1"
           }
         },
         {
@@ -4210,7 +4239,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/game.h"
           },
           "hashes": {
-            "sha-256": "504ce27ed9593ff6dff4eb1362885c428b2c926415e7fc1f1f275481a0216ed4"
+            "sha-256": "9febcfe24a7139c261b67607712a1b59b466f3c66025cb6accd7d426170c3672"
           }
         },
         {
@@ -4250,7 +4279,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/camera.h"
           },
           "hashes": {
-            "sha-256": "a1643301dd36f5c1860b73021f624efa87d703021dc224d61802e5c5c67f9f7e"
+            "sha-256": "c87c9a3bbd3b64322d9d0a17f08123abd28236b43bd2b91b66a607a18d8b4aa5"
           }
         },
         {
@@ -4258,7 +4287,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/trianglecomponent.h"
           },
           "hashes": {
-            "sha-256": "0ad6e03db96a6391707e42742a8d11f5cc7e168523c760316f8f0206e5cdb36e"
+            "sha-256": "d4f529ef2300d4cb03ab08fa9900a429d2bbb3482229cb2bff6dc27d02e81579"
           }
         },
         {

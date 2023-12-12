@@ -20,7 +20,7 @@ Game::Game()
 
 	vertexPillarsShader = nullptr;
 	pixelPillarsShader = nullptr;
-
+	constPillarsBuffer = nullptr;
 }
 
 void Game::Init() 
@@ -39,16 +39,16 @@ void Game::Run()
 	bool isExitRequested = false;
 	MSG msg = {};
 
-	while (!isExitRequested) {
+	while (!isExitRequested) 
+	{
 		// Handle the windows messages.
-		while (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE)) {
+		while (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE)) 
+		{
 			TranslateMessage(&msg);
 			DispatchMessage(&msg);
 
 			// If windows signals to end the application then exit out.
-			if (msg.message == WM_QUIT) {
-				isExitRequested = true;
-			}
+			if (msg.message == WM_QUIT) isExitRequested = true;
 		}
 
 		PrepareFrame();
@@ -254,6 +254,34 @@ int Game::PrepareResources()
 		&pixelPillarsShader
 	);
 
+	D3D11_BUFFER_DESC constPillarsBufDesc = {};
+	constPillarsBufDesc.Usage = D3D11_USAGE_DYNAMIC;
+	constPillarsBufDesc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
+	constPillarsBufDesc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE;
+	constPillarsBufDesc.MiscFlags = 0;
+	constPillarsBufDesc.StructureByteStride = 0;
+	constPillarsBufDesc.ByteWidth = sizeof(constPillarsData);
+	HRESULT result = device->CreateBuffer(&constPillarsBufDesc, nullptr, &constPillarsBuffer);
+
+	if (FAILED(result)) 
+	{
+		std::cout << "Error while pillars' const buffer creating...";
+	}
+
+	D3D11_BUFFER_DESC pointLightBufDesc = {};
+	pointLightBufDesc.Usage = D3D11_USAGE_DYNAMIC;
+	pointLightBufDesc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
+	pointLightBufDesc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE;
+	pointLightBufDesc.MiscFlags = 0;
+	pointLightBufDesc.StructureByteStride = 0;
+	pointLightBufDesc.ByteWidth = sizeof(PointLightData);
+	result = device->CreateBuffer(&pointLightBufDesc, nullptr, &pointLightBuffer);
+
+	if (FAILED(result))
+	{
+		std::cout << "Error while point light buffer creating...";
+	}
+
 	return 0;
 }
 
@@ -298,13 +326,11 @@ void Game::DestroyResources()
 	if (depthView != nullptr) 
 	{
 		depthView->Release();
-
 	}
 	
 	if (shadowDepthView != nullptr) 
 	{
 		shadowDepthView->Release();
-
 	}
 
 	if (vertexPillarsShader != nullptr)
@@ -321,6 +347,16 @@ void Game::DestroyResources()
 	{
 		depthStencilState->Release();
 	}
+
+	if (constPillarsBuffer != nullptr)
+	{
+		constPillarsBuffer->Release();
+	}
+
+	if (pointLightBuffer != nullptr)
+	{
+		pointLightBuffer->Release();
+	}
 }
 
 void Game::PrepareFrame() 
@@ -331,7 +367,8 @@ void Game::PrepareFrame()
 	totalTime += deltaTime;
 	frameCount++;
 
-	if (totalTime > 1.0f) {
+	if (totalTime > 1.0f) 
+	{
 		float fps = frameCount / totalTime;
 		totalTime = 0.0f;
 		WCHAR text[256];
@@ -395,14 +432,43 @@ void Game::DrawShadows()
 
 void Game::DrawPillars()
 {
-	ConstData constData;
+	constPillarsData.viewerPos = camera.at(0)->position;
+	constPillarsData.invertedCamViewProjection = (camera.at(0)->viewMatrix * camera.at(0)->projectionMatrix).Transpose().Invert();
 
-	constData.worldViewProj = camera.at(0)->GetModelMatrix() * camera.at(0)->viewMatrix * camera.at(0)->projectionMatrix;
-	constData.worldViewProj = constData.worldViewProj.Transpose();
+	D3D11_MAPPED_SUBRESOURCE subresourse = {};
+	context->Map(
+		constPillarsBuffer,
+		0,
+		D3D11_MAP_WRITE_DISCARD,
+		0,
+		&subresourse
+	);
 
-	constData.world = DirectX::SimpleMath::Matrix::CreateTranslation(camera.at(0)->position);
-	constData.world = camera.at(0)->GetModelMatrix().Transpose();
-	constData.invertedWorldTransform = camera.at(0)->GetModelMatrix().Transpose().Invert().Transpose();
+	memcpy(
+		reinterpret_cast<float*>(subresourse.pData),
+		&constPillarsData,
+		sizeof(ConstPillarData)
+	);
+	context->Unmap(constPillarsBuffer, 0);
+
+	pointLightData.lightSourcePosition = DirectX::SimpleMath::Vector4(100.0f, 5.0f, 0.0f, 0.0f);
+	pointLightData.lightColor = DirectX::SimpleMath::Vector4(100.0f, 5.0f, 0.0f, 1.0f);
+
+	D3D11_MAPPED_SUBRESOURCE subresourse2 = {};
+	context->Map(
+		pointLightBuffer,
+		0,
+		D3D11_MAP_WRITE_DISCARD,
+		0,
+		&subresourse2
+	);
+
+	memcpy(
+		reinterpret_cast<float*>(subresourse2.pData),
+		&pointLightData,
+		sizeof(PointLightData)
+	);
+	context->Unmap(pointLightBuffer, 0);
 
 	ID3D11BlendState* blendState = nullptr;
 	D3D11_BLEND_DESC blendDesc = {};
@@ -452,11 +518,12 @@ void Game::DrawPillars()
 	context->OMSetDepthStencilState(depthStencilState, 1);
 	context->OMSetRenderTargets(1, &rtv, depthView);
 	context->IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP);
-	//context->VSSetConstantBuffers(0, 1, &constPillarsBuffer);
 	context->VSSetShader(vertexPillarsShader, nullptr, 0);
 	context->PSSetShader(pixelPillarsShader, nullptr, 0);
+	context->PSSetConstantBuffers(0, 1, &constPillarsBuffer);
+	context->PSSetConstantBuffers(1, 1, &pointLightBuffer);
 	context->OMSetBlendState(blendState, blendFactor, 0xFFFFFF);
-	//context->Draw(4, 0);
+	context->Draw(4, 0);
 
 	ID3D11RenderTargetView* nullrtv[8] = { nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr };
 	context->OMSetRenderTargets(1, nullrtv, nullptr);

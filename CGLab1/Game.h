@@ -6,6 +6,19 @@
 #include "TriangleComponent.h"
 #include "Camera.h"
 
+struct ConstPillarData
+{
+	DirectX::SimpleMath::Matrix invertedCamViewProjection;
+	DirectX::SimpleMath::Vector3 viewerPos;
+	float dummy = 1.0f;
+};
+
+struct PointLightData
+{
+	DirectX::SimpleMath::Vector4 lightSourcePosition;
+	DirectX::SimpleMath::Vector4 lightColor;
+};
+
 class Game 
 {
 public:
@@ -47,6 +60,12 @@ public:
 
 	ID3D11VertexShader* vertexPillarsShader;
 	ID3D11PixelShader* pixelPillarsShader;
+
+	ID3D11Buffer* constPillarsBuffer;
+	ConstPillarData constPillarsData;
+
+	ID3D11Buffer* pointLightBuffer;
+	PointLightData pointLightData;
 
 	ID3D11DepthStencilState* depthStencilState;
 

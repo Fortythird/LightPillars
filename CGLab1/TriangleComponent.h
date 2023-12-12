@@ -27,7 +27,7 @@ struct ConstData
 	DirectX::SimpleMath::Matrix invertedWorldTransform;
 };
 
-struct LightData {
+struct DirectionalLightData {
 	DirectX::SimpleMath::Vector4 direction;
 	DirectX::SimpleMath::Vector4 color;
 	DirectX::SimpleMath::Vector4 viewerPosition;
@@ -69,7 +69,7 @@ public:
 	ConstData constData;
 	ID3D11Buffer* constBuffer;
 	ID3D11Buffer* lightConstBuffer;
-	LightData lightData;
+	DirectionalLightData dirLightData;
 	LightConstData lightConstData;
 	ID3D11Buffer* lightBuffer;
 

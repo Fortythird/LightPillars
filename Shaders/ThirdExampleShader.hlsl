@@ -59,9 +59,9 @@ PS_IN VSMain(VS_IN input)
 {
 	PS_IN output = (PS_IN)0;
 	output.pos = mul(float4(input.pos.xyz, 1.0f), constData.worldViewProj);
-	output.uv = input.texCoord;
 	output.worldPos = mul(float4(input.pos.xyz, 1.0f), constData.world);
 	output.normal = mul(float4(input.normal.xyz, 1.0f), constData.invertedWorldTransform);
+    output.uv = input.texCoord;
 	
 	return output;
 }

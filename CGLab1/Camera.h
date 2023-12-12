@@ -19,7 +19,7 @@ class Camera {
 		float yawAxis;
 		float pitchAxis;
 		float velocityMagnitude = 2.0f;
-		float mouseSensetivity = 1.0f;
+		float mouseSensetivity = 5.0f;
 		float orbitPos = 0;
 		DirectX::SimpleMath::Vector3* parentPos;
 

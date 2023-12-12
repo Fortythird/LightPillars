@@ -74,14 +74,6 @@ void SolarSystemComponent::Update()
 
 	DirectX::SimpleMath::Vector3 deltaPos = DirectX::SimpleMath::Vector3::Zero;
 
-	/*if (cameraInstanceP->inputDeviceCameraInstance != nullptr)
-	{
-		if (cameraInstanceP->inputDeviceCameraInstance->IsKeyDown(Keys::W)) deltaPos += cameraInstanceP->camDirection;
-		if (cameraInstanceP->inputDeviceCameraInstance->IsKeyDown(Keys::S)) deltaPos -= cameraInstanceP->camDirection;
-		if (cameraInstanceP->inputDeviceCameraInstance->IsKeyDown(Keys::A)) deltaPos -= cameraInstanceP->camDirection.Cross(DirectX::SimpleMath::Vector3(0, 0, 1));
-		if (cameraInstanceP->inputDeviceCameraInstance->IsKeyDown(Keys::D)) deltaPos += cameraInstanceP->camDirection.Cross(DirectX::SimpleMath::Vector3(0, 0, 1));
-	}*/
-
 	deltaPos.Normalize();
 	deltaPos /= 20;
 

@@ -28,7 +28,7 @@ void Camera::Initialize(
 	pitchAxis = pitchVal;
 	position = pos;
 
-	position = { 0, 0, 5.0f };
+	position = { -5.0f, 3.0f, 0.0f };
 	
 	if (inputDeviceCameraInstance != nullptr) {
 		inputDeviceCameraInstance->MouseMove.AddRaw(this, &Camera::OnMouseMove);
@@ -55,7 +55,8 @@ void Camera::Update(float deltaTime, int screenWidth, int screenHeight)
 		if (velDir.Length() != 0) {
 			velDir.Normalize();
 		}
-		position = position + velDir * velocityMagnitude * deltaTime;
+
+		position += velDir * velocityMagnitude * deltaTime;
 	}
 
 	viewMatrix = DirectX::SimpleMath::Matrix::CreateLookAt(position, position + rotation.Forward(), rotation.Up());
@@ -75,6 +76,8 @@ void Camera::OnMouseMove(const MouseMoveEventArgs& args)
 
 	yawAxis -= args.Offset.x * 0.003f * mouseSensetivity;
 	pitchAxis -= args.Offset.y * 0.003f * mouseSensetivity;
+	if (pitchAxis < -1.57f) pitchAxis = -1.57f;
+	else if (pitchAxis > 1.57f) pitchAxis = 1.57f;
 
 	if (args.WheelDelta == 0) return;
 	if (args.WheelDelta > 0) velocityMagnitude += 1;

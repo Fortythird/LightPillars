@@ -25,12 +25,12 @@
       <COLUMN>19</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'TriangleComponent::textureView' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'TriangleComponent::topologyType' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>TriangleComponent::{ctor}</FUNCTION>
     <DECORATED>??0TriangleComponent@@QEAA@XZ</DECORATED>
     <FUNCLINE>5</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>TriangleComponent::textureView</targetSymbol>
+      <targetSymbol>TriangleComponent::topologyType</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -42,12 +42,12 @@
       <COLUMN>19</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'TriangleComponent::topologyType' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'TriangleComponent::textureView' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>TriangleComponent::{ctor}</FUNCTION>
     <DECORATED>??0TriangleComponent@@QEAA@XZ</DECORATED>
     <FUNCLINE>5</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>TriangleComponent::topologyType</targetSymbol>
+      <targetSymbol>TriangleComponent::textureView</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -76,12 +76,12 @@
       <COLUMN>0</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'TriangleComponentParameters::numPoints' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'TriangleComponentParameters::indeces' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>TriangleComponentParameters::{ctor}</FUNCTION>
     <DECORATED>??0TriangleComponentParameters@@QEAA@XZ</DECORATED>
     <FUNCLINE>21</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>TriangleComponentParameters::numPoints</targetSymbol>
+      <targetSymbol>TriangleComponentParameters::indeces</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -93,12 +93,12 @@
       <COLUMN>0</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'TriangleComponentParameters::indeces' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'TriangleComponentParameters::numPoints' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>TriangleComponentParameters::{ctor}</FUNCTION>
     <DECORATED>??0TriangleComponentParameters@@QEAA@XZ</DECORATED>
     <FUNCLINE>21</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>TriangleComponentParameters::indeces</targetSymbol>
+      <targetSymbol>TriangleComponentParameters::numPoints</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>

@@ -146,7 +146,7 @@ int TriangleComponent::Init(Microsoft::WRL::ComPtr<ID3D11Device> device, Display
 	lightBufDesc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE;
 	lightBufDesc.MiscFlags = 0;
 	lightBufDesc.StructureByteStride = 0;
-	lightBufDesc.ByteWidth = sizeof(LightData);
+	lightBufDesc.ByteWidth = sizeof(DirectionalLightData);
 	result = device->CreateBuffer(&lightBufDesc, nullptr, &lightBuffer);
 
 	if (FAILED(result)) {
@@ -359,16 +359,16 @@ void TriangleComponent::DestroyResources()
 
 void TriangleComponent::Update(ID3D11DeviceContext* context, Camera* camera) 
 {
-	lightData.direction = DirectX::SimpleMath::Vector4(2.0f, 2.0f, 1.0f, 1.0f);
-	lightData.color = DirectX::SimpleMath::Vector4(1.0f, 1.0f, 1.0f, 1.0f);
-	lightData.viewerPosition = DirectX::SimpleMath::Vector4(camera->position.x, camera->position.y, camera->position.z, 1.0f);
+	dirLightData.direction = DirectX::SimpleMath::Vector4(2.0f, 2.0f, 1.0f, 1.0f);
+	dirLightData.color = DirectX::SimpleMath::Vector4(1.0f, 1.0f, 1.0f, 1.0f);
+	dirLightData.viewerPosition = DirectX::SimpleMath::Vector4(camera->position.x, camera->position.y, camera->position.z, 1.0f);
 
-	auto dir = DirectX::SimpleMath::Vector3(lightData.direction.x, lightData.direction.y, lightData.direction.z);
+	auto dir = DirectX::SimpleMath::Vector3(dirLightData.direction.x, dirLightData.direction.y, dirLightData.direction.z);
 	dir.Normalize();
 	float destination = 60.0f;
-	lightData.worldViewProj = DirectX::SimpleMath::Matrix::CreateLookAt(dir * destination, dir * destination - dir, DirectX::SimpleMath::Vector3(0, 0, 1))
+	dirLightData.worldViewProj = DirectX::SimpleMath::Matrix::CreateLookAt(dir * destination, dir * destination - dir, DirectX::SimpleMath::Vector3(0, 0, 1))
 		* DirectX::SimpleMath::Matrix::CreateOrthographic(60, 60, 0.1f, 150.0f);
-	lightData.worldViewProj = lightData.worldViewProj.Transpose();
+	dirLightData.worldViewProj = dirLightData.worldViewProj.Transpose();
 
 	D3D11_MAPPED_SUBRESOURCE subresourse2 = {};
 	context->Map(
@@ -381,8 +381,8 @@ void TriangleComponent::Update(ID3D11DeviceContext* context, Camera* camera)
 
 	memcpy(
 		reinterpret_cast<float*>(subresourse2.pData),
-		&lightData,
-		sizeof(LightData)
+		&dirLightData,
+		sizeof(DirectionalLightData)
 	);
 	context->Unmap(lightBuffer, 0);
 
@@ -399,7 +399,7 @@ void TriangleComponent::Update(ID3D11DeviceContext* context, Camera* camera)
 
 void TriangleComponent::Draw(ID3D11DeviceContext* context, Camera* camera, ID3D11ShaderResourceView* resView)
 {
-	auto dir = DirectX::SimpleMath::Vector3(lightData.direction.x, lightData.direction.y, lightData.direction.z);
+	auto dir = DirectX::SimpleMath::Vector3(dirLightData.direction.x, dirLightData.direction.y, dirLightData.direction.z);
 	dir.Normalize();
 	float destination = 60.0f;
 	lightConstData.pos = DirectX::SimpleMath::Vector4(dir.x * destination, dir.y * destination, dir.z * destination, 1.0f);
@@ -468,7 +468,7 @@ void TriangleComponent::Draw(ID3D11DeviceContext* context, Camera* camera, ID3D1
 
 void TriangleComponent::DrawShadow(ID3D11DeviceContext* context, Microsoft::WRL::ComPtr<ID3D11Device> device)
 {
-	auto dir = DirectX::SimpleMath::Vector3(lightData.direction.x, lightData.direction.y, lightData.direction.z);
+	auto dir = DirectX::SimpleMath::Vector3(dirLightData.direction.x, dirLightData.direction.y, dirLightData.direction.z);
 	dir.Normalize();
 	float destination = 60.0f;
 	constData.worldViewProj = GetModelMatrix() * DirectX::SimpleMath::Matrix::CreateLookAt(dir * destination, dir * destination - dir, 

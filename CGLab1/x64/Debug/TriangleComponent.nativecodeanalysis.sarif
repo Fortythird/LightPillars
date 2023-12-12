@@ -36,35 +36,6 @@
         {
           "ruleId": "C26495",
           "message": {
-            "text": "Variable 'TriangleComponent::textureView' is uninitialized. Always initialize a member variable (type.6)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/TriangleComponent.cpp"
-                },
-                "region": {
-                  "startLine": 5,
-                  "startColumn": 20
-                }
-              },
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TriangleComponent::{ctor}",
-                  "decoratedName": "??0TriangleComponent@@QEAA@XZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "targetSymbol": "TriangleComponent::textureView"
-          }
-        },
-        {
-          "ruleId": "C26495",
-          "message": {
             "text": "Variable 'TriangleComponent::topologyType' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
@@ -89,6 +60,35 @@
           ],
           "properties": {
             "targetSymbol": "TriangleComponent::topologyType"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'TriangleComponent::textureView' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/TriangleComponent.cpp"
+                },
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 20
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TriangleComponent::{ctor}",
+                  "decoratedName": "??0TriangleComponent@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "TriangleComponent::textureView"
           }
         },
         {
@@ -123,35 +123,6 @@
         {
           "ruleId": "C26495",
           "message": {
-            "text": "Variable 'TriangleComponentParameters::numPoints' is uninitialized. Always initialize a member variable (type.6)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/TriangleComponent.h"
-                },
-                "region": {
-                  "startLine": 21,
-                  "startColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TriangleComponentParameters::{ctor}",
-                  "decoratedName": "??0TriangleComponentParameters@@QEAA@XZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "targetSymbol": "TriangleComponentParameters::numPoints"
-          }
-        },
-        {
-          "ruleId": "C26495",
-          "message": {
             "text": "Variable 'TriangleComponentParameters::indeces' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
@@ -176,6 +147,35 @@
           ],
           "properties": {
             "targetSymbol": "TriangleComponentParameters::indeces"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'TriangleComponentParameters::numPoints' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/TriangleComponent.h"
+                },
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TriangleComponentParameters::{ctor}",
+                  "decoratedName": "??0TriangleComponentParameters@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "TriangleComponentParameters::numPoints"
           }
         },
         {
@@ -347,7 +347,7 @@
             "resultFile"
           ],
           "hashes": {
-            "sha-256": "b14bbb25a8d7facad6981acb75dd37e9e0ccdd79952159d2600e5726d802efba"
+            "sha-256": "3d14b04bdf9a81b3bbf9dd1dee7c5a6fff07df40e6d47d955aaa387d73fc2b92"
           }
         },
         {
@@ -358,7 +358,7 @@
             "resultFile"
           ],
           "hashes": {
-            "sha-256": "0ad6e03db96a6391707e42742a8d11f5cc7e168523c760316f8f0206e5cdb36e"
+            "sha-256": "d4f529ef2300d4cb03ab08fa9900a429d2bbb3482229cb2bff6dc27d02e81579"
           }
         },
         {
@@ -441,7 +441,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/camera.h"
           },
           "hashes": {
-            "sha-256": "a1643301dd36f5c1860b73021f624efa87d703021dc224d61802e5c5c67f9f7e"
+            "sha-256": "c87c9a3bbd3b64322d9d0a17f08123abd28236b43bd2b91b66a607a18d8b4aa5"
           }
         }
       ]
