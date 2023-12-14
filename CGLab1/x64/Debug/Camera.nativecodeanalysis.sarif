@@ -7,35 +7,6 @@
         {
           "ruleId": "C26495",
           "message": {
-            "text": "Variable 'Camera::pitchAxis' is uninitialized. Always initialize a member variable (type.6)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Camera.cpp"
-                },
-                "region": {
-                  "startLine": 4,
-                  "startColumn": 9
-                }
-              },
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Camera::{ctor}",
-                  "decoratedName": "??0Camera@@QEAA@PEAUVector3@SimpleMath@DirectX@@@Z",
-                  "kind": "function"
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "targetSymbol": "Camera::pitchAxis"
-          }
-        },
-        {
-          "ruleId": "C26495",
-          "message": {
             "text": "Variable 'Camera::yawAxis' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
@@ -60,6 +31,35 @@
           ],
           "properties": {
             "targetSymbol": "Camera::yawAxis"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'Camera::pitchAxis' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Camera.cpp"
+                },
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 9
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Camera::{ctor}",
+                  "decoratedName": "??0Camera@@QEAA@PEAUVector3@SimpleMath@DirectX@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "Camera::pitchAxis"
           }
         },
         {
@@ -173,7 +173,7 @@
             "resultFile"
           ],
           "hashes": {
-            "sha-256": "1f797c7e8ba5ae553435cfab0115bfe0d98764f83b8fa4217a8ea090dd42b703"
+            "sha-256": "2f993a418329c169d20621da5d3b699b65970901d2ffe42b17600f19f3269ba9"
           }
         },
         {

@@ -56,6 +56,8 @@ public:
 	void DrawShadows();
 	void DrawPillars();
 
+	float CalculateGaussProt(float d);
+
 	float* BGcolor;
 
 	ID3D11VertexShader* vertexPillarsShader;

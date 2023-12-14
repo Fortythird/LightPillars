@@ -1,6 +1,5 @@
-﻿  Game.cpp
-  CGLab1.vcxproj -> C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\x64\Debug\CGLab1.exe
-C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Camera.cpp(4): warning C26495: Variable 'Camera::pitchAxis' is uninitialized. Always initialize a member variable (type.6).
+﻿  CGLab1.vcxproj -> C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\x64\Debug\CGLab1.exe
+C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Camera.cpp(4): warning C26495: Variable 'Camera::yawAxis' is uninitialized. Always initialize a member variable (type.6).
 C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Delegates.h(409): warning C26495: Variable 'InlineAllocator<32>::<unnamed-tag>::pPtr' is uninitialized. Always initialize a member variable (type.6).
 C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Game.cpp(5): warning C26495: Variable 'Game::shadowViewport' is uninitialized. Always initialize a member variable (type.6).
 C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Game.cpp(149): warning C6387: 'sceneDepthTexture' could be '0':  this does not adhere to the specification for the function 'ID3D11Device::CreateDepthStencilView'. See line 0 for an earlier location where this can occur

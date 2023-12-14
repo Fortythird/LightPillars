@@ -28,7 +28,7 @@ void Camera::Initialize(
 	pitchAxis = pitchVal;
 	position = pos;
 
-	position = { -5.0f, 3.0f, 0.0f };
+	position = { -5.0f, 3.0f, -5.0f };
 	
 	if (inputDeviceCameraInstance != nullptr) {
 		inputDeviceCameraInstance->MouseMove.AddRaw(this, &Camera::OnMouseMove);

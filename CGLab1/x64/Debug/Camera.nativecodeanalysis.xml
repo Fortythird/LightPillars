@@ -8,12 +8,12 @@
       <COLUMN>8</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'Camera::pitchAxis' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'Camera::yawAxis' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>Camera::{ctor}</FUNCTION>
     <DECORATED>??0Camera@@QEAA@PEAUVector3@SimpleMath@DirectX@@@Z</DECORATED>
     <FUNCLINE>4</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>Camera::pitchAxis</targetSymbol>
+      <targetSymbol>Camera::yawAxis</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -25,12 +25,12 @@
       <COLUMN>8</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'Camera::yawAxis' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'Camera::pitchAxis' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>Camera::{ctor}</FUNCTION>
     <DECORATED>??0Camera@@QEAA@PEAUVector3@SimpleMath@DirectX@@@Z</DECORATED>
     <FUNCLINE>4</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>Camera::yawAxis</targetSymbol>
+      <targetSymbol>Camera::pitchAxis</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
