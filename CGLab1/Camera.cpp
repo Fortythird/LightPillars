@@ -21,14 +21,14 @@ void Camera::Initialize(
 		((float) PI) / 2.0f,
 		(float) screenWidth / screenHeight, 
 		0.1f,
-		100.0f
+		50.0f
 	); 
 	
 	yawAxis = yawVal;
 	pitchAxis = pitchVal;
 	position = pos;
 
-	position = { -5.0f, 3.0f, -5.0f };
+	position = { 0.0f, 3.0f, -5.0f };
 	
 	if (inputDeviceCameraInstance != nullptr) {
 		inputDeviceCameraInstance->MouseMove.AddRaw(this, &Camera::OnMouseMove);

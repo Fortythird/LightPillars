@@ -1,6 +1,7 @@
 struct ConstData
 {
     float4x4 invertedCamViewProjection;
+    float4x4 camViewProjection;
     float3 viewerPos;
     float dummy;
 };
@@ -20,6 +21,9 @@ cbuffer ConstBuf : register(b1)
 {
     PointLightData pointLightData;
 };
+
+Texture2D camDepthTexture : register(t0);
+SamplerState camDepthSampler : register(s0);
 
 static const float CRIT_ANGLE_RAD = radians(5.0f);
 static const float CRIT_ANGLE_DEG = 5.0f;
@@ -59,9 +63,10 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
     float4 NDC = float4(pos.x * 2.0f / 800.0f - 1.0f, -pos.y * 2.0f / 800.0f + 1.0f, 0.0f, 1.0f);
     float4 worldPoint = mul(NDC, constData.invertedCamViewProjection);
     worldPoint /= worldPoint.w;
+    
     float3 viewDir = normalize(worldPoint.xyz - constData.viewerPos);
     
-    if (/*dot(viewDir, pointLightData.lightSourcePosition.xyz - constData.viewerPos) <= 0*/false) return float4(0, 0, 0, 1);
+    if (viewDir.y == 0) return float4(0, 0, 0, 1);
     else
     {
         float shiftY = (pointLightData.lightSourcePosition.y - constData.viewerPos.y) / viewDir.y;
@@ -74,55 +79,99 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
                 : constData.viewerPos.y + viewDir.y * (R0x - constData.viewerPos.x) / viewDir.x,
             R0z
         );
+        
+        float4 camSpacePoint = mul(constData.camViewProjection, float4(R0.xyz, 0));
+        float depthValue = camDepthTexture.SampleLevel(camDepthSampler, 
+            float2((NDC.x + 1.0f) / 2, -(NDC.y + 1.0f) / 2), 0).x;
+        
+        if (depthValue <= camSpacePoint.z / camSpacePoint.w && depthValue != 1.0f)
+            return float4(0, 0, 0, 1);
     
         float3 reflectionDir = normalize(pointLightData.lightSourcePosition.xyz - R0);
     
         float3 normal0 = normalize(viewDir - reflectionDir);
     
-        if (normal0.y < cos(CRIT_ANGLE_RAD)) return float4(0.0f, 0.0f, 0.0f, 1.0f);
+        if (normal0.y < cos(CRIT_ANGLE_RAD)) return float4(0, 0, 0, 1); // abs() to normal0.y to calculate lower pillar
         else
         {
-            float3 lightPosDir = normalize(pointLightData.lightSourcePosition.xyz - constData.viewerPos);
+            float a = pow(viewDir.x * reflectionDir.y - viewDir.y * reflectionDir.x, 2) + pow(viewDir.y * reflectionDir.z - viewDir.z * reflectionDir.y, 2);
+            
+            float b;
+            
+            float c;
+            
+            float3 n1;
+            
+            float3 n2;
+            
+            if (viewDir.z != 0 || reflectionDir.z != 0)
+            {
+                b = -2 * cos(CRIT_ANGLE_RAD) * (viewDir.x * reflectionDir.z - viewDir.z * reflectionDir.x) * (viewDir.x * reflectionDir.y - viewDir.y * reflectionDir.x);
         
-            float a = (viewDir.x * reflectionDir.y - viewDir.y * reflectionDir.x) + pow((viewDir.y * reflectionDir.z - viewDir.z * reflectionDir.y), 2);
+                c = pow(cos(CRIT_ANGLE_RAD), 2) * pow(viewDir.x * reflectionDir.z - viewDir.z * reflectionDir.x, 2)
+                    - pow(sin(CRIT_ANGLE_RAD), 2) * pow(viewDir.y * reflectionDir.z - viewDir.z * reflectionDir.y, 2);
+                
+                float discriminant = pow(b, 2) - 4 * a * c;
         
-            float b = -2 * cos(CRIT_ANGLE_RAD) * (viewDir.x * reflectionDir.z - viewDir.z * reflectionDir.x) * (viewDir.x * reflectionDir.y - viewDir.y * reflectionDir.x);
+                float n1z = (-b + sqrt(discriminant)) / 2.0f / a;
         
-            float c = pow(cos(CRIT_ANGLE_RAD), 2) * pow(viewDir.x * reflectionDir.z - viewDir.z * reflectionDir.x, 2)
-            - pow(sin(CRIT_ANGLE_RAD), 2) * pow(viewDir.y * reflectionDir.z - viewDir.z * reflectionDir.y, 2);
+                n1 = normalize(float3(
+                    (cos(CRIT_ANGLE_RAD) * (viewDir.x * reflectionDir.z - viewDir.z * reflectionDir.x) - n1z * (viewDir.x * reflectionDir.y - viewDir.y * reflectionDir.x))
+                        / (viewDir.y * reflectionDir.z - viewDir.z * reflectionDir.y),
+                    cos(CRIT_ANGLE_RAD),
+                    n1z
+                ));
         
-            float discriminant = pow(b, 2) - 4 * a * c;
+                float n2z = (-b - sqrt(discriminant)) / 2.0f / a;
+            
+                n2 = normalize(float3(
+                    (cos(CRIT_ANGLE_RAD) * (viewDir.x * reflectionDir.z - viewDir.z * reflectionDir.x) - n2z * (viewDir.x * reflectionDir.y - viewDir.y * reflectionDir.x))
+                        / (viewDir.y * reflectionDir.z - viewDir.z * reflectionDir.y),
+                    cos(CRIT_ANGLE_RAD),
+                    n2z
+                ));
+            }
+            else
+            {
+                b = -2 * cos(CRIT_ANGLE_RAD) * (viewDir.x * reflectionDir.z - viewDir.z * reflectionDir.x) * (viewDir.y * reflectionDir.z - viewDir.z * reflectionDir.y);
         
-            float n1z = (-b + sqrt(discriminant)) / 2 / a;
+                c = pow(cos(CRIT_ANGLE_RAD), 2) * pow(viewDir.x * reflectionDir.z - viewDir.z * reflectionDir.x, 2)
+                    - pow(sin(CRIT_ANGLE_RAD), 2) * pow(viewDir.x * reflectionDir.y - viewDir.y * reflectionDir.x, 2);
+                
+                float discriminant = pow(b, 2) - 4 * a * c;
         
-            float3 n1 = float3(
-                (cos(CRIT_ANGLE_RAD) * (viewDir.x * reflectionDir.z - viewDir.z * reflectionDir.x) - n1z * (viewDir.x * reflectionDir.y - viewDir.y * reflectionDir.x))
-                    / (viewDir.y * reflectionDir.z - viewDir.z * reflectionDir.y),
-                cos(CRIT_ANGLE_RAD),
-                n1z
-            );
+                float n1x = (-b + sqrt(discriminant)) / 2.0f / a;
         
-            float n2z = (-b - sqrt(discriminant)) / 2 / a;
-            float3 n2 = float3(
-                (cos(CRIT_ANGLE_RAD) * (viewDir.x * reflectionDir.z - viewDir.z * reflectionDir.x) - n2z * (viewDir.x * reflectionDir.y - viewDir.y * reflectionDir.x))
-                    / (viewDir.y * reflectionDir.z - viewDir.z * reflectionDir.y),
-                cos(CRIT_ANGLE_RAD),
-                n2z
-            );
+                n1 = normalize(float3(
+                    n1x,
+                    cos(CRIT_ANGLE_RAD),
+                    (cos(CRIT_ANGLE_RAD) * (viewDir.x * reflectionDir.z - viewDir.z * reflectionDir.x) - n1x * (viewDir.y * reflectionDir.z - viewDir.z * reflectionDir.y))
+                        / (viewDir.x * reflectionDir.y - viewDir.y * reflectionDir.x)
+                ));
         
-            float3 reflectionDir1 = float3(
+                float n2x = (-b - sqrt(discriminant)) / 2.0f / a;
+            
+                n2 = normalize(float3(
+                    n2x,
+                    cos(CRIT_ANGLE_RAD),
+                    (cos(CRIT_ANGLE_RAD) * (viewDir.x * reflectionDir.z - viewDir.z * reflectionDir.x) - n2x * (viewDir.y * reflectionDir.z - viewDir.z * reflectionDir.y))
+                        / (viewDir.x * reflectionDir.y - viewDir.y * reflectionDir.x)
+                ));
+            }
+        
+           /* float3 reflectionDir1 = normalize(float3(
                 viewDir.x - n1.x,
                 viewDir.y - n1.y,
                 viewDir.z - n1.z
-            );
+            ));
         
-            float3 reflectionDir2 = float3(
+            float3 reflectionDir2 = normalize(float3(
                 viewDir.x - n2.x,
                 viewDir.y - n2.y,
                 viewDir.z - n2.z
-            );
+            ));
         
-            float k = 0;
+            /*float k = 0;
         
             if (viewDir.x != 0)
             {
@@ -156,9 +205,9 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
             }
         
             float3 R1 = float3(
-                pointLightData.lightSourcePosition.x + k * reflectionDir1.x,
-                pointLightData.lightSourcePosition.y + k * reflectionDir1.y,
-                pointLightData.lightSourcePosition.z + k * reflectionDir1.z
+                pointLightData.lightSourcePosition.x - k * reflectionDir1.x, // check if minus is required
+                pointLightData.lightSourcePosition.y - k * reflectionDir1.y,
+                pointLightData.lightSourcePosition.z - k * reflectionDir1.z
             );
         
             if (viewDir.x != 0)
@@ -193,10 +242,10 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
             }
         
             float3 R2 = float3(
-                pointLightData.lightSourcePosition.x + k * reflectionDir2.x,
-                pointLightData.lightSourcePosition.y + k * reflectionDir2.y,
-                pointLightData.lightSourcePosition.z + k * reflectionDir1.z
-            );
+                pointLightData.lightSourcePosition.x - k * reflectionDir2.x,
+                pointLightData.lightSourcePosition.y - k * reflectionDir2.y,
+                pointLightData.lightSourcePosition.z - k * reflectionDir2.z
+            );*/
         
             float N = abs(CalculateGaussIntegral(acos(n1.y) / PI * 180.0f, acos(normal0.y) / PI * 180.0f)
                 + CalculateGaussIntegral(acos(n2.y) / PI * 180.0f, acos(normal0.y) / PI * 180.0f));
@@ -205,10 +254,9 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
             float e1 = acos(n1.x * viewDir.x + n1.y * viewDir.y + n1.z * viewDir.z);
             float e2 = acos(n2.x * viewDir.x + n2.y * viewDir.y + n2.z * viewDir.z);
             
-            //N *= (abs(CalculateRefractionIntegral(e1, e2)));
+            N *= (abs(CalculateRefractionIntegral(e1, e2)));
             
             return float4(pointLightData.lightColor.xyz * N, 1.0f);
-            //return float4(pointLightData.lightColor);
         }
     }
 }

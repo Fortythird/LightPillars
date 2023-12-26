@@ -294,6 +294,7 @@ int TriangleComponent::Init(Microsoft::WRL::ComPtr<ID3D11Device> device, Display
 	device->CreateSamplerState(&SamplerDesc, &samplerState);
 
 	D3D11_SAMPLER_DESC DepthSamplerDesc = {};
+	DepthSamplerDesc.Filter = D3D11_FILTER_MIN_MAG_MIP_LINEAR;
 	DepthSamplerDesc.AddressU = D3D11_TEXTURE_ADDRESS_CLAMP;
 	DepthSamplerDesc.AddressV = D3D11_TEXTURE_ADDRESS_CLAMP;
 	DepthSamplerDesc.AddressW = D3D11_TEXTURE_ADDRESS_CLAMP;

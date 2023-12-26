@@ -13,6 +13,7 @@ Game::Game()
 	shadowDepthTexture = nullptr;
 	sceneDepthTexture = nullptr;
 	depthView = nullptr;
+	camDepthView = nullptr;
 	shadowDepthView = nullptr;
 	resView = nullptr;
 	shadowRastState = nullptr;
@@ -133,8 +134,8 @@ int Game::PrepareResources()
 	depthTexDesc.Height = 5000;
 	depthTexDesc.SampleDesc = { 1, 0 };
 	res = device->CreateTexture2D(&depthTexDesc, nullptr, &shadowDepthTexture);
-	depthTexDesc.Width = 800;
-	depthTexDesc.Height = 800;
+	depthTexDesc.Width = display.getScreenWidth();
+	depthTexDesc.Height = display.getScreenHeight();
 	res = device->CreateTexture2D(&depthTexDesc, nullptr, &sceneDepthTexture);
 
 	if (FAILED(res))
@@ -165,6 +166,7 @@ int Game::PrepareResources()
 	shaderResViewDesc.Format = DXGI_FORMAT_R32_FLOAT;
 	shaderResViewDesc.Texture2D.MipLevels = 1;
 	res = device->CreateShaderResourceView(shadowDepthTexture, &shaderResViewDesc, &resView);
+	res = device->CreateShaderResourceView(sceneDepthTexture, &shaderResViewDesc, &camDepthView);
 
 	if (FAILED(res))
 	{
@@ -327,6 +329,11 @@ void Game::DestroyResources()
 	{
 		depthView->Release();
 	}
+
+	if (camDepthView != nullptr)
+	{
+		camDepthView->Release();
+	}
 	
 	if (shadowDepthView != nullptr) 
 	{
@@ -405,9 +412,9 @@ void Game::Draw()
 		display.getScreenWidth(),
 		display.getScreenHeight()
 	);
-
-	context->ClearRenderTargetView(rtv, BGcolor);
 	
+	context->ClearRenderTargetView(rtv, BGcolor);
+
 	context->RSSetViewports(1, &viewport);
 	context->OMSetRenderTargets(1, &rtv, depthView);
 
@@ -434,6 +441,7 @@ void Game::DrawPillars()
 {
 	constPillarsData.viewerPos = camera.at(0)->position;
 	constPillarsData.invertedCamViewProjection = (camera.at(0)->viewMatrix * camera.at(0)->projectionMatrix).Transpose().Invert();
+	constPillarsData.camViewProjection = camera.at(0)->projectionMatrix.Transpose();
 
 	D3D11_MAPPED_SUBRESOURCE subresourse = {};
 	context->Map(
@@ -451,7 +459,7 @@ void Game::DrawPillars()
 	);
 	context->Unmap(constPillarsBuffer, 0);
 
-	pointLightData.lightSourcePosition = DirectX::SimpleMath::Vector4(10.0f, 5.0f, 0.0f, 0.0f);
+	pointLightData.lightSourcePosition = DirectX::SimpleMath::Vector4(0.0f, 5.0f, 10.0f, 0.0f);
 	pointLightData.lightColor = DirectX::SimpleMath::Vector4(0.0f, 0.8f, 0.7f, 1.0f);
 
 	D3D11_MAPPED_SUBRESOURCE subresourse2 = {};
@@ -469,42 +477,6 @@ void Game::DrawPillars()
 		sizeof(PointLightData)
 	);
 	context->Unmap(pointLightBuffer, 0);
-
-	DirectX::SimpleMath::Vector4 testNDC = DirectX::SimpleMath::Vector4(0, 0, 0, 1);
-	DirectX::SimpleMath::Vector4 wPos = DirectX::XMVector4Transform(testNDC, constPillarsData.invertedCamViewProjection.Transpose());
-	wPos /= wPos.w;
-	DirectX::SimpleMath::Vector3 viewDir = DirectX::SimpleMath::Vector3(
-		wPos.x - constPillarsData.viewerPos.x,
-		wPos.y - constPillarsData.viewerPos.y,
-		wPos.z - constPillarsData.viewerPos.z
-	);
-	viewDir.Normalize();
-
-	float shiftY = (pointLightData.lightSourcePosition.y - constPillarsData.viewerPos.y);
-
-	float R0x = (pointLightData.lightSourcePosition.x + constPillarsData.viewerPos.x + viewDir.x * shiftY) / 2.0f;
-	float R0z = (pointLightData.lightSourcePosition.z + constPillarsData.viewerPos.z + viewDir.z * shiftY) / 2.0f;
-
-	DirectX::SimpleMath::Vector3 R0 = DirectX::SimpleMath::Vector3(
-		R0x,
-		viewDir.x == 0 ? constPillarsData.viewerPos.y + viewDir.y * (R0z - constPillarsData.viewerPos.z) / viewDir.z
-		: constPillarsData.viewerPos.y + viewDir.y * (R0x - constPillarsData.viewerPos.x) / viewDir.x,
-		R0z
-	);
-
-	DirectX::SimpleMath::Vector3 reflectionDir = DirectX::SimpleMath::Vector3(
-		pointLightData.lightSourcePosition.x - R0.x,
-		pointLightData.lightSourcePosition.y - R0.y,
-		pointLightData.lightSourcePosition.z - R0.z
-	);
-
-	reflectionDir.Normalize();
-
-	DirectX::SimpleMath::Vector3 normal = viewDir - reflectionDir;
-
-	normal.Normalize();
-
-	std::cout << acos(normal.x * viewDir.x + normal.y * viewDir.y + normal.z * viewDir.z) << std::endl;
 
 	ID3D11BlendState* blendState = nullptr;
 	D3D11_BLEND_DESC blendDesc = {};
@@ -545,30 +517,27 @@ void Game::DrawPillars()
 	depthStencilStateDesc.BackFace.StencilDepthFailOp = D3D11_STENCIL_OP_DECR;
 	depthStencilStateDesc.BackFace.StencilPassOp = D3D11_STENCIL_OP_KEEP;
 	depthStencilStateDesc.BackFace.StencilFunc = D3D11_COMPARISON_ALWAYS;
-
 	device->CreateDepthStencilState(
 		&depthStencilStateDesc,
 		&depthStencilState
 	);
 
-	context->OMSetDepthStencilState(depthStencilState, 1);
-	context->OMSetRenderTargets(1, &rtv, depthView);
+	D3D11_SAMPLER_DESC SamplerDesc = {};
+	SamplerDesc.Filter = D3D11_FILTER_MIN_MAG_MIP_LINEAR;
+	SamplerDesc.AddressU = D3D11_TEXTURE_ADDRESS_WRAP;
+	SamplerDesc.AddressV = D3D11_TEXTURE_ADDRESS_WRAP;
+	SamplerDesc.AddressW = D3D11_TEXTURE_ADDRESS_WRAP;
+	device->CreateSamplerState(&SamplerDesc, &samplerState);
+
+	//context->OMSetDepthStencilState(depthStencilState, 1);
+	context->OMSetRenderTargets(1, &rtv, nullptr);
 	context->IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP);
 	context->VSSetShader(vertexPillarsShader, nullptr, 0);
 	context->PSSetShader(pixelPillarsShader, nullptr, 0);
 	context->PSSetConstantBuffers(0, 1, &constPillarsBuffer);
 	context->PSSetConstantBuffers(1, 1, &pointLightBuffer);
+	context->PSSetShaderResources(0, 1, &camDepthView);
+	context->PSSetSamplers(0, 1, &samplerState);
 	context->OMSetBlendState(blendState, blendFactor, 0xFFFFFF);
 	context->Draw(4, 0);
-
-	ID3D11RenderTargetView* nullrtv[8] = { nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr };
-	context->OMSetRenderTargets(1, nullrtv, nullptr);
-}
-
-float Game::CalculateGaussProt(float d)
-{
-	return 2 * (903168 * pow(d, 10) - 24613120 * pow(d, 9) + 275587200 * pow(d, 8) - 1540512000 * pow(d, 7)
-		+ 3869040000 * pow(d, 6) - 1775340000 * pow(d, 5) + 11280150000 * pow(d, 4) - 126215250000 * pow(d, 3)
-		+ 5906250000 * pow(d, 2) + 1928925534375 * d) / (8064 * pow(10, 9));
-	
 }

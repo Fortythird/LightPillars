@@ -81,7 +81,7 @@ float4 PSMain(PS_IN input) : SV_TARGET
 
 	float3 ambient = color.xyz * 0.1;
 	float3 diffuse = 0.5 * saturate(dot(LightDir, normal)) * color.xyz;
-	float3 specular = pow(saturate(dot(-viewDir, refVec)), 5.0) * 0.7;
+	float3 specular = pow(saturate(dot(-viewDir, refVec)), 32.0) * 0.5;
 
 	float shadowTest = lightSpacePos.z / lightSpacePos.w - 0.001f < depthValue;
 

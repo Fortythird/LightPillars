@@ -36,35 +36,6 @@
         {
           "ruleId": "C26495",
           "message": {
-            "text": "Variable 'Game::viewport' is uninitialized. Always initialize a member variable (type.6)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                },
-                "region": {
-                  "startLine": 5,
-                  "startColumn": 7
-                }
-              },
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Game::{ctor}",
-                  "decoratedName": "??0Game@@QEAA@XZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "targetSymbol": "Game::viewport"
-          }
-        },
-        {
-          "ruleId": "C26495",
-          "message": {
             "text": "Variable 'Game::display' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
@@ -89,6 +60,35 @@
           ],
           "properties": {
             "targetSymbol": "Game::display"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'Game::viewport' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                },
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 7
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Game::{ctor}",
+                  "decoratedName": "??0Game@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "Game::viewport"
           }
         },
         {
@@ -277,9 +277,9 @@
                   "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                 },
                 "region": {
-                  "startLine": 149,
+                  "startLine": 150,
                   "startColumn": 2,
-                  "endLine": 149,
+                  "endLine": 150,
                   "endColumn": 75
                 }
               },
@@ -304,22 +304,8 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 69,
+                            "startLine": 70,
                             "startColumn": 20
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 71,
-                            "startColumn": 23
                           }
                         }
                       },
@@ -347,7 +333,7 @@
                           },
                           "region": {
                             "startLine": 73,
-                            "startColumn": 28
+                            "startColumn": 23
                           }
                         }
                       },
@@ -361,7 +347,7 @@
                           },
                           "region": {
                             "startLine": 74,
-                            "startColumn": 29
+                            "startColumn": 28
                           }
                         }
                       },
@@ -389,7 +375,7 @@
                           },
                           "region": {
                             "startLine": 76,
-                            "startColumn": 44
+                            "startColumn": 29
                           }
                         }
                       },
@@ -403,7 +389,7 @@
                           },
                           "region": {
                             "startLine": 77,
-                            "startColumn": 46
+                            "startColumn": 44
                           }
                         }
                       },
@@ -417,7 +403,7 @@
                           },
                           "region": {
                             "startLine": 78,
-                            "startColumn": 39
+                            "startColumn": 46
                           }
                         }
                       },
@@ -431,7 +417,7 @@
                           },
                           "region": {
                             "startLine": 79,
-                            "startColumn": 30
+                            "startColumn": 39
                           }
                         }
                       },
@@ -445,90 +431,6 @@
                           },
                           "region": {
                             "startLine": 80,
-                            "startColumn": 23
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 81,
-                            "startColumn": 24
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 82,
-                            "startColumn": 20
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 83,
-                            "startColumn": 22
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 84,
-                            "startColumn": 17
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 85,
-                            "startColumn": 28
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 86,
                             "startColumn": 30
                           }
                         }
@@ -542,8 +444,8 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 88,
-                            "startColumn": 11
+                            "startLine": 81,
+                            "startColumn": 23
                           }
                         }
                       },
@@ -556,7 +458,49 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 89,
+                            "startLine": 82,
+                            "startColumn": 24
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 83,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 84,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 85,
                             "startColumn": 17
                           }
                         }
@@ -570,8 +514,50 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
+                            "startLine": 86,
+                            "startColumn": 28
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 87,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 89,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
                             "startLine": 90,
-                            "startColumn": 18
+                            "startColumn": 17
                           }
                         }
                       },
@@ -585,7 +571,7 @@
                           },
                           "region": {
                             "startLine": 91,
-                            "startColumn": 20
+                            "startColumn": 18
                           }
                         }
                       },
@@ -640,8 +626,8 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 96,
-                            "startColumn": 17
+                            "startLine": 95,
+                            "startColumn": 20
                           }
                         }
                       },
@@ -655,7 +641,7 @@
                           },
                           "region": {
                             "startLine": 97,
-                            "startColumn": 23
+                            "startColumn": 17
                           }
                         }
                       },
@@ -669,7 +655,7 @@
                           },
                           "region": {
                             "startLine": 98,
-                            "startColumn": 24
+                            "startColumn": 23
                           }
                         }
                       },
@@ -683,7 +669,7 @@
                           },
                           "region": {
                             "startLine": 99,
-                            "startColumn": 26
+                            "startColumn": 24
                           }
                         }
                       },
@@ -738,7 +724,21 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 104,
+                            "startLine": 103,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 105,
                             "startColumn": 10
                           }
                         }
@@ -752,7 +752,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 119,
+                            "startLine": 120,
                             "startColumn": 6
                           }
                         },
@@ -771,7 +771,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 121,
+                            "startLine": 122,
                             "startColumn": 59
                           }
                         }
@@ -785,7 +785,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 124,
+                            "startLine": 125,
                             "startColumn": 23
                           }
                         }
@@ -799,22 +799,8 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 125,
-                            "startColumn": 22
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
                             "startLine": 126,
-                            "startColumn": 25
+                            "startColumn": 22
                           }
                         }
                       },
@@ -856,20 +842,6 @@
                           },
                           "region": {
                             "startLine": 129,
-                            "startColumn": 30
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 130,
                             "startColumn": 25
                           }
                         }
@@ -883,8 +855,22 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
+                            "startLine": 130,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
                             "startLine": 131,
-                            "startColumn": 21
+                            "startColumn": 25
                           }
                         }
                       },
@@ -912,48 +898,6 @@
                           },
                           "region": {
                             "startLine": 133,
-                            "startColumn": 22
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 134,
-                            "startColumn": 26
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 135,
-                            "startColumn": 6
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 136,
                             "startColumn": 21
                           }
                         }
@@ -967,7 +911,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 137,
+                            "startLine": 134,
                             "startColumn": 22
                           }
                         }
@@ -981,7 +925,21 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 138,
+                            "startLine": 135,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 136,
                             "startColumn": 6
                           }
                         }
@@ -995,7 +953,49 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 140,
+                            "startLine": 137,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 138,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 139,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 141,
                             "startColumn": 6
                           }
                         },
@@ -1014,7 +1014,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 142,
+                            "startLine": 143,
                             "startColumn": 50
                           }
                         }
@@ -1028,7 +1028,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 145,
+                            "startLine": 146,
                             "startColumn": 32
                           }
                         }
@@ -1042,7 +1042,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 146,
+                            "startLine": 147,
                             "startColumn": 23
                           }
                         }
@@ -1056,7 +1056,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 147,
+                            "startLine": 148,
                             "startColumn": 30
                           }
                         }
@@ -1070,7 +1070,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 148,
+                            "startLine": 149,
                             "startColumn": 35
                           }
                         }
@@ -1084,7 +1084,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 149,
+                            "startLine": 150,
                             "startColumn": 6
                           }
                         },
@@ -1115,9 +1115,9 @@
                   "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                 },
                 "region": {
-                  "startLine": 156,
+                  "startLine": 157,
                   "startColumn": 2,
-                  "endLine": 156,
+                  "endLine": 157,
                   "endColumn": 76
                 }
               },
@@ -1142,22 +1142,8 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 69,
+                            "startLine": 70,
                             "startColumn": 20
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 71,
-                            "startColumn": 23
                           }
                         }
                       },
@@ -1185,7 +1171,7 @@
                           },
                           "region": {
                             "startLine": 73,
-                            "startColumn": 28
+                            "startColumn": 23
                           }
                         }
                       },
@@ -1199,7 +1185,7 @@
                           },
                           "region": {
                             "startLine": 74,
-                            "startColumn": 29
+                            "startColumn": 28
                           }
                         }
                       },
@@ -1227,7 +1213,7 @@
                           },
                           "region": {
                             "startLine": 76,
-                            "startColumn": 44
+                            "startColumn": 29
                           }
                         }
                       },
@@ -1241,7 +1227,7 @@
                           },
                           "region": {
                             "startLine": 77,
-                            "startColumn": 46
+                            "startColumn": 44
                           }
                         }
                       },
@@ -1255,7 +1241,7 @@
                           },
                           "region": {
                             "startLine": 78,
-                            "startColumn": 39
+                            "startColumn": 46
                           }
                         }
                       },
@@ -1269,7 +1255,7 @@
                           },
                           "region": {
                             "startLine": 79,
-                            "startColumn": 30
+                            "startColumn": 39
                           }
                         }
                       },
@@ -1283,90 +1269,6 @@
                           },
                           "region": {
                             "startLine": 80,
-                            "startColumn": 23
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 81,
-                            "startColumn": 24
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 82,
-                            "startColumn": 20
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 83,
-                            "startColumn": 22
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 84,
-                            "startColumn": 17
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 85,
-                            "startColumn": 28
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 86,
                             "startColumn": 30
                           }
                         }
@@ -1380,8 +1282,8 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 88,
-                            "startColumn": 11
+                            "startLine": 81,
+                            "startColumn": 23
                           }
                         }
                       },
@@ -1394,7 +1296,49 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 89,
+                            "startLine": 82,
+                            "startColumn": 24
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 83,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 84,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 85,
                             "startColumn": 17
                           }
                         }
@@ -1408,8 +1352,50 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
+                            "startLine": 86,
+                            "startColumn": 28
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 87,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 89,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
                             "startLine": 90,
-                            "startColumn": 18
+                            "startColumn": 17
                           }
                         }
                       },
@@ -1423,7 +1409,7 @@
                           },
                           "region": {
                             "startLine": 91,
-                            "startColumn": 20
+                            "startColumn": 18
                           }
                         }
                       },
@@ -1478,8 +1464,8 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 96,
-                            "startColumn": 17
+                            "startLine": 95,
+                            "startColumn": 20
                           }
                         }
                       },
@@ -1493,7 +1479,7 @@
                           },
                           "region": {
                             "startLine": 97,
-                            "startColumn": 23
+                            "startColumn": 17
                           }
                         }
                       },
@@ -1507,7 +1493,7 @@
                           },
                           "region": {
                             "startLine": 98,
-                            "startColumn": 24
+                            "startColumn": 23
                           }
                         }
                       },
@@ -1521,7 +1507,7 @@
                           },
                           "region": {
                             "startLine": 99,
-                            "startColumn": 26
+                            "startColumn": 24
                           }
                         }
                       },
@@ -1576,7 +1562,21 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 104,
+                            "startLine": 103,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 105,
                             "startColumn": 10
                           }
                         }
@@ -1590,7 +1590,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 119,
+                            "startLine": 120,
                             "startColumn": 6
                           }
                         },
@@ -1609,7 +1609,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 121,
+                            "startLine": 122,
                             "startColumn": 59
                           }
                         }
@@ -1623,7 +1623,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 124,
+                            "startLine": 125,
                             "startColumn": 23
                           }
                         }
@@ -1637,22 +1637,8 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 125,
-                            "startColumn": 22
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
                             "startLine": 126,
-                            "startColumn": 25
+                            "startColumn": 22
                           }
                         }
                       },
@@ -1694,20 +1680,6 @@
                           },
                           "region": {
                             "startLine": 129,
-                            "startColumn": 30
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 130,
                             "startColumn": 25
                           }
                         }
@@ -1721,8 +1693,22 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
+                            "startLine": 130,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
                             "startLine": 131,
-                            "startColumn": 21
+                            "startColumn": 25
                           }
                         }
                       },
@@ -1750,48 +1736,6 @@
                           },
                           "region": {
                             "startLine": 133,
-                            "startColumn": 22
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 134,
-                            "startColumn": 26
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 135,
-                            "startColumn": 6
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 136,
                             "startColumn": 21
                           }
                         }
@@ -1805,7 +1749,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 137,
+                            "startLine": 134,
                             "startColumn": 22
                           }
                         }
@@ -1819,7 +1763,21 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 138,
+                            "startLine": 135,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 136,
                             "startColumn": 6
                           }
                         }
@@ -1833,7 +1791,49 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 140,
+                            "startLine": 137,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 138,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 139,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 141,
                             "startColumn": 6
                           }
                         },
@@ -1852,7 +1852,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 142,
+                            "startLine": 143,
                             "startColumn": 50
                           }
                         }
@@ -1866,7 +1866,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 145,
+                            "startLine": 146,
                             "startColumn": 32
                           }
                         }
@@ -1880,7 +1880,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 146,
+                            "startLine": 147,
                             "startColumn": 23
                           }
                         }
@@ -1894,7 +1894,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 147,
+                            "startLine": 148,
                             "startColumn": 30
                           }
                         }
@@ -1908,7 +1908,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 148,
+                            "startLine": 149,
                             "startColumn": 35
                           }
                         }
@@ -1922,7 +1922,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 149,
+                            "startLine": 150,
                             "startColumn": 6
                           }
                         }
@@ -1936,7 +1936,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 151,
+                            "startLine": 152,
                             "startColumn": 6
                           }
                         },
@@ -1955,7 +1955,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 153,
+                            "startLine": 154,
                             "startColumn": 64
                           }
                         }
@@ -1969,7 +1969,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 156,
+                            "startLine": 157,
                             "startColumn": 6
                           }
                         },
@@ -1988,7 +1988,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 156,
+                            "startLine": 157,
                             "startColumn": 6
                           }
                         },
@@ -2019,9 +2019,9 @@
                   "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                 },
                 "region": {
-                  "startLine": 167,
+                  "startLine": 168,
                   "startColumn": 2,
-                  "endLine": 167,
+                  "endLine": 168,
                   "endColumn": 82
                 }
               },
@@ -2046,22 +2046,8 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 69,
+                            "startLine": 70,
                             "startColumn": 20
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 71,
-                            "startColumn": 23
                           }
                         }
                       },
@@ -2089,7 +2075,7 @@
                           },
                           "region": {
                             "startLine": 73,
-                            "startColumn": 28
+                            "startColumn": 23
                           }
                         }
                       },
@@ -2103,7 +2089,7 @@
                           },
                           "region": {
                             "startLine": 74,
-                            "startColumn": 29
+                            "startColumn": 28
                           }
                         }
                       },
@@ -2131,7 +2117,7 @@
                           },
                           "region": {
                             "startLine": 76,
-                            "startColumn": 44
+                            "startColumn": 29
                           }
                         }
                       },
@@ -2145,7 +2131,7 @@
                           },
                           "region": {
                             "startLine": 77,
-                            "startColumn": 46
+                            "startColumn": 44
                           }
                         }
                       },
@@ -2159,7 +2145,7 @@
                           },
                           "region": {
                             "startLine": 78,
-                            "startColumn": 39
+                            "startColumn": 46
                           }
                         }
                       },
@@ -2173,7 +2159,7 @@
                           },
                           "region": {
                             "startLine": 79,
-                            "startColumn": 30
+                            "startColumn": 39
                           }
                         }
                       },
@@ -2187,90 +2173,6 @@
                           },
                           "region": {
                             "startLine": 80,
-                            "startColumn": 23
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 81,
-                            "startColumn": 24
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 82,
-                            "startColumn": 20
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 83,
-                            "startColumn": 22
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 84,
-                            "startColumn": 17
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 85,
-                            "startColumn": 28
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 86,
                             "startColumn": 30
                           }
                         }
@@ -2284,8 +2186,8 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 88,
-                            "startColumn": 11
+                            "startLine": 81,
+                            "startColumn": 23
                           }
                         }
                       },
@@ -2298,7 +2200,49 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 89,
+                            "startLine": 82,
+                            "startColumn": 24
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 83,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 84,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 85,
                             "startColumn": 17
                           }
                         }
@@ -2312,8 +2256,50 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
+                            "startLine": 86,
+                            "startColumn": 28
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 87,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 89,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
                             "startLine": 90,
-                            "startColumn": 18
+                            "startColumn": 17
                           }
                         }
                       },
@@ -2327,7 +2313,7 @@
                           },
                           "region": {
                             "startLine": 91,
-                            "startColumn": 20
+                            "startColumn": 18
                           }
                         }
                       },
@@ -2382,8 +2368,8 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 96,
-                            "startColumn": 17
+                            "startLine": 95,
+                            "startColumn": 20
                           }
                         }
                       },
@@ -2397,7 +2383,7 @@
                           },
                           "region": {
                             "startLine": 97,
-                            "startColumn": 23
+                            "startColumn": 17
                           }
                         }
                       },
@@ -2411,7 +2397,7 @@
                           },
                           "region": {
                             "startLine": 98,
-                            "startColumn": 24
+                            "startColumn": 23
                           }
                         }
                       },
@@ -2425,7 +2411,7 @@
                           },
                           "region": {
                             "startLine": 99,
-                            "startColumn": 26
+                            "startColumn": 24
                           }
                         }
                       },
@@ -2480,7 +2466,21 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 104,
+                            "startLine": 103,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 105,
                             "startColumn": 10
                           }
                         }
@@ -2494,7 +2494,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 119,
+                            "startLine": 120,
                             "startColumn": 6
                           }
                         },
@@ -2513,7 +2513,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 121,
+                            "startLine": 122,
                             "startColumn": 59
                           }
                         }
@@ -2527,7 +2527,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 124,
+                            "startLine": 125,
                             "startColumn": 23
                           }
                         }
@@ -2541,22 +2541,8 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 125,
-                            "startColumn": 22
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
                             "startLine": 126,
-                            "startColumn": 25
+                            "startColumn": 22
                           }
                         }
                       },
@@ -2598,20 +2584,6 @@
                           },
                           "region": {
                             "startLine": 129,
-                            "startColumn": 30
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 130,
                             "startColumn": 25
                           }
                         }
@@ -2625,8 +2597,22 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
+                            "startLine": 130,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
                             "startLine": 131,
-                            "startColumn": 21
+                            "startColumn": 25
                           }
                         }
                       },
@@ -2654,48 +2640,6 @@
                           },
                           "region": {
                             "startLine": 133,
-                            "startColumn": 22
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 134,
-                            "startColumn": 26
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 135,
-                            "startColumn": 6
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 136,
                             "startColumn": 21
                           }
                         }
@@ -2709,7 +2653,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 137,
+                            "startLine": 134,
                             "startColumn": 22
                           }
                         }
@@ -2723,7 +2667,21 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 138,
+                            "startLine": 135,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 136,
                             "startColumn": 6
                           }
                         }
@@ -2737,7 +2695,49 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 140,
+                            "startLine": 137,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 138,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 139,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 141,
                             "startColumn": 6
                           }
                         },
@@ -2756,7 +2756,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 142,
+                            "startLine": 143,
                             "startColumn": 50
                           }
                         }
@@ -2770,7 +2770,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 145,
+                            "startLine": 146,
                             "startColumn": 32
                           }
                         }
@@ -2784,7 +2784,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 146,
+                            "startLine": 147,
                             "startColumn": 23
                           }
                         }
@@ -2798,7 +2798,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 147,
+                            "startLine": 148,
                             "startColumn": 30
                           }
                         }
@@ -2812,7 +2812,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 148,
+                            "startLine": 149,
                             "startColumn": 35
                           }
                         }
@@ -2826,7 +2826,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 149,
+                            "startLine": 150,
                             "startColumn": 6
                           }
                         }
@@ -2840,7 +2840,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 151,
+                            "startLine": 152,
                             "startColumn": 6
                           }
                         },
@@ -2859,7 +2859,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 153,
+                            "startLine": 154,
                             "startColumn": 64
                           }
                         }
@@ -2873,7 +2873,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 156,
+                            "startLine": 157,
                             "startColumn": 6
                           }
                         },
@@ -2892,7 +2892,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 158,
+                            "startLine": 159,
                             "startColumn": 6
                           }
                         },
@@ -2911,22 +2911,8 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 160,
+                            "startLine": 161,
                             "startColumn": 65
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 163,
-                            "startColumn": 34
                           }
                         }
                       },
@@ -2954,7 +2940,7 @@
                           },
                           "region": {
                             "startLine": 165,
-                            "startColumn": 27
+                            "startColumn": 34
                           }
                         }
                       },
@@ -2968,7 +2954,7 @@
                           },
                           "region": {
                             "startLine": 166,
-                            "startColumn": 40
+                            "startColumn": 27
                           }
                         }
                       },
@@ -2982,11 +2968,1032 @@
                           },
                           "region": {
                             "startLine": 167,
+                            "startColumn": 40
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 168,
                             "startColumn": 6
                           }
                         },
                         "message": {
                           "text": "'shadowDepthTexture' should not be NULL, because this is not consistent with the SAL annotation on 'ID3D11Device::CreateShaderResourceView'"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6387",
+          "message": {
+            "text": "'sceneDepthTexture' could be '0':  this does not adhere to the specification for the function 'ID3D11Device::CreateShaderResourceView'. See line 0 for an earlier location where this can occur"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                },
+                "region": {
+                  "startLine": 169,
+                  "startColumn": 2,
+                  "endLine": 169,
+                  "endColumn": 81
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Game::PrepareResources",
+                  "decoratedName": "?PrepareResources@Game@@QEAAHXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 70,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 72,
+                            "startColumn": 23
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 73,
+                            "startColumn": 23
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 74,
+                            "startColumn": 28
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 75,
+                            "startColumn": 29
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 76,
+                            "startColumn": 29
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 77,
+                            "startColumn": 44
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 78,
+                            "startColumn": 46
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 79,
+                            "startColumn": 39
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 80,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 81,
+                            "startColumn": 23
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 82,
+                            "startColumn": 24
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 83,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 84,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 85,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 86,
+                            "startColumn": 28
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 87,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 89,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 90,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 91,
+                            "startColumn": 18
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 92,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 93,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 94,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 95,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 97,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 98,
+                            "startColumn": 23
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 99,
+                            "startColumn": 24
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 100,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 101,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 102,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 103,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 105,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 120,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume 'FAILED(res)')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 122,
+                            "startColumn": 59
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 125,
+                            "startColumn": 23
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 126,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 127,
+                            "startColumn": 25
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 128,
+                            "startColumn": 25
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 129,
+                            "startColumn": 25
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 130,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 131,
+                            "startColumn": 25
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 132,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 133,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 134,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 135,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 136,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 137,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 138,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 139,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 141,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume 'FAILED(res)')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 143,
+                            "startColumn": 50
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 146,
+                            "startColumn": 32
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 147,
+                            "startColumn": 23
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 148,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 149,
+                            "startColumn": 35
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 150,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "'sceneDepthTexture' is an Output from 'ID3D11Device::CreateDepthStencilView' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.19041.0\\um\\d3d11.h:13619)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 152,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume 'FAILED(res)')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 154,
+                            "startColumn": 64
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 157,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 159,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume 'FAILED(res)')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 161,
+                            "startColumn": 65
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 164,
+                            "startColumn": 34
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 165,
+                            "startColumn": 34
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 166,
+                            "startColumn": 27
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 167,
+                            "startColumn": 40
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 168,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 169,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "'sceneDepthTexture' should not be NULL, because this is not consistent with the SAL annotation on 'ID3D11Device::CreateShaderResourceView'"
                         }
                       },
                       "kinds": [
@@ -3012,9 +4019,9 @@
                   "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                 },
                 "region": {
-                  "startLine": 182,
+                  "startLine": 184,
                   "startColumn": 2,
-                  "endLine": 182,
+                  "endLine": 184,
                   "endColumn": 62
                 }
               },
@@ -3039,22 +4046,8 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 69,
+                            "startLine": 70,
                             "startColumn": 20
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 71,
-                            "startColumn": 23
                           }
                         }
                       },
@@ -3082,7 +4075,7 @@
                           },
                           "region": {
                             "startLine": 73,
-                            "startColumn": 28
+                            "startColumn": 23
                           }
                         }
                       },
@@ -3096,7 +4089,7 @@
                           },
                           "region": {
                             "startLine": 74,
-                            "startColumn": 29
+                            "startColumn": 28
                           }
                         }
                       },
@@ -3124,7 +4117,7 @@
                           },
                           "region": {
                             "startLine": 76,
-                            "startColumn": 44
+                            "startColumn": 29
                           }
                         }
                       },
@@ -3138,7 +4131,7 @@
                           },
                           "region": {
                             "startLine": 77,
-                            "startColumn": 46
+                            "startColumn": 44
                           }
                         }
                       },
@@ -3152,7 +4145,7 @@
                           },
                           "region": {
                             "startLine": 78,
-                            "startColumn": 39
+                            "startColumn": 46
                           }
                         }
                       },
@@ -3166,7 +4159,7 @@
                           },
                           "region": {
                             "startLine": 79,
-                            "startColumn": 30
+                            "startColumn": 39
                           }
                         }
                       },
@@ -3180,90 +4173,6 @@
                           },
                           "region": {
                             "startLine": 80,
-                            "startColumn": 23
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 81,
-                            "startColumn": 24
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 82,
-                            "startColumn": 20
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 83,
-                            "startColumn": 22
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 84,
-                            "startColumn": 17
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 85,
-                            "startColumn": 28
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 86,
                             "startColumn": 30
                           }
                         }
@@ -3277,8 +4186,8 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 88,
-                            "startColumn": 11
+                            "startLine": 81,
+                            "startColumn": 23
                           }
                         }
                       },
@@ -3291,7 +4200,49 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 89,
+                            "startLine": 82,
+                            "startColumn": 24
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 83,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 84,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 85,
                             "startColumn": 17
                           }
                         }
@@ -3305,8 +4256,50 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
+                            "startLine": 86,
+                            "startColumn": 28
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 87,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 89,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
                             "startLine": 90,
-                            "startColumn": 18
+                            "startColumn": 17
                           }
                         }
                       },
@@ -3320,7 +4313,7 @@
                           },
                           "region": {
                             "startLine": 91,
-                            "startColumn": 20
+                            "startColumn": 18
                           }
                         }
                       },
@@ -3375,8 +4368,8 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 96,
-                            "startColumn": 17
+                            "startLine": 95,
+                            "startColumn": 20
                           }
                         }
                       },
@@ -3390,7 +4383,7 @@
                           },
                           "region": {
                             "startLine": 97,
-                            "startColumn": 23
+                            "startColumn": 17
                           }
                         }
                       },
@@ -3404,7 +4397,7 @@
                           },
                           "region": {
                             "startLine": 98,
-                            "startColumn": 24
+                            "startColumn": 23
                           }
                         }
                       },
@@ -3418,7 +4411,7 @@
                           },
                           "region": {
                             "startLine": 99,
-                            "startColumn": 26
+                            "startColumn": 24
                           }
                         }
                       },
@@ -3473,7 +4466,21 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 104,
+                            "startLine": 103,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 105,
                             "startColumn": 10
                           }
                         }
@@ -3487,7 +4494,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 119,
+                            "startLine": 120,
                             "startColumn": 6
                           }
                         }
@@ -3501,7 +4508,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 121,
+                            "startLine": 122,
                             "startColumn": 59
                           }
                         }
@@ -3515,7 +4522,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 124,
+                            "startLine": 125,
                             "startColumn": 23
                           }
                         }
@@ -3529,22 +4536,8 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 125,
-                            "startColumn": 22
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
                             "startLine": 126,
-                            "startColumn": 25
+                            "startColumn": 22
                           }
                         }
                       },
@@ -3586,20 +4579,6 @@
                           },
                           "region": {
                             "startLine": 129,
-                            "startColumn": 30
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 130,
                             "startColumn": 25
                           }
                         }
@@ -3613,8 +4592,22 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
+                            "startLine": 130,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
                             "startLine": 131,
-                            "startColumn": 21
+                            "startColumn": 25
                           }
                         }
                       },
@@ -3642,48 +4635,6 @@
                           },
                           "region": {
                             "startLine": 133,
-                            "startColumn": 22
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 134,
-                            "startColumn": 26
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 135,
-                            "startColumn": 6
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 136,
                             "startColumn": 21
                           }
                         }
@@ -3697,7 +4648,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 137,
+                            "startLine": 134,
                             "startColumn": 22
                           }
                         }
@@ -3711,7 +4662,63 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
+                            "startLine": 135,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 136,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 137,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
                             "startLine": 138,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 139,
                             "startColumn": 6
                           }
                         }
@@ -3725,7 +4732,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 140,
+                            "startLine": 141,
                             "startColumn": 6
                           }
                         }
@@ -3739,7 +4746,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 142,
+                            "startLine": 143,
                             "startColumn": 50
                           }
                         }
@@ -3753,7 +4760,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 145,
+                            "startLine": 146,
                             "startColumn": 32
                           }
                         }
@@ -3767,7 +4774,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 146,
+                            "startLine": 147,
                             "startColumn": 23
                           }
                         }
@@ -3781,7 +4788,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 147,
+                            "startLine": 148,
                             "startColumn": 30
                           }
                         }
@@ -3795,7 +4802,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 148,
+                            "startLine": 149,
                             "startColumn": 35
                           }
                         }
@@ -3809,7 +4816,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 149,
+                            "startLine": 150,
                             "startColumn": 6
                           }
                         }
@@ -3823,7 +4830,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 151,
+                            "startLine": 152,
                             "startColumn": 6
                           }
                         }
@@ -3837,7 +4844,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 153,
+                            "startLine": 154,
                             "startColumn": 64
                           }
                         }
@@ -3851,7 +4858,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 156,
+                            "startLine": 157,
                             "startColumn": 6
                           }
                         }
@@ -3865,7 +4872,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 158,
+                            "startLine": 159,
                             "startColumn": 6
                           }
                         }
@@ -3879,22 +4886,8 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 160,
+                            "startLine": 161,
                             "startColumn": 65
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 163,
-                            "startColumn": 34
                           }
                         }
                       },
@@ -3922,7 +4915,7 @@
                           },
                           "region": {
                             "startLine": 165,
-                            "startColumn": 27
+                            "startColumn": 34
                           }
                         }
                       },
@@ -3936,7 +4929,7 @@
                           },
                           "region": {
                             "startLine": 166,
-                            "startColumn": 40
+                            "startColumn": 27
                           }
                         }
                       },
@@ -3950,6 +4943,20 @@
                           },
                           "region": {
                             "startLine": 167,
+                            "startColumn": 40
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 168,
                             "startColumn": 6
                           }
                         }
@@ -3978,76 +4985,6 @@
                           },
                           "region": {
                             "startLine": 171,
-                            "startColumn": 60
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 174,
-                            "startColumn": 24
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 175,
-                            "startColumn": 31
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 176,
-                            "startColumn": 31
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 177,
-                            "startColumn": 38
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                          },
-                          "region": {
-                            "startLine": 178,
                             "startColumn": 6
                           }
                         }
@@ -4061,7 +4998,91 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
+                            "startLine": 173,
+                            "startColumn": 60
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 176,
+                            "startColumn": 24
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 177,
+                            "startColumn": 31
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 178,
+                            "startColumn": 31
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 179,
+                            "startColumn": 38
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
                             "startLine": 180,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                          },
+                          "region": {
+                            "startLine": 182,
                             "startColumn": 19
                           }
                         }
@@ -4075,7 +5096,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 181,
+                            "startLine": 183,
                             "startColumn": 6
                           }
                         },
@@ -4095,7 +5116,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
                           },
                           "region": {
-                            "startLine": 182,
+                            "startLine": 184,
                             "startColumn": 6
                           }
                         },
@@ -4196,7 +5217,7 @@
             "resultFile"
           ],
           "hashes": {
-            "sha-256": "89d8bc12f5faf301ed56f790f490e523304a74e10fc47b9ab8e4e98ab9887b51"
+            "sha-256": "4d63316f9f0c302c5d74d6f8d09128155a586c42cf0b39aba903f39556ee1fff"
           }
         },
         {
@@ -4239,7 +5260,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/game.h"
           },
           "hashes": {
-            "sha-256": "4e24e0172d10e83d8cf2121f48de4ff118a725891e44de3a6cf13d1fbf46e5f1"
+            "sha-256": "55dd47dd00f5e19c0a93503761d79865985ef422afff496eaa9d12d5d7b63696"
           }
         },
         {

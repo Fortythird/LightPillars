@@ -9,6 +9,7 @@
 struct ConstPillarData
 {
 	DirectX::SimpleMath::Matrix invertedCamViewProjection;
+	DirectX::SimpleMath::Matrix camViewProjection;
 	DirectX::SimpleMath::Vector3 viewerPos;
 	float dummy = 1.0f;
 };
@@ -36,6 +37,7 @@ public:
 	ID3D11DepthStencilView* depthView;
 	ID3D11DepthStencilView* shadowDepthView;
 	ID3D11ShaderResourceView* resView;
+	ID3D11ShaderResourceView* camDepthView;
 	ID3D11DepthStencilState* depthState;
 	ID3D11SamplerState* samplerState;
 	ID3D11RasterizerState* drawRastState;
