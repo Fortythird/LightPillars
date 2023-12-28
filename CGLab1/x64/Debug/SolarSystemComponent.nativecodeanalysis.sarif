@@ -503,7 +503,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/game.h"
           },
           "hashes": {
-            "sha-256": "55dd47dd00f5e19c0a93503761d79865985ef422afff496eaa9d12d5d7b63696"
+            "sha-256": "3f01622fbb045f27169ed0470815d54d2e14ded1e6d6e49b9782b29b615ee60c"
           }
         },
         {
@@ -535,7 +535,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/gamecomponent.h"
           },
           "hashes": {
-            "sha-256": "7f8139962382d5981e6c9b1a0eb508bc130e1c12111168bfb5a140ce5725a841"
+            "sha-256": "73cfa76d7495c58b701c04e5ee81c96ceb3dce10782b221ffc94670709d36049"
           }
         },
         {
@@ -552,6 +552,14 @@
           },
           "hashes": {
             "sha-256": "744330147a1174edd601f0e08feb9e7ed2402a149e1e4be5b9500b12d643ce1b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/pointlight.h"
+          },
+          "hashes": {
+            "sha-256": "06b50978a4ec2a18d428b24e4db292964e91370a013018d065f7049ca6ec8a55"
           }
         }
       ]

@@ -30,6 +30,11 @@ void Game::Init()
 
 	display.CreateDisplay(&inputDevice);
 
+	pointLights.push_back(new PointLight(
+		DirectX::SimpleMath::Vector3(5.0f, 5.0f, 0),
+		DirectX::SimpleMath::Vector3(0.5f, 0.2f, 0.8f)
+	));
+
 	PrepareResources();
 }
 
@@ -284,6 +289,11 @@ int Game::PrepareResources()
 		std::cout << "Error while point light buffer creating...";
 	}
 
+	for (int i = 0; i < pointLights.size(); i++)
+	{
+		pointLights[i]->PrepareResources(device, camera.at(0)->position);
+	}
+
 	return 0;
 }
 
@@ -291,7 +301,7 @@ void Game::DestroyResources()
 {
 	for (int i = 0; i < Components.size(); i++) 
 	{
-		Components[i]->DestroyResourses();
+		Components[i]->DestroyResources();
 	}
 
 	if (context != nullptr) 
@@ -363,6 +373,11 @@ void Game::DestroyResources()
 	if (pointLightBuffer != nullptr)
 	{
 		pointLightBuffer->Release();
+	}
+
+	for (int i = 0; i < pointLights.size(); i++)
+	{
+		pointLights[i]->DestroyResources();
 	}
 }
 
@@ -439,6 +454,12 @@ void Game::DrawShadows()
 
 void Game::DrawPillars()
 {
+
+	for (int i = 0; i < pointLights.size(); i++)
+	{
+		pointLights[i]->Update(context, camera.at(0)->position);
+	}
+
 	constPillarsData.viewerPos = camera.at(0)->position;
 	constPillarsData.invertedCamViewProjection = (camera.at(0)->viewMatrix * camera.at(0)->projectionMatrix).Transpose().Invert();
 	constPillarsData.camViewProjection = camera.at(0)->projectionMatrix.Transpose();
@@ -459,8 +480,8 @@ void Game::DrawPillars()
 	);
 	context->Unmap(constPillarsBuffer, 0);
 
-	pointLightData.lightSourcePosition = DirectX::SimpleMath::Vector4(0.0f, 5.0f, 10.0f, 0.0f);
-	pointLightData.lightColor = DirectX::SimpleMath::Vector4(0.0f, 0.8f, 0.7f, 1.0f);
+	pointLightData.lightSourcePosition = DirectX::SimpleMath::Vector4(pointLights[0]->position.x, pointLights[0]->position.y, pointLights[0]->position.z, 1.0f);
+	pointLightData.lightColor = DirectX::SimpleMath::Vector4(pointLights[0]->color.x, pointLights[0]->color.y, pointLights[0]->color.z, 1.0f);
 
 	D3D11_MAPPED_SUBRESOURCE subresourse2 = {};
 	context->Map(
@@ -532,12 +553,20 @@ void Game::DrawPillars()
 	//context->OMSetDepthStencilState(depthStencilState, 1);
 	context->OMSetRenderTargets(1, &rtv, nullptr);
 	context->IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP);
+
 	context->VSSetShader(vertexPillarsShader, nullptr, 0);
 	context->PSSetShader(pixelPillarsShader, nullptr, 0);
+
 	context->PSSetConstantBuffers(0, 1, &constPillarsBuffer);
 	context->PSSetConstantBuffers(1, 1, &pointLightBuffer);
+
 	context->PSSetShaderResources(0, 1, &camDepthView);
+	context->PSSetShaderResources(1, 1, &(pointLights[0]->depthView[2]));
+	context->PSSetShaderResources(2, 1, &(pointLights[0]->depthView[4]));
 	context->PSSetSamplers(0, 1, &samplerState);
+	context->PSSetSamplers(1, 1, &(pointLights[0]->samplerStates[2]));
+	context->PSSetSamplers(2, 1, &(pointLights[0]->samplerStates[4]));
+
 	context->OMSetBlendState(blendState, blendFactor, 0xFFFFFF);
 	context->Draw(4, 0);
 }

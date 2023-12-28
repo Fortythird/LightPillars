@@ -25,9 +25,17 @@ cbuffer ConstBuf : register(b1)
 Texture2D camDepthTexture : register(t0);
 SamplerState camDepthSampler : register(s0);
 
+Texture2D lightFrontFaceDepthTexture : register(t1);
+SamplerState lightFrontFaceDepthSampler : register(s1);
+
+Texture2D lightUpperFaceDepthTexture : register(t2);
+SamplerState lightUpperFaceDepthSampler : register(s2);
+
 static const float CRIT_ANGLE_RAD = radians(5.0f);
 static const float CRIT_ANGLE_DEG = 5.0f;
 static const float PI = 3.1412f;
+static const float GAUSS_MEAN = 20.0f;
+static const float GAUSS_DEVIATION = 5.0f;
 
 float CalculateGaussProt(float d)
 {
@@ -39,6 +47,11 @@ float CalculateGaussProt(float d)
 float CalculateGaussIntegral(float lowerBorder, float upperBorder)
 {
     return (CalculateGaussProt(upperBorder) - CalculateGaussProt(lowerBorder));
+}
+
+float CalculateGaussFunc(float x)
+{
+    return pow(2.71f, -0.5f * pow((x - GAUSS_MEAN) / GAUSS_DEVIATION, 2));
 }
 
 float CalculateRefractionProt(float d)
@@ -66,8 +79,8 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
     
     float3 viewDir = normalize(worldPoint.xyz - constData.viewerPos);
     
-    if (viewDir.y == 0) return float4(0, 0, 0, 1);
-    else
+    if (viewDir.y == 0 || viewDir.x == 0 && viewDir.z == 0) return float4(0, 0, 0, 1);
+    else 
     {
         float shiftY = (pointLightData.lightSourcePosition.y - constData.viewerPos.y) / viewDir.y;
     
@@ -159,7 +172,7 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
                 ));
             }
         
-           /* float3 reflectionDir1 = normalize(float3(
+            float3 reflectionDir1 = normalize(float3(
                 viewDir.x - n1.x,
                 viewDir.y - n1.y,
                 viewDir.z - n1.z
@@ -171,7 +184,7 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
                 viewDir.z - n2.z
             ));
         
-            /*float k = 0;
+            float k = 0;
         
             if (viewDir.x != 0)
             {
@@ -245,7 +258,7 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
                 pointLightData.lightSourcePosition.x - k * reflectionDir2.x,
                 pointLightData.lightSourcePosition.y - k * reflectionDir2.y,
                 pointLightData.lightSourcePosition.z - k * reflectionDir2.z
-            );*/
+            );
         
             float N = abs(CalculateGaussIntegral(acos(n1.y) / PI * 180.0f, acos(normal0.y) / PI * 180.0f)
                 + CalculateGaussIntegral(acos(n2.y) / PI * 180.0f, acos(normal0.y) / PI * 180.0f));
@@ -255,6 +268,8 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
             float e2 = acos(n2.x * viewDir.x + n2.y * viewDir.y + n2.z * viewDir.z);
             
             N *= (abs(CalculateRefractionIntegral(e1, e2)));
+            
+            N *= CalculateGaussFunc(length(R0 - constData.viewerPos)) * clamp(abs(R1 - R2) / 2.0f, 0, 1);
             
             return float4(pointLightData.lightColor.xyz * N, 1.0f);
         }

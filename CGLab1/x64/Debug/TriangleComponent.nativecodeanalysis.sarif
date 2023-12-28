@@ -268,35 +268,6 @@
         {
           "ruleId": "C26495",
           "message": {
-            "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::Buffer' is uninitialized. Always initialize a member variable (type.6)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Delegates.h"
-                },
-                "region": {
-                  "startLine": 409,
-                  "startColumn": 3
-                }
-              },
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "InlineAllocator<32>::{ctor}",
-                  "decoratedName": "??0?$InlineAllocator@$0CA@@@QEAA@XZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::Buffer"
-          }
-        },
-        {
-          "ruleId": "C26495",
-          "message": {
             "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::pPtr' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
@@ -321,6 +292,35 @@
           ],
           "properties": {
             "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::pPtr"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::Buffer' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Delegates.h"
+                },
+                "region": {
+                  "startLine": 409,
+                  "startColumn": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "InlineAllocator<32>::{ctor}",
+                  "decoratedName": "??0?$InlineAllocator@$0CA@@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::Buffer"
           }
         }
       ],
@@ -409,7 +409,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/gamecomponent.h"
           },
           "hashes": {
-            "sha-256": "7f8139962382d5981e6c9b1a0eb508bc130e1c12111168bfb5a140ce5725a841"
+            "sha-256": "73cfa76d7495c58b701c04e5ee81c96ceb3dce10782b221ffc94670709d36049"
           }
         },
         {

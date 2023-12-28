@@ -10,7 +10,7 @@ class GameComponent {
 	public:
 		virtual int Init(Microsoft::WRL::ComPtr<ID3D11Device> device, DisplayWin32 display, HRESULT res) { return 0; };
 	
-		virtual void DestroyResourses() {};
+		virtual void DestroyResources() {};
 
 		virtual void Draw(ID3D11DeviceContext* context, Camera* camera, ID3D11ShaderResourceView* resView) {};
 

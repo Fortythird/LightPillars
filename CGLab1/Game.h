@@ -5,6 +5,7 @@
 #include "GameComponent.h"
 #include "TriangleComponent.h"
 #include "Camera.h"
+#include "PointLight.h"
 
 struct ConstPillarData
 {
@@ -78,6 +79,8 @@ public:
 	InputDevice inputDevice;
 	std::vector <GameComponent*> Components;
 	ID3D11DeviceContext* context;
+
+	std::vector <PointLight*> pointLights;
 
 	bool IsKeyDown(Keys key) { inputDevice.IsKeyDown(key); };
 	virtual void Update();
