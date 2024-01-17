@@ -305,56 +305,25 @@ int TriangleComponent::Init(Microsoft::WRL::ComPtr<ID3D11Device> device, Display
 
 void TriangleComponent::DestroyResources() 
 {
-	if (vertexShader != nullptr) 
-	{
-		vertexShader->Release();
-	}
+	if (vertexShader != nullptr) vertexShader->Release();
 
-	if (pixelShader != nullptr)
-	{
-		pixelShader->Release();
-	}
+	if (pixelShader != nullptr) pixelShader->Release();
 
-	if (layout != nullptr) 
-	{
-		layout->Release();
-	}
+	if (layout != nullptr) layout->Release();
 
-	if (vertexBuffer != nullptr) 
-	{
-		vertexBuffer->Release();
-	}
+	if (vertexBuffer != nullptr) vertexBuffer->Release();
 
-	if (indexBuffer != nullptr) 
-	{
-		indexBuffer->Release();
-	}
+	if (indexBuffer != nullptr) indexBuffer->Release();
 
-	if (rastState != nullptr) 
-	{
-		rastState->Release();
-	}
+	if (rastState != nullptr) rastState->Release();
 
-	if (textureBuffer != nullptr)
-	{
-		textureBuffer->Release();
-	}
+	if (textureBuffer != nullptr) textureBuffer->Release();
 
-	if (constBuffer != nullptr) 
-	{
-		constBuffer->Release();
-	}
+	if (constBuffer != nullptr) constBuffer->Release();
 
-	if (lightConstBuffer != nullptr)
-	{
-		lightConstBuffer->Release();
-	}
+	if (lightConstBuffer != nullptr) lightConstBuffer->Release();
 
-	if (lightBuffer != nullptr)
-	{
-		lightBuffer->Release();
-	}
-
+	if (lightBuffer != nullptr) lightBuffer->Release();
 }
 
 

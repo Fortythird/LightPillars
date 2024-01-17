@@ -60,6 +60,10 @@ void PointLight::Update(ID3D11DeviceContext* context, DirectX::SimpleMath::Vecto
 		-DirectX::SimpleMath::Vector3(viewerPos.x, position.y, viewerPos.z) - position
 	);
 	// Back view
+
+	/*context->RSSetViewports(1, &shadowViewport);
+	ID3D11RenderTargetView* nullrtv[8] = { nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr };
+	context->OMSetRenderTargets(1, nullrtv, &(depthView[2]));*/
 }
 
 void PointLight::DestroyResources()
@@ -76,6 +80,8 @@ void PointLight::DestroyResources()
 
 void PointLight::PrepareResources(Microsoft::WRL::ComPtr<ID3D11Device> device, DirectX::SimpleMath::Vector3 viewerPos)
 {
+	HRESULT res;
+
 	for (int i = 0; i < 6; i++)
 	{
 		depthTextures[i] = nullptr;
@@ -91,16 +97,18 @@ void PointLight::PrepareResources(Microsoft::WRL::ComPtr<ID3D11Device> device, D
 
 	// Right view
 	// Left view
+	// Front view
 	views[2] = DirectX::SimpleMath::Matrix::CreateLookAt(
 		position,
 		DirectX::SimpleMath::Vector3(viewerPos.x, position.y, viewerPos.z),
 		DirectX::SimpleMath::Vector3::Up
 	);
 	// Down view
+	// Upper view
 	views[4] = DirectX::SimpleMath::Matrix::CreateLookAt(
 		position,
 		DirectX::SimpleMath::Vector3::Up,
-		-DirectX::SimpleMath::Vector3(viewerPos.x, position.y, viewerPos.z) - position
+		position - DirectX::SimpleMath::Vector3(viewerPos.x, position.y, viewerPos.z)
 	);
 	// Back view
 
@@ -115,20 +123,36 @@ void PointLight::PrepareResources(Microsoft::WRL::ComPtr<ID3D11Device> device, D
 	depthTexDesc.Width = textureResolution;
 	depthTexDesc.Height = textureResolution;
 	depthTexDesc.SampleDesc = { 1, 0 };
-	device->CreateTexture2D(&depthTexDesc, nullptr, &(depthTextures[2]));
+
+	res = device->CreateTexture2D(&depthTexDesc, nullptr, &(depthTextures[2]));
+	if (FAILED(res)) std::cout << "Failed create cube map depth texture 2" << std::endl;
+
 	device->CreateTexture2D(&depthTexDesc, nullptr, &(depthTextures[4]));
+	if (FAILED(res)) std::cout << "Failed create cube map depth texture 4" << std::endl;
 
 	D3D11_SHADER_RESOURCE_VIEW_DESC shaderResViewDesc = {};
 	shaderResViewDesc.ViewDimension = D3D11_SRV_DIMENSION_TEXTURE2D;
 	shaderResViewDesc.Format = DXGI_FORMAT_R32_FLOAT;
 	shaderResViewDesc.Texture2D.MipLevels = 1;
-	device->CreateShaderResourceView(depthTextures[2], &shaderResViewDesc, &(depthView[2]));
-	device->CreateShaderResourceView(depthTextures[4], &shaderResViewDesc, &(depthView[4]));
+	res = device->CreateShaderResourceView(depthTextures[2], &shaderResViewDesc, &(depthView[2]));
+	if (FAILED(res)) std::cout << "Failed create cube map depth shader resource view 2" << std::endl;
+
+	res = device->CreateShaderResourceView(depthTextures[4], &shaderResViewDesc, &(depthView[4]));
+	if (FAILED(res)) std::cout << "Failed create cube map depth shader resource view 4" << std::endl;
 
 	D3D11_SAMPLER_DESC SamplerDesc = {};
 	SamplerDesc.Filter = D3D11_FILTER_MIN_MAG_MIP_LINEAR;
-	SamplerDesc.AddressU = D3D11_TEXTURE_ADDRESS_WRAP;
-	SamplerDesc.AddressV = D3D11_TEXTURE_ADDRESS_WRAP;
-	SamplerDesc.AddressW = D3D11_TEXTURE_ADDRESS_WRAP;
-	for (int i = 0; i < 6; i++) device->CreateSamplerState(&SamplerDesc, &(samplerStates[i]));
+	SamplerDesc.AddressU = D3D11_TEXTURE_ADDRESS_CLAMP;
+	SamplerDesc.AddressV = D3D11_TEXTURE_ADDRESS_CLAMP;
+	SamplerDesc.AddressW = D3D11_TEXTURE_ADDRESS_CLAMP;
+	res = device->CreateSamplerState(&SamplerDesc, &samplerState);
+	if (FAILED(res)) std::cout << "Failed creating light depth texture Sampler state" << std::endl;
+
+	shadowViewport = {};
+	shadowViewport.Width = textureResolution;
+	shadowViewport.Height = textureResolution;
+	shadowViewport.TopLeftX = 0;
+	shadowViewport.TopLeftY = 0;
+	shadowViewport.MinDepth = 0;
+	shadowViewport.MaxDepth = 1.0f;
 }

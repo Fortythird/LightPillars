@@ -6,13 +6,7 @@ Camera::Camera(DirectX::SimpleMath::Vector3* _parentPos)
 	parentPos = _parentPos;
 }
 
-void Camera::Initialize(
-	DirectX::SimpleMath::Vector3 pos, 
-	float yawVal, 
-	float pitchVal, 
-	int screenWidth, 
-	int screenHeight, 
-	InputDevice* inputeDeviceInstance) 
+void Camera::Initialize(DirectX::SimpleMath::Vector3 pos, float yawVal, float pitchVal, int screenWidth, int screenHeight, InputDevice* inputeDeviceInstance) 
 {
 	inputDeviceCameraInstance = inputeDeviceInstance;
 	viewMatrix = DirectX::SimpleMath::Matrix::Identity;

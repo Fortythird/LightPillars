@@ -32,7 +32,7 @@ void Game::Init()
 
 	pointLights.push_back(new PointLight(
 		DirectX::SimpleMath::Vector3(5.0f, 5.0f, 0),
-		DirectX::SimpleMath::Vector3(0.5f, 0.2f, 0.8f)
+		DirectX::SimpleMath::Vector3(0.5f, 0.6f, 0.8f)
 	));
 
 	PrepareResources();
@@ -138,45 +138,37 @@ int Game::PrepareResources()
 	depthTexDesc.Width = 5000;
 	depthTexDesc.Height = 5000;
 	depthTexDesc.SampleDesc = { 1, 0 };
+
 	res = device->CreateTexture2D(&depthTexDesc, nullptr, &shadowDepthTexture);
+	if (FAILED(res)) std::cout << "Error while creating texture 2D" << std::endl;
+
 	depthTexDesc.Width = display.getScreenWidth();
 	depthTexDesc.Height = display.getScreenHeight();
-	res = device->CreateTexture2D(&depthTexDesc, nullptr, &sceneDepthTexture);
 
-	if (FAILED(res))
-	{
-		std::cout << "Error while creating texture 2D" << std::endl;
-	}
+	res = device->CreateTexture2D(&depthTexDesc, nullptr, &sceneDepthTexture);
+	if (FAILED(res)) std::cout << "Error while creating texture 2D" << std::endl;
 
 	D3D11_DEPTH_STENCIL_VIEW_DESC depthStenDesc = {};
 	depthStenDesc.Format = DXGI_FORMAT_D32_FLOAT;
 	depthStenDesc.ViewDimension = D3D11_DSV_DIMENSION_TEXTURE2D;
 	depthStenDesc.Texture2D.MipSlice = 0;
-	res = device->CreateDepthStencilView(sceneDepthTexture, &depthStenDesc, &depthView);
 
-	if (FAILED(res))
-	{
-		std::cout << "Error while creating scene depth stencil view" << std::endl;
-	}
+	res = device->CreateDepthStencilView(sceneDepthTexture, &depthStenDesc, &depthView);
+	if (FAILED(res)) std::cout << "Error while creating scene depth stencil view" << std::endl;
 
 	res = device->CreateDepthStencilView(shadowDepthTexture, &depthStenDesc, &shadowDepthView);
-
-	if (FAILED(res))
-	{
-		std::cout << "Error while creating shadow depth stencil view" << std::endl;
-	}
+	if (FAILED(res)) std::cout << "Error while creating shadow depth stencil view" << std::endl;
 
 	D3D11_SHADER_RESOURCE_VIEW_DESC shaderResViewDesc = {};
 	shaderResViewDesc.ViewDimension = D3D11_SRV_DIMENSION_TEXTURE2D;
 	shaderResViewDesc.Format = DXGI_FORMAT_R32_FLOAT;
 	shaderResViewDesc.Texture2D.MipLevels = 1;
-	res = device->CreateShaderResourceView(shadowDepthTexture, &shaderResViewDesc, &resView);
-	res = device->CreateShaderResourceView(sceneDepthTexture, &shaderResViewDesc, &camDepthView);
 
-	if (FAILED(res))
-	{
-		std::cout << "Error while creating shader resource view" << std::endl;
-	}
+	res = device->CreateShaderResourceView(shadowDepthTexture, &shaderResViewDesc, &resView);
+	if (FAILED(res)) std::cout << "Error while creating shader resource view" << std::endl;
+
+	res = device->CreateShaderResourceView(sceneDepthTexture, &shaderResViewDesc, &camDepthView);
+	if (FAILED(res)) std::cout << "Error while creating shader resource view" << std::endl;
 
 	D3D11_RASTERIZER_DESC drawRenderStateDesc = {};
 	drawRenderStateDesc.CullMode = D3D11_CULL_BACK;
@@ -188,10 +180,7 @@ int Game::PrepareResources()
 	res = swapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (void**)&backTexture);
 	res = device->CreateRenderTargetView(backTexture, nullptr, &rtv);
 
-	for (int i = 0; i < Components.size(); i++)
-	{
-		Components[i]->Init(device, display, res);
-	}
+	for (int i = 0; i < Components.size(); i++) Components[i]->Init(device, display, res);
 
 	ID3DBlob* vertexBC = nullptr;
 	ID3DBlob* errorVertexCode = nullptr;
@@ -208,16 +197,14 @@ int Game::PrepareResources()
 		&errorVertexCode
 	);
 
-	if (FAILED(res)) {
+	if (FAILED(res)) 
+	{
 		if (errorVertexCode)
 		{
 			char* compileErrors = (char*)(errorVertexCode->GetBufferPointer());
 			std::cout << compileErrors << std::endl;
 		}
-		else
-		{
-			MessageBox(display.getHWND(), L"../Shaders/ThirdExampleShader.hlsl", L"Missing Shader File", MB_OK);
-		}
+		else MessageBox(display.getHWND(), L"../Shaders/PillarsShader.hlsl", L"Missing Shader File", MB_OK);
 	}
 
 	ID3DBlob* pixelBC = nullptr;
@@ -235,16 +222,14 @@ int Game::PrepareResources()
 		&errorPixelCode
 	);
 
-	if (FAILED(res)) {
+	if (FAILED(res)) 
+	{
 		if (errorPixelCode)
 		{
 			char* compileErrors = (char*)(errorPixelCode->GetBufferPointer());
 			std::cout << compileErrors << std::endl;
 		}
-		else
-		{
-			MessageBox(display.getHWND(), L"../Shaders/ThirdExampleShader.hlsl", L"Missing Shader File", MB_OK);
-		}
+		else MessageBox(display.getHWND(), L"../Shaders/PillarsShader.hlsl", L"Missing Shader File", MB_OK);
 	}
 
 	device->CreateVertexShader(
@@ -270,10 +255,7 @@ int Game::PrepareResources()
 	constPillarsBufDesc.ByteWidth = sizeof(constPillarsData);
 	HRESULT result = device->CreateBuffer(&constPillarsBufDesc, nullptr, &constPillarsBuffer);
 
-	if (FAILED(result)) 
-	{
-		std::cout << "Error while pillars' const buffer creating...";
-	}
+	if (FAILED(result)) std::cout << "Error while pillars' const buffer creating...";
 
 	D3D11_BUFFER_DESC pointLightBufDesc = {};
 	pointLightBufDesc.Usage = D3D11_USAGE_DYNAMIC;
@@ -284,25 +266,16 @@ int Game::PrepareResources()
 	pointLightBufDesc.ByteWidth = sizeof(PointLightData);
 	result = device->CreateBuffer(&pointLightBufDesc, nullptr, &pointLightBuffer);
 
-	if (FAILED(result))
-	{
-		std::cout << "Error while point light buffer creating...";
-	}
+	if (FAILED(result)) std::cout << "Error while point light buffer creating...";
 
-	for (int i = 0; i < pointLights.size(); i++)
-	{
-		pointLights[i]->PrepareResources(device, camera.at(0)->position);
-	}
+	for (int i = 0; i < pointLights.size(); i++) pointLights[i]->PrepareResources(device, camera.at(0)->position);
 
 	return 0;
 }
 
 void Game::DestroyResources() 
 {
-	for (int i = 0; i < Components.size(); i++) 
-	{
-		Components[i]->DestroyResources();
-	}
+	for (int i = 0; i < Components.size(); i++) Components[i]->DestroyResources();
 
 	if (context != nullptr) 
 	{
@@ -310,75 +283,33 @@ void Game::DestroyResources()
 		context->Release();
 	}
 
-	if (swapChain != nullptr) 
-	{
-		swapChain->Release();
-	}
+	if (swapChain != nullptr) swapChain->Release();
 
-	if (device != nullptr) 
-	{
-		device->Release();
-	}
+	if (device != nullptr) device->Release();
 
-	if (debug != nullptr) 
-	{
-		debug->ReportLiveDeviceObjects(D3D11_RLDO_DETAIL);
-	}
+	if (debug != nullptr) debug->ReportLiveDeviceObjects(D3D11_RLDO_DETAIL);
 
-	if (shadowDepthTexture) 
-	{
-		shadowDepthTexture->Release();
-	}
+	if (shadowDepthTexture) shadowDepthTexture->Release();
 
-	if (sceneDepthTexture)
-	{
-		sceneDepthTexture->Release();
-	}
+	if (sceneDepthTexture) sceneDepthTexture->Release();
 
-	if (depthView != nullptr) 
-	{
-		depthView->Release();
-	}
+	if (depthView != nullptr) depthView->Release();
 
-	if (camDepthView != nullptr)
-	{
-		camDepthView->Release();
-	}
+	if (camDepthView != nullptr) camDepthView->Release();
 	
-	if (shadowDepthView != nullptr) 
-	{
-		shadowDepthView->Release();
-	}
+	if (shadowDepthView != nullptr) shadowDepthView->Release();
 
-	if (vertexPillarsShader != nullptr)
-	{
-		vertexPillarsShader->Release();
-	}
+	if (vertexPillarsShader != nullptr) vertexPillarsShader->Release();
 
-	if (pixelPillarsShader != nullptr)
-	{
-		pixelPillarsShader->Release();
-	}
+	if (pixelPillarsShader != nullptr) pixelPillarsShader->Release();
 
-	if (depthStencilState != nullptr)
-	{
-		depthStencilState->Release();
-	}
+	if (depthStencilState != nullptr) depthStencilState->Release();
 
-	if (constPillarsBuffer != nullptr)
-	{
-		constPillarsBuffer->Release();
-	}
+	if (constPillarsBuffer != nullptr) constPillarsBuffer->Release();
 
-	if (pointLightBuffer != nullptr)
-	{
-		pointLightBuffer->Release();
-	}
+	if (pointLightBuffer != nullptr) pointLightBuffer->Release();
 
-	for (int i = 0; i < pointLights.size(); i++)
-	{
-		pointLights[i]->DestroyResources();
-	}
+	for (int i = 0; i < pointLights.size(); i++) pointLights[i]->DestroyResources();
 }
 
 void Game::PrepareFrame() 
@@ -445,16 +376,11 @@ void Game::DrawShadows()
 	ID3D11RenderTargetView* nullrtv[8] = {nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr};
 	context->OMSetRenderTargets(1, nullrtv, shadowDepthView);
 
-	for (int i = 0; i < Components.size(); i++)
-	{
-		Components[i]->DrawShadow(context, device);
-	}	
-	
+	for (int i = 0; i < Components.size(); i++) Components[i]->DrawShadow(context, device);	
 }
 
 void Game::DrawPillars()
 {
-
 	for (int i = 0; i < pointLights.size(); i++)
 	{
 		pointLights[i]->Update(context, camera.at(0)->position);
@@ -482,6 +408,8 @@ void Game::DrawPillars()
 
 	pointLightData.lightSourcePosition = DirectX::SimpleMath::Vector4(pointLights[0]->position.x, pointLights[0]->position.y, pointLights[0]->position.z, 1.0f);
 	pointLightData.lightColor = DirectX::SimpleMath::Vector4(pointLights[0]->color.x, pointLights[0]->color.y, pointLights[0]->color.z, 1.0f);
+	pointLightData.frontFaceViewProjection = (pointLights.at(0)->views[2] * pointLights.at(0)->projectionMtrx).Transpose();
+	pointLightData.frontFaceViewProjection = (pointLights.at(0)->views[4] * pointLights.at(0)->projectionMtrx).Transpose();
 
 	D3D11_MAPPED_SUBRESOURCE subresourse2 = {};
 	context->Map(
@@ -517,7 +445,8 @@ void Game::DrawPillars()
 		&blendState
 	);
 
-	if (FAILED(res)) {
+	if (FAILED(res)) 
+	{
 		std::cout << "Failed creating BlendState" << std::endl;
 	}
 
@@ -548,9 +477,10 @@ void Game::DrawPillars()
 	SamplerDesc.AddressU = D3D11_TEXTURE_ADDRESS_WRAP;
 	SamplerDesc.AddressV = D3D11_TEXTURE_ADDRESS_WRAP;
 	SamplerDesc.AddressW = D3D11_TEXTURE_ADDRESS_WRAP;
-	device->CreateSamplerState(&SamplerDesc, &samplerState);
+	res = device->CreateSamplerState(&SamplerDesc, &samplerState);
 
-	//context->OMSetDepthStencilState(depthStencilState, 1);
+	if (FAILED(res)) std::cout << "Failed creating Sampler state" << std::endl;
+
 	context->OMSetRenderTargets(1, &rtv, nullptr);
 	context->IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP);
 
@@ -561,11 +491,10 @@ void Game::DrawPillars()
 	context->PSSetConstantBuffers(1, 1, &pointLightBuffer);
 
 	context->PSSetShaderResources(0, 1, &camDepthView);
-	context->PSSetShaderResources(1, 1, &(pointLights[0]->depthView[2]));
-	context->PSSetShaderResources(2, 1, &(pointLights[0]->depthView[4]));
+	context->PSSetShaderResources(1, 1, &(pointLights.at(0)->depthView[2]));
+	context->PSSetShaderResources(2, 1, &(pointLights.at(0)->depthView[4]));
 	context->PSSetSamplers(0, 1, &samplerState);
-	context->PSSetSamplers(1, 1, &(pointLights[0]->samplerStates[2]));
-	context->PSSetSamplers(2, 1, &(pointLights[0]->samplerStates[4]));
+	context->PSSetSamplers(1, 1, &(pointLights.at(0)->samplerState));
 
 	context->OMSetBlendState(blendState, blendFactor, 0xFFFFFF);
 	context->Draw(4, 0);

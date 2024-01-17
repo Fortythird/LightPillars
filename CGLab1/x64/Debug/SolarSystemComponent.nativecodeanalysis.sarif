@@ -223,7 +223,7 @@
             "analysisTarget"
           ],
           "hashes": {
-            "sha-256": "8a02d7acb8fb7ebdf8a2655bfa9badf57c84440077f897f625b8f128af18fd18"
+            "sha-256": "1d4414f38987bb5650057c7029c99e86575d41c67bd17adbabe0e210c5dfe614"
           }
         },
         {
@@ -503,7 +503,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/game.h"
           },
           "hashes": {
-            "sha-256": "3f01622fbb045f27169ed0470815d54d2e14ded1e6d6e49b9782b29b615ee60c"
+            "sha-256": "b391cc24b9433d4674610eba3fa71c169700f54a0721b7629837917fa5a818b0"
           }
         },
         {
@@ -559,7 +559,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/pointlight.h"
           },
           "hashes": {
-            "sha-256": "06b50978a4ec2a18d428b24e4db292964e91370a013018d065f7049ca6ec8a55"
+            "sha-256": "c1e53d707bdf22c96fa6cb74e1d95a8eab6cd18a470cfa9fe7d565074999cc32"
           }
         }
       ]

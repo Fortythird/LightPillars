@@ -19,6 +19,8 @@ struct PointLightData
 {
 	DirectX::SimpleMath::Vector4 lightSourcePosition;
 	DirectX::SimpleMath::Vector4 lightColor;
+	DirectX::SimpleMath::Matrix frontFaceViewProjection;
+	DirectX::SimpleMath::Matrix upperFaceViewProjection;
 };
 
 class Game 

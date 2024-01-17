@@ -6,9 +6,9 @@
 class PointLight
 {
 private:
-
-	DirectX::SimpleMath::Matrix projectionMtrx;
 	int textureResolution = 1024;
+
+	D3D11_VIEWPORT shadowViewport;
 
 public:
 	
@@ -16,6 +16,7 @@ public:
 	DirectX::SimpleMath::Vector3 color;
 
 	DirectX::SimpleMath::Matrix views[6];
+	DirectX::SimpleMath::Matrix projectionMtrx;
 
 	float intensity;
 	float nearDistance;
@@ -23,7 +24,7 @@ public:
 
 	ID3D11Texture2D* depthTextures[6] = {};
 	ID3D11ShaderResourceView* depthView[6] = {};
-	ID3D11SamplerState* samplerStates[6] = {};
+	ID3D11SamplerState* samplerState;
 
 	PointLight();
 	PointLight(DirectX::SimpleMath::Vector3 pos, DirectX::SimpleMath::Vector3 col);

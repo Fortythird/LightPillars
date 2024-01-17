@@ -157,7 +157,7 @@
     <SFA>
       <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
       <FILENAME>Game.cpp</FILENAME>
-      <LINE>155</LINE>
+      <LINE>156</LINE>
       <COLUMN>5</COLUMN>
     </SFA>
     <DEFECTCODE>6387</DEFECTCODE>
@@ -450,31 +450,13 @@
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>141</LINE>
-        <COLUMN>5</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
         <LINE>142</LINE>
-        <COLUMN>20</COLUMN>
+        <COLUMN>5</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
         <LINE>143</LINE>
-        <COLUMN>21</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
-        <LINE>144</LINE>
-        <COLUMN>5</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
-        <LINE>146</LINE>
         <COLUMN>5</COLUMN>
         <KEYEVENT>
           <ID>2</ID>
@@ -486,8 +468,44 @@
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
+        <LINE>143</LINE>
+        <COLUMN>65</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>145</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>146</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
         <LINE>148</LINE>
-        <COLUMN>49</COLUMN>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>149</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'FAILED(res)')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>149</LINE>
+        <COLUMN>65</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
@@ -516,10 +534,10 @@
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>155</LINE>
+        <LINE>156</LINE>
         <COLUMN>5</COLUMN>
         <KEYEVENT>
-          <ID>3</ID>
+          <ID>4</ID>
           <KIND>usage</KIND>
           <IMPORTANCE>Essential</IMPORTANCE>
           <MESSAGE>'sceneDepthTexture' should not be NULL, because this is not consistent with the SAL annotation on 'ID3D11Device::CreateDepthStencilView'</MESSAGE>
@@ -531,7 +549,7 @@
     <SFA>
       <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
       <FILENAME>Game.cpp</FILENAME>
-      <LINE>162</LINE>
+      <LINE>159</LINE>
       <COLUMN>5</COLUMN>
     </SFA>
     <DEFECTCODE>6387</DEFECTCODE>
@@ -824,31 +842,13 @@
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>141</LINE>
-        <COLUMN>5</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
         <LINE>142</LINE>
-        <COLUMN>20</COLUMN>
+        <COLUMN>5</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
         <LINE>143</LINE>
-        <COLUMN>21</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
-        <LINE>144</LINE>
-        <COLUMN>5</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
-        <LINE>146</LINE>
         <COLUMN>5</COLUMN>
         <KEYEVENT>
           <ID>2</ID>
@@ -860,8 +860,44 @@
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
+        <LINE>143</LINE>
+        <COLUMN>65</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>145</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>146</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
         <LINE>148</LINE>
-        <COLUMN>49</COLUMN>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>149</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'FAILED(res)')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>149</LINE>
+        <COLUMN>65</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
@@ -890,7 +926,7 @@
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>155</LINE>
+        <LINE>156</LINE>
         <COLUMN>5</COLUMN>
       </SFA>
       <SFA>
@@ -899,7 +935,7 @@
         <LINE>157</LINE>
         <COLUMN>5</COLUMN>
         <KEYEVENT>
-          <ID>3</ID>
+          <ID>4</ID>
           <KIND>branch</KIND>
           <IMPORTANCE>Full</IMPORTANCE>
           <MESSAGE>Enter this branch, (assume 'FAILED(res)')</MESSAGE>
@@ -908,16 +944,16 @@
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>159</LINE>
-        <COLUMN>63</COLUMN>
+        <LINE>157</LINE>
+        <COLUMN>79</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>162</LINE>
+        <LINE>159</LINE>
         <COLUMN>5</COLUMN>
         <KEYEVENT>
-          <ID>4</ID>
+          <ID>5</ID>
           <KIND>declaration</KIND>
           <IMPORTANCE>Full</IMPORTANCE>
           <MESSAGE>'shadowDepthTexture' is an Output from 'ID3D11Device::CreateDepthStencilView' (declared at c:\program files (x86)\windows kits\10\include\10.0.19041.0\um\d3d11.h:13619)</MESSAGE>
@@ -926,10 +962,10 @@
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>162</LINE>
+        <LINE>159</LINE>
         <COLUMN>5</COLUMN>
         <KEYEVENT>
-          <ID>5</ID>
+          <ID>6</ID>
           <KIND>usage</KIND>
           <IMPORTANCE>Essential</IMPORTANCE>
           <MESSAGE>'shadowDepthTexture' should not be NULL, because this is not consistent with the SAL annotation on 'ID3D11Device::CreateDepthStencilView'</MESSAGE>
@@ -941,7 +977,7 @@
     <SFA>
       <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
       <FILENAME>Game.cpp</FILENAME>
-      <LINE>173</LINE>
+      <LINE>167</LINE>
       <COLUMN>5</COLUMN>
     </SFA>
     <DEFECTCODE>6387</DEFECTCODE>
@@ -1234,31 +1270,13 @@
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>141</LINE>
-        <COLUMN>5</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
         <LINE>142</LINE>
-        <COLUMN>20</COLUMN>
+        <COLUMN>5</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
         <LINE>143</LINE>
-        <COLUMN>21</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
-        <LINE>144</LINE>
-        <COLUMN>5</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
-        <LINE>146</LINE>
         <COLUMN>5</COLUMN>
         <KEYEVENT>
           <ID>2</ID>
@@ -1270,8 +1288,44 @@
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
+        <LINE>143</LINE>
+        <COLUMN>65</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>145</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>146</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
         <LINE>148</LINE>
-        <COLUMN>49</COLUMN>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>149</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'FAILED(res)')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>149</LINE>
+        <COLUMN>65</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
@@ -1300,7 +1354,7 @@
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>155</LINE>
+        <LINE>156</LINE>
         <COLUMN>5</COLUMN>
       </SFA>
       <SFA>
@@ -1309,7 +1363,7 @@
         <LINE>157</LINE>
         <COLUMN>5</COLUMN>
         <KEYEVENT>
-          <ID>3</ID>
+          <ID>4</ID>
           <KIND>branch</KIND>
           <IMPORTANCE>Full</IMPORTANCE>
           <MESSAGE>Enter this branch, (assume 'FAILED(res)')</MESSAGE>
@@ -1318,16 +1372,16 @@
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>159</LINE>
-        <COLUMN>63</COLUMN>
+        <LINE>157</LINE>
+        <COLUMN>79</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>162</LINE>
+        <LINE>159</LINE>
         <COLUMN>5</COLUMN>
         <KEYEVENT>
-          <ID>4</ID>
+          <ID>5</ID>
           <KIND>declaration</KIND>
           <IMPORTANCE>Full</IMPORTANCE>
           <MESSAGE>'shadowDepthTexture' is an Output from 'ID3D11Device::CreateDepthStencilView' (declared at c:\program files (x86)\windows kits\10\include\10.0.19041.0\um\d3d11.h:13619)</MESSAGE>
@@ -1336,10 +1390,10 @@
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>164</LINE>
+        <LINE>160</LINE>
         <COLUMN>5</COLUMN>
         <KEYEVENT>
-          <ID>5</ID>
+          <ID>6</ID>
           <KIND>branch</KIND>
           <IMPORTANCE>Full</IMPORTANCE>
           <MESSAGE>Enter this branch, (assume 'FAILED(res)')</MESSAGE>
@@ -1348,40 +1402,40 @@
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>166</LINE>
-        <COLUMN>64</COLUMN>
+        <LINE>160</LINE>
+        <COLUMN>80</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>169</LINE>
+        <LINE>162</LINE>
         <COLUMN>33</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>170</LINE>
+        <LINE>163</LINE>
         <COLUMN>33</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>171</LINE>
+        <LINE>164</LINE>
         <COLUMN>26</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>172</LINE>
+        <LINE>165</LINE>
         <COLUMN>39</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>173</LINE>
+        <LINE>167</LINE>
         <COLUMN>5</COLUMN>
         <KEYEVENT>
-          <ID>6</ID>
+          <ID>7</ID>
           <KIND>usage</KIND>
           <IMPORTANCE>Essential</IMPORTANCE>
           <MESSAGE>'shadowDepthTexture' should not be NULL, because this is not consistent with the SAL annotation on 'ID3D11Device::CreateShaderResourceView'</MESSAGE>
@@ -1393,7 +1447,7 @@
     <SFA>
       <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
       <FILENAME>Game.cpp</FILENAME>
-      <LINE>174</LINE>
+      <LINE>170</LINE>
       <COLUMN>5</COLUMN>
     </SFA>
     <DEFECTCODE>6387</DEFECTCODE>
@@ -1686,31 +1740,13 @@
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>141</LINE>
-        <COLUMN>5</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
         <LINE>142</LINE>
-        <COLUMN>20</COLUMN>
+        <COLUMN>5</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
         <LINE>143</LINE>
-        <COLUMN>21</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
-        <LINE>144</LINE>
-        <COLUMN>5</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
-        <LINE>146</LINE>
         <COLUMN>5</COLUMN>
         <KEYEVENT>
           <ID>2</ID>
@@ -1722,8 +1758,44 @@
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
+        <LINE>143</LINE>
+        <COLUMN>65</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>145</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>146</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
         <LINE>148</LINE>
-        <COLUMN>49</COLUMN>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>149</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'FAILED(res)')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>149</LINE>
+        <COLUMN>65</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
@@ -1752,10 +1824,10 @@
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>155</LINE>
+        <LINE>156</LINE>
         <COLUMN>5</COLUMN>
         <KEYEVENT>
-          <ID>3</ID>
+          <ID>4</ID>
           <KIND>declaration</KIND>
           <IMPORTANCE>Full</IMPORTANCE>
           <MESSAGE>'sceneDepthTexture' is an Output from 'ID3D11Device::CreateDepthStencilView' (declared at c:\program files (x86)\windows kits\10\include\10.0.19041.0\um\d3d11.h:13619)</MESSAGE>
@@ -1767,30 +1839,6 @@
         <LINE>157</LINE>
         <COLUMN>5</COLUMN>
         <KEYEVENT>
-          <ID>4</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume 'FAILED(res)')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
-        <LINE>159</LINE>
-        <COLUMN>63</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
-        <LINE>162</LINE>
-        <COLUMN>5</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
-        <LINE>164</LINE>
-        <COLUMN>5</COLUMN>
-        <KEYEVENT>
           <ID>5</ID>
           <KIND>branch</KIND>
           <IMPORTANCE>Full</IMPORTANCE>
@@ -1800,46 +1848,100 @@
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>166</LINE>
-        <COLUMN>64</COLUMN>
+        <LINE>157</LINE>
+        <COLUMN>79</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>169</LINE>
+        <LINE>159</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>160</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'FAILED(res)')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>160</LINE>
+        <COLUMN>80</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>162</LINE>
         <COLUMN>33</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>170</LINE>
+        <LINE>163</LINE>
         <COLUMN>33</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>171</LINE>
+        <LINE>164</LINE>
         <COLUMN>26</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>172</LINE>
+        <LINE>165</LINE>
         <COLUMN>39</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>173</LINE>
+        <LINE>167</LINE>
         <COLUMN>5</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>174</LINE>
+        <LINE>168</LINE>
         <COLUMN>5</COLUMN>
         <KEYEVENT>
-          <ID>6</ID>
+          <ID>7</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'FAILED(res)')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>168</LINE>
+        <COLUMN>75</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>170</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>8</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'sceneDepthTexture' is an Output from 'ID3D11Device::CreateShaderResourceView' (declared at c:\program files (x86)\windows kits\10\include\10.0.19041.0\um\d3d11.h:13595)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>170</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>9</ID>
           <KIND>usage</KIND>
           <IMPORTANCE>Essential</IMPORTANCE>
           <MESSAGE>'sceneDepthTexture' should not be NULL, because this is not consistent with the SAL annotation on 'ID3D11Device::CreateShaderResourceView'</MESSAGE>
@@ -1851,7 +1953,7 @@
     <SFA>
       <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
       <FILENAME>Game.cpp</FILENAME>
-      <LINE>189</LINE>
+      <LINE>181</LINE>
       <COLUMN>5</COLUMN>
     </SFA>
     <DEFECTCODE>6387</DEFECTCODE>
@@ -2138,38 +2240,50 @@
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>141</LINE>
-        <COLUMN>5</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
         <LINE>142</LINE>
-        <COLUMN>20</COLUMN>
+        <COLUMN>5</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
         <LINE>143</LINE>
-        <COLUMN>21</COLUMN>
+        <COLUMN>5</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>144</LINE>
-        <COLUMN>5</COLUMN>
+        <LINE>143</LINE>
+        <COLUMN>65</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>145</LINE>
+        <COLUMN>20</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
         <LINE>146</LINE>
-        <COLUMN>5</COLUMN>
+        <COLUMN>21</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
         <LINE>148</LINE>
-        <COLUMN>49</COLUMN>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>149</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>149</LINE>
+        <COLUMN>65</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
@@ -2198,7 +2312,7 @@
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>155</LINE>
+        <LINE>156</LINE>
         <COLUMN>5</COLUMN>
       </SFA>
       <SFA>
@@ -2210,115 +2324,127 @@
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
+        <LINE>157</LINE>
+        <COLUMN>79</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
         <LINE>159</LINE>
-        <COLUMN>63</COLUMN>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>160</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>160</LINE>
+        <COLUMN>80</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
         <LINE>162</LINE>
-        <COLUMN>5</COLUMN>
+        <COLUMN>33</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>163</LINE>
+        <COLUMN>33</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
         <LINE>164</LINE>
-        <COLUMN>5</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
-        <LINE>166</LINE>
-        <COLUMN>64</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
-        <LINE>169</LINE>
-        <COLUMN>33</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
-        <LINE>170</LINE>
-        <COLUMN>33</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
-        <LINE>171</LINE>
         <COLUMN>26</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>172</LINE>
+        <LINE>165</LINE>
         <COLUMN>39</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
+        <LINE>167</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>168</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>168</LINE>
+        <COLUMN>75</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>170</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>171</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
+        <LINE>171</LINE>
+        <COLUMN>75</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+        <FILENAME>Game.cpp</FILENAME>
         <LINE>173</LINE>
-        <COLUMN>5</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
-        <LINE>174</LINE>
-        <COLUMN>5</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
-        <LINE>176</LINE>
-        <COLUMN>5</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
-        <LINE>178</LINE>
-        <COLUMN>59</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-        <FILENAME>Game.cpp</FILENAME>
-        <LINE>181</LINE>
         <COLUMN>23</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>182</LINE>
+        <LINE>174</LINE>
         <COLUMN>30</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>183</LINE>
+        <LINE>175</LINE>
         <COLUMN>30</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>184</LINE>
+        <LINE>176</LINE>
         <COLUMN>37</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>185</LINE>
+        <LINE>177</LINE>
         <COLUMN>5</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>187</LINE>
+        <LINE>179</LINE>
         <COLUMN>18</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>188</LINE>
+        <LINE>180</LINE>
         <COLUMN>5</COLUMN>
         <KEYEVENT>
           <ID>1</ID>
@@ -2330,7 +2456,7 @@
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>Game.cpp</FILENAME>
-        <LINE>189</LINE>
+        <LINE>181</LINE>
         <COLUMN>5</COLUMN>
         <KEYEVENT>
           <ID>2</ID>
@@ -2349,12 +2475,12 @@
       <COLUMN>2</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::pPtr' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::Buffer' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>InlineAllocator&lt;32&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$InlineAllocator@$0CA@@@QEAA@XZ</DECORATED>
     <FUNCLINE>409</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::pPtr</targetSymbol>
+      <targetSymbol>InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::Buffer</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -2366,12 +2492,12 @@
       <COLUMN>2</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::Buffer' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::pPtr' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>InlineAllocator&lt;32&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$InlineAllocator@$0CA@@@QEAA@XZ</DECORATED>
     <FUNCLINE>409</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::Buffer</targetSymbol>
+      <targetSymbol>InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::pPtr</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
