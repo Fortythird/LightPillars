@@ -34,7 +34,7 @@ void SolarSystemComponent::Init()
 	Components.push_back(floor);
 
 	Components.push_back(Ball);
-	Ball->pos = { 5.0f, 10.0f, 0.0f };
+	Ball->pos = { 5.0f, 0.0f, 0.0f };
 
 	auto cameraInstance = new Camera(&Ball->pos);
 	cameraInstance->Initialize(

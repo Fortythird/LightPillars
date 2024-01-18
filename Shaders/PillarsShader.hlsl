@@ -1,4 +1,4 @@
-static int DEPTH_CALC_ENABLED = 1;
+static const int DEPTH_CALC_ENABLED = 0;
 
 struct ConstData
 {
@@ -45,9 +45,10 @@ SamplerState lightDepthSampler : register(s1);
 
 static const float CRIT_ANGLE_RAD = radians(5.0f);
 static const float CRIT_ANGLE_DEG = 5.0f;
-static const float PI = 3.1412f;
+static const float PI = 3.14159265359f;
 static const float ABSORPTION_PARAMETER = 0.02f;
-static const int DEPTH_READING_FREQUENCY = 100;
+static const float DEPTH_READING_FREQUENCY = 100.0f;
+static const float PILLAR_WIDTH_FACTOR = 10.0f;
 
 float CalculateGaussProt(float d)
 {
@@ -100,12 +101,7 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
             R0z
         );
         
-        float4 camSpacePoint = mul(constData.camViewProjection, float4(R0.xyz, 0)); // Make this with Rn
-        float depthValue = camDepthTexture.SampleLevel(camDepthSampler, 
-            float2((NDC.x + 1.0f) / 2, -(NDC.y + 1.0f) / 2), 0).x;
-        
-        if (depthValue <= camSpacePoint.z / camSpacePoint.w && depthValue != 1.0f)
-            return float4(0, 0, 0, 1);
+
     
         float3 reflectionDir = normalize(pointLightData.lightSourcePosition.xyz - R0);
     
@@ -233,9 +229,23 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
                 ));
             }*/
         
-            float3 reflectionDir1 = normalize(viewDir - n1);
+            /*float t1 = (-n1.x * viewDir.x - n1.y * viewDir.y - n1.z * viewDir.z) / (pow(n1.x, 2) + pow(n1.y, 2) + pow(n1.z, 2));
+            float t2 = (-n2.x * viewDir.x - n2.y * viewDir.y - n2.z * viewDir.z) / (pow(n2.x, 2) + pow(n2.y, 2) + pow(n2.z, 2));
+            
+            float3 reflectionDir1 = normalize(float3(
+                2 * n1.x * t1 + viewDir.x,
+                2 * n1.y * t1 + viewDir.y,
+                2 * n1.z * t1 + viewDir.z
+            ));
         
-            float3 reflectionDir2 = normalize(viewDir - n2);
+            float3 reflectionDir2 = normalize(float3(
+                2 * n2.x * t2 + viewDir.x,
+                2 * n2.y * t2 + viewDir.y,
+                2 * n2.z * t2 + viewDir.z
+            ));*/
+            
+            float3 reflectionDir1 = reflect(viewDir, n1);
+            float3 reflectionDir2 = reflect(viewDir, n2);
         
             float k = 0;
         
@@ -270,8 +280,8 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
                     - viewDir.x * constData.viewerPos.z - viewDir.z * pointLightData.lightSourcePosition.x) / (viewDir.z * reflectionDir1.x - viewDir.x * reflectionDir1.z);
             }
         
-            float3 R1 = pointLightData.lightSourcePosition.xyz - k * reflectionDir1;
-        
+            float3 R1 = pointLightData.lightSourcePosition.xyz + k * reflectionDir1;
+            
             if (viewDir.x != 0)
             {
                 if (viewDir.x / viewDir.y == constData.viewerPos.x / constData.viewerPos.y 
@@ -303,21 +313,22 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
                     - viewDir.x * constData.viewerPos.z - viewDir.z * pointLightData.lightSourcePosition.x) / (viewDir.z * reflectionDir2.x - viewDir.x * reflectionDir2.z);
             }
         
-            float3 R2 = pointLightData.lightSourcePosition.xyz - k * reflectionDir2;
+            float3 R2 = pointLightData.lightSourcePosition.xyz + k * reflectionDir2;
             
             if (R1.x == R2.x && R1.y == R2.y && R1.z == R2.z) return float4(0, 0, 0, 1);
-            
-            if (acos(n1.y) / PI * 180.0f > 5.5f)
-                return float4(1.0f, 0.0f, 0.0f, 1.0f);
-            
-            if (acos(n2.y) / PI * 180.0f > 5.5f)
-                return float4(0.0f, 0.0f, 1.0f, 1.0f);
                
+            float3 Rn = R1, Rf = R1;
+            if (length(R1 - constData.viewerPos) > length(R2 - constData.viewerPos))
+                Rn = R2;
+            else
+                Rf = R2;
+            
             if (DEPTH_CALC_ENABLED)
-            {
-                float3 Rn = R1, Rf = R1;
-                if (length(R1 - constData.viewerPos) > length(R2 - constData.viewerPos)) Rn = R2;
-                else Rf = R2;
+            {   
+                float4 camSpacePoint = mul(constData.camViewProjection, float4(Rn.xyz, 0));
+                float depthValue = camDepthTexture.SampleLevel(camDepthSampler, float2((NDC.x + 1.0f) / 2, -(NDC.y + 1.0f) / 2), 0).x;
+                if (depthValue <= camSpacePoint.z / camSpacePoint.w && depthValue != 1.0f)
+                    return float4(0, 0, 0, 1);
             
                 float3 step = (Rf - Rn) / DEPTH_READING_FREQUENCY;
             
@@ -325,7 +336,7 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
             
                 float3 currentVector = currentPoint - pointLightData.lightSourcePosition.xyz;
             
-                bool isDepthTestPassed;
+                bool isDepthTestPassed = true;
             
                 float intensity = 0, L = 0;
             
@@ -352,102 +363,84 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
                         isDepthTestPassed = true;
                 }
             
+                bool testDepthPass = true;
+                
+                isDepthTestPassed = true;
+                
                 for (int i = 1; i <= DEPTH_READING_FREQUENCY; i++)
                 {
                     currentPoint = Rn + step * i;
                     currentVector = normalize(currentPoint - pointLightData.lightSourcePosition.xyz);
-                
+                    
+                    float depthValue;
+                    
                     if (currentVector.y < sqrt(pow(currentVector.x, 2) + pow(currentVector.z, 2)))
                     {
                         float4 lightSpacePos = mul(pointLightData.frontFaceViewProjection, float4(currentPoint.xyz, 1.0f));
-                        float depthValue = lightFrontFaceDepthTexture.SampleLevel(lightDepthSampler,
-		                float2(lightSpacePos.x / lightSpacePos.w, -lightSpacePos.y / lightSpacePos.w) * 0.5f + 0.5f, 0).x;
-                    
-                        if ( /*depthValue <= lightSpacePos.z / lightSpacePos.w && depthValue != 1.0f*/true)
-                        {
-                            if (isDepthTestPassed)
-                            {
-                                isDepthTestPassed = false;
-                            
-                                n1 = normalize(normalize(viewDir) + normalize(startPoint - pointLightData.lightSourcePosition.xyz)); // > 5 !!
-                                n2 = normalize(normalize(viewDir) + normalize(currentPoint - pointLightData.lightSourcePosition.xyz));
-                                float e1 = acos(n1.x * viewDir.x + n1.y * viewDir.y + n1.z * viewDir.z);
-                                float e2 = acos(n2.x * viewDir.x + n2.y * viewDir.y + n2.z * viewDir.z);
-                            
-                                float3 nR0 = R0 - Rn;
-                                float3 nf = Rf - Rn;
-                                float N;
-                                
-                                /*if (length(nR0) < length(nf) && nf.x / nR0.x >= 0) 
-                                    N = abs(CalculateGaussIntegral(acos(n1.y) / PI * 180.0f, acos(normal0.y) / PI * 180.0f))
-                                    + abs(CalculateGaussIntegral(acos(n2.y) / PI * 180.0f, acos(normal0.y) / PI * 180.0f));
-                                else*/
-                                    N = abs(CalculateGaussIntegral(acos(n1.y) / PI * 180.0f, acos(n2.y) / PI * 180.0f));
-                            
-                                intensity = intensity + N /* abs(CalculateRefractionIntegral(e1, e2))
-                                    * pow(2.71f, -ABSORPTION_PARAMETER * length((startPoint + currentPoint) / 2.0f - constData.viewerPos))*/;
-                            
-                                L += length(currentPoint - startPoint);
-                            }
-                        }
-                        else
-                        {
-                            if (!isDepthTestPassed)
-                            {
-                                isDepthTestPassed = true;
-                                startPoint = currentPoint;
-                            }
-                        }
+                        depthValue = lightFrontFaceDepthTexture.SampleLevel(lightDepthSampler,
+		                    float2(lightSpacePos.x / lightSpacePos.w, -lightSpacePos.y / lightSpacePos.w) * 0.5f + 0.5f, 0).x;
                     }
-                    /*else
+                    else
                     {
                         float4 lightSpacePos = mul(pointLightData.upperFaceViewProjection, float4(currentPoint.xyz, 1.0f));
-                        float depthValue = lightUpperFaceDepthTexture.SampleLevel(lightDepthSampler,
-		                float2(lightSpacePos.x / lightSpacePos.w, -lightSpacePos.y / lightSpacePos.w) * 0.5f + 0.5f, 0).x;
+                        depthValue = lightUpperFaceDepthTexture.SampleLevel(lightDepthSampler,
+		                    float2(lightSpacePos.x / lightSpacePos.w, -lightSpacePos.y / lightSpacePos.w) * 0.5f + 0.5f, 0).x;
+                    }
                     
-                        if ( /*depthValue <= lightSpacePos.z / lightSpacePos.w && depthValue != 1.0f*isDepthTestPassed)
+                    if ( /*depthValue <= lightSpacePos.z / lightSpacePos.w && depthValue != 1.0f*/!testDepthPass)
+                    {
+                        if (isDepthTestPassed)
                         {
-                            if (isDepthTestPassed)
-                            {
-                                isDepthTestPassed = false;
+                            isDepthTestPassed = false;
                             
-                                n1 = normalize(normalize(viewDir) + normalize(startPoint - pointLightData.lightSourcePosition.xyz));
-                                n2 = normalize(normalize(viewDir) + normalize(currentPoint - pointLightData.lightSourcePosition.xyz));
-                                float e1 = acos(n1.x * viewDir.x + n1.y * viewDir.y + n1.z * viewDir.z);
-                                float e2 = acos(n2.x * viewDir.x + n2.y * viewDir.y + n2.z * viewDir.z);
+                            n1 = normalize(viewDir + normalize(startPoint - pointLightData.lightSourcePosition.xyz));
+                            n2 = normalize(viewDir + currentVector);
+                            float e1 = acos(n1.x * viewDir.x + n1.y * viewDir.y + n1.z * viewDir.z);
+                            float e2 = acos(n2.x * viewDir.x + n2.y * viewDir.y + n2.z * viewDir.z);
                             
-                                float3 nR0 = R0 - Rn;
-                                float nf = Rf - Rn;
-                                float N;
+                            float3 nR0 = R0 - startPoint;
+                            float3 nf = currentPoint - startPoint;
+                            float N;
+                                
+                            if (length(nR0) < length(nf) && nf.x / nR0.x >= 0) 
+                                N = abs(CalculateGaussIntegral(acos(n1.y) / PI * 180.0f, acos(normal0.y) / PI * 180.0f))
+                                    + abs(CalculateGaussIntegral(acos(n2.y) / PI * 180.0f, acos(normal0.y) / PI * 180.0f));
+                            else
+                                N = abs(CalculateGaussIntegral(acos(n1.y) / PI * 180.0f, acos(n2.y) / PI * 180.0f));
                             
-                                if (length(nR0) < length(nf) && nf.x / nR0.x >= 0)
-                                    N = abs(CalculateGaussIntegral(acos(n1.y) / PI * 180.0f, acos(normal0.y) / PI * 180.0f)
-                                    + CalculateGaussIntegral(acos(n2.y) / PI * 180.0f, acos(normal0.y) / PI * 180.0f));
-                                else
-                                    N = abs(CalculateGaussIntegral(acos(n1.y) / PI * 180.0f, acos(n2.y) / PI * 180.0f));
+                            intensity = intensity + N * abs(CalculateRefractionIntegral(e1, e2))
+                                    * pow(2.71f, -ABSORPTION_PARAMETER * length((startPoint + currentPoint) / PILLAR_WIDTH_FACTOR - constData.viewerPos));
                             
-                                intensity = intensity + N * abs(CalculateRefractionIntegral(e1, e2));
-                                    //* pow(2.71f, -ABSORPTION_PARAMETER * length((startPoint + currentPoint) / 2.0f - constData.viewerPos));
-                            
-                                L += length(currentPoint - startPoint);
-                            }
+                            L += length(currentPoint - startPoint);
                         }
-                        else
+                    }
+                    else
+                    {
+                        if (!isDepthTestPassed)
                         {
-                            if (!isDepthTestPassed)
-                            {
-                                isDepthTestPassed = true;
-                                startPoint = currentPoint;
-                            }
+                            isDepthTestPassed = true;
+                            startPoint = currentPoint;
                         }
-                    }*/
+                    }
+                    
+                    if (i < 99)
+                        testDepthPass = true;
+                    else
+                        testDepthPass = false;
                 }
+                
+                //TODO: add post-loop calculation
 
-                //intensity *= clamp(L / 2.0f, 0, 1);
+                intensity *= clamp(L / 2.0f, 0, 1);
                 return float4(pointLightData.lightColor.xyz * intensity, 1.0f);
             }
             else
             {
+                float4 camSpacePoint = mul(constData.camViewProjection, float4(Rn.xyz, 0));
+                float depthValue = camDepthTexture.SampleLevel(camDepthSampler, float2((NDC.x + 1.0f) / 2, -(NDC.y + 1.0f) / 2), 0).x;
+                if (depthValue <= camSpacePoint.z / camSpacePoint.w && depthValue != 1.0f)
+                    return float4(0, 0, 0, 1);
+                
                 float N = abs(CalculateGaussIntegral(acos(n1.y) / PI * 180.0f, acos(normal0.y) / PI * 180.0f))
                 + abs(CalculateGaussIntegral(acos(n2.y) / PI * 180.0f, acos(normal0.y) / PI * 180.0f));
             
@@ -457,7 +450,7 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
             
                 N *= (abs(CalculateRefractionIntegral(e1, e2)));
             
-                N *= pow(2.71f, -ABSORPTION_PARAMETER * length(R0 - constData.viewerPos)) * clamp(length(R2 - R1) / 2.0f, 0, 1);
+                N *= pow(2.71f, -ABSORPTION_PARAMETER * length(R0 - constData.viewerPos)) * clamp(length(R2 - R1) / PILLAR_WIDTH_FACTOR, 0, 1);
             
                 return float4(pointLightData.lightColor.xyz * N, 1.0f);
             }
