@@ -89,7 +89,7 @@ public:
 	int Init(Microsoft::WRL::ComPtr<ID3D11Device> device, DisplayWin32 display, HRESULT result);
 	void DestroyResources();
 	void Draw(ID3D11DeviceContext* context, Camera* camera, ID3D11ShaderResourceView* resView);
-	void DrawShadow(ID3D11DeviceContext* context, Microsoft::WRL::ComPtr<ID3D11Device> device);
+	void DrawShadow(ID3D11DeviceContext* context);
 	void Update(ID3D11DeviceContext* context, Camera* camera) override;
 	void SetPos(DirectX::SimpleMath::Vector3 _pos) override;
 	void SetRot(DirectX::SimpleMath::Vector3 _rot) override;

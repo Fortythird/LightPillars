@@ -7,35 +7,6 @@
         {
           "ruleId": "C26495",
           "message": {
-            "text": "Variable 'Game::shadowViewport' is uninitialized. Always initialize a member variable (type.6)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                },
-                "region": {
-                  "startLine": 5,
-                  "startColumn": 7
-                }
-              },
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Game::{ctor}",
-                  "decoratedName": "??0Game@@QEAA@XZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "targetSymbol": "Game::shadowViewport"
-          }
-        },
-        {
-          "ruleId": "C26495",
-          "message": {
             "text": "Variable 'Game::display' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
@@ -60,6 +31,35 @@
           ],
           "properties": {
             "targetSymbol": "Game::display"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'Game::shadowViewport' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                },
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 7
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Game::{ctor}",
+                  "decoratedName": "??0Game@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "Game::shadowViewport"
           }
         },
         {
@@ -268,7 +268,7 @@
         {
           "ruleId": "C6387",
           "message": {
-            "text": "'sceneDepthTexture' could be '0':  this does not adhere to the specification for the function 'ID3D11Device::CreateDepthStencilView'. See line 0 for an earlier location where this can occur"
+            "text": "'sceneDepthTexture' could be '0'."
           },
           "locations": [
             {
@@ -1139,7 +1139,7 @@
         {
           "ruleId": "C6387",
           "message": {
-            "text": "'shadowDepthTexture' could be '0':  this does not adhere to the specification for the function 'ID3D11Device::CreateDepthStencilView'. See line 0 for an earlier location where this can occur"
+            "text": "'shadowDepthTexture' could be '0'."
           },
           "locations": [
             {
@@ -2076,7 +2076,7 @@
         {
           "ruleId": "C6387",
           "message": {
-            "text": "'shadowDepthTexture' could be '0':  this does not adhere to the specification for the function 'ID3D11Device::CreateShaderResourceView'. See line 0 for an earlier location where this can occur"
+            "text": "'shadowDepthTexture' could be '0'."
           },
           "locations": [
             {
@@ -3102,7 +3102,7 @@
         {
           "ruleId": "C6387",
           "message": {
-            "text": "'sceneDepthTexture' could be '0':  this does not adhere to the specification for the function 'ID3D11Device::CreateShaderResourceView'. See line 0 for an earlier location where this can occur"
+            "text": "'sceneDepthTexture' could be '0'."
           },
           "locations": [
             {
@@ -4194,7 +4194,7 @@
         {
           "ruleId": "C6387",
           "message": {
-            "text": "'backTexture' could be '0':  this does not adhere to the specification for the function 'ID3D11Device::CreateRenderTargetView'. See line 0 for an earlier location where this can occur"
+            "text": "'backTexture' could be '0'."
           },
           "locations": [
             {
@@ -5378,35 +5378,6 @@
         {
           "ruleId": "C26495",
           "message": {
-            "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::Buffer' is uninitialized. Always initialize a member variable (type.6)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Delegates.h"
-                },
-                "region": {
-                  "startLine": 409,
-                  "startColumn": 3
-                }
-              },
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "InlineAllocator<32>::{ctor}",
-                  "decoratedName": "??0?$InlineAllocator@$0CA@@@QEAA@XZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::Buffer"
-          }
-        },
-        {
-          "ruleId": "C26495",
-          "message": {
             "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::pPtr' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
@@ -5432,13 +5403,42 @@
           "properties": {
             "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::pPtr"
           }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::Buffer' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Delegates.h"
+                },
+                "region": {
+                  "startLine": 409,
+                  "startColumn": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "InlineAllocator<32>::{ctor}",
+                  "decoratedName": "??0?$InlineAllocator@$0CA@@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::Buffer"
+          }
         }
       ],
       "tool": {
         "driver": {
           "name": "PREfast",
           "fullName": "PREfast Code Analysis",
-          "version": "14.38.33130.0",
+          "version": "14.37.32826.1",
           "informationUri": "https://aka.ms/cpp/ca"
         }
       },
@@ -5457,7 +5457,7 @@
             "resultFile"
           ],
           "hashes": {
-            "sha-256": "f3af872d40a8c94f702882ed441657ae9d4e514cdc847c27fa60918586aaac92"
+            "sha-256": "ca4379fbfddd70068e10571ac9db7d9d850c9db3de94e61bdcf23be1ddc7e461"
           }
         },
         {
@@ -5532,7 +5532,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/gamecomponent.h"
           },
           "hashes": {
-            "sha-256": "73cfa76d7495c58b701c04e5ee81c96ceb3dce10782b221ffc94670709d36049"
+            "sha-256": "e3ac14b022655883d32b266b53005073c6ac12efaef1a2f7f409d5a91d91f935"
           }
         },
         {
@@ -5548,7 +5548,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/trianglecomponent.h"
           },
           "hashes": {
-            "sha-256": "d4f529ef2300d4cb03ab08fa9900a429d2bbb3482229cb2bff6dc27d02e81579"
+            "sha-256": "f93e68906ec9b2db6299c57fe6a618e6f963477df9f3812449c8eefe69bfe171"
           }
         },
         {
@@ -5564,7 +5564,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/pointlight.h"
           },
           "hashes": {
-            "sha-256": "c1e53d707bdf22c96fa6cb74e1d95a8eab6cd18a470cfa9fe7d565074999cc32"
+            "sha-256": "b46a6a7635f7fa9fc056f03d0e22cb95090c73b983cc7974ccdd82ac6674e579"
           }
         }
       ]

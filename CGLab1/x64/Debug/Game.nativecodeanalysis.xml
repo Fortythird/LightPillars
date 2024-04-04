@@ -8,12 +8,12 @@
       <COLUMN>6</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'Game::shadowViewport' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'Game::display' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>Game::{ctor}</FUNCTION>
     <DECORATED>??0Game@@QEAA@XZ</DECORATED>
     <FUNCLINE>5</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>Game::shadowViewport</targetSymbol>
+      <targetSymbol>Game::display</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -25,12 +25,12 @@
       <COLUMN>6</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'Game::display' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'Game::shadowViewport' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>Game::{ctor}</FUNCTION>
     <DECORATED>??0Game@@QEAA@XZ</DECORATED>
     <FUNCLINE>5</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>Game::display</targetSymbol>
+      <targetSymbol>Game::shadowViewport</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -161,7 +161,7 @@
       <COLUMN>5</COLUMN>
     </SFA>
     <DEFECTCODE>6387</DEFECTCODE>
-    <DESCRIPTION>'sceneDepthTexture' could be '0':  this does not adhere to the specification for the function 'ID3D11Device::CreateDepthStencilView'. See line 0 for an earlier location where this can occur</DESCRIPTION>
+    <DESCRIPTION>'sceneDepthTexture' could be '0'.</DESCRIPTION>
     <FUNCTION>Game::PrepareResources</FUNCTION>
     <DECORATED>?PrepareResources@Game@@QEAAHXZ</DECORATED>
     <FUNCLINE>73</FUNCLINE>
@@ -553,7 +553,7 @@
       <COLUMN>5</COLUMN>
     </SFA>
     <DEFECTCODE>6387</DEFECTCODE>
-    <DESCRIPTION>'shadowDepthTexture' could be '0':  this does not adhere to the specification for the function 'ID3D11Device::CreateDepthStencilView'. See line 0 for an earlier location where this can occur</DESCRIPTION>
+    <DESCRIPTION>'shadowDepthTexture' could be '0'.</DESCRIPTION>
     <FUNCTION>Game::PrepareResources</FUNCTION>
     <DECORATED>?PrepareResources@Game@@QEAAHXZ</DECORATED>
     <FUNCLINE>73</FUNCLINE>
@@ -981,7 +981,7 @@
       <COLUMN>5</COLUMN>
     </SFA>
     <DEFECTCODE>6387</DEFECTCODE>
-    <DESCRIPTION>'shadowDepthTexture' could be '0':  this does not adhere to the specification for the function 'ID3D11Device::CreateShaderResourceView'. See line 0 for an earlier location where this can occur</DESCRIPTION>
+    <DESCRIPTION>'shadowDepthTexture' could be '0'.</DESCRIPTION>
     <FUNCTION>Game::PrepareResources</FUNCTION>
     <DECORATED>?PrepareResources@Game@@QEAAHXZ</DECORATED>
     <FUNCLINE>73</FUNCLINE>
@@ -1451,7 +1451,7 @@
       <COLUMN>5</COLUMN>
     </SFA>
     <DEFECTCODE>6387</DEFECTCODE>
-    <DESCRIPTION>'sceneDepthTexture' could be '0':  this does not adhere to the specification for the function 'ID3D11Device::CreateShaderResourceView'. See line 0 for an earlier location where this can occur</DESCRIPTION>
+    <DESCRIPTION>'sceneDepthTexture' could be '0'.</DESCRIPTION>
     <FUNCTION>Game::PrepareResources</FUNCTION>
     <DECORATED>?PrepareResources@Game@@QEAAHXZ</DECORATED>
     <FUNCLINE>73</FUNCLINE>
@@ -1957,7 +1957,7 @@
       <COLUMN>5</COLUMN>
     </SFA>
     <DEFECTCODE>6387</DEFECTCODE>
-    <DESCRIPTION>'backTexture' could be '0':  this does not adhere to the specification for the function 'ID3D11Device::CreateRenderTargetView'. See line 0 for an earlier location where this can occur</DESCRIPTION>
+    <DESCRIPTION>'backTexture' could be '0'.</DESCRIPTION>
     <FUNCTION>Game::PrepareResources</FUNCTION>
     <DECORATED>?PrepareResources@Game@@QEAAHXZ</DECORATED>
     <FUNCLINE>73</FUNCLINE>
@@ -2475,12 +2475,12 @@
       <COLUMN>2</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::Buffer' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::pPtr' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>InlineAllocator&lt;32&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$InlineAllocator@$0CA@@@QEAA@XZ</DECORATED>
     <FUNCLINE>409</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::Buffer</targetSymbol>
+      <targetSymbol>InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::pPtr</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -2492,12 +2492,12 @@
       <COLUMN>2</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::pPtr' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::Buffer' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>InlineAllocator&lt;32&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$InlineAllocator@$0CA@@@QEAA@XZ</DECORATED>
     <FUNCLINE>409</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::pPtr</targetSymbol>
+      <targetSymbol>InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::Buffer</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>

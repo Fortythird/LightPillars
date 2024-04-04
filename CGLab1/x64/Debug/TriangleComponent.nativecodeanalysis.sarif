@@ -94,6 +94,64 @@
         {
           "ruleId": "C26495",
           "message": {
+            "text": "Variable 'TriangleComponentParameters::numPoints' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/TriangleComponent.h"
+                },
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TriangleComponentParameters::{ctor}",
+                  "decoratedName": "??0TriangleComponentParameters@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "TriangleComponentParameters::numPoints"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'TriangleComponentParameters::numIndeces' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/TriangleComponent.h"
+                },
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TriangleComponentParameters::{ctor}",
+                  "decoratedName": "??0TriangleComponentParameters@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "TriangleComponentParameters::numIndeces"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
             "text": "Variable 'TriangleComponentParameters::points' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
@@ -147,64 +205,6 @@
           ],
           "properties": {
             "targetSymbol": "TriangleComponentParameters::indeces"
-          }
-        },
-        {
-          "ruleId": "C26495",
-          "message": {
-            "text": "Variable 'TriangleComponentParameters::numIndeces' is uninitialized. Always initialize a member variable (type.6)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/TriangleComponent.h"
-                },
-                "region": {
-                  "startLine": 21,
-                  "startColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TriangleComponentParameters::{ctor}",
-                  "decoratedName": "??0TriangleComponentParameters@@QEAA@XZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "targetSymbol": "TriangleComponentParameters::numIndeces"
-          }
-        },
-        {
-          "ruleId": "C26495",
-          "message": {
-            "text": "Variable 'TriangleComponentParameters::numPoints' is uninitialized. Always initialize a member variable (type.6)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/TriangleComponent.h"
-                },
-                "region": {
-                  "startLine": 21,
-                  "startColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TriangleComponentParameters::{ctor}",
-                  "decoratedName": "??0TriangleComponentParameters@@QEAA@XZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "targetSymbol": "TriangleComponentParameters::numPoints"
           }
         },
         {
@@ -268,35 +268,6 @@
         {
           "ruleId": "C26495",
           "message": {
-            "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::Buffer' is uninitialized. Always initialize a member variable (type.6)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Delegates.h"
-                },
-                "region": {
-                  "startLine": 409,
-                  "startColumn": 3
-                }
-              },
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "InlineAllocator<32>::{ctor}",
-                  "decoratedName": "??0?$InlineAllocator@$0CA@@@QEAA@XZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::Buffer"
-          }
-        },
-        {
-          "ruleId": "C26495",
-          "message": {
             "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::pPtr' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
@@ -322,13 +293,42 @@
           "properties": {
             "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::pPtr"
           }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::Buffer' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Delegates.h"
+                },
+                "region": {
+                  "startLine": 409,
+                  "startColumn": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "InlineAllocator<32>::{ctor}",
+                  "decoratedName": "??0?$InlineAllocator@$0CA@@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::Buffer"
+          }
         }
       ],
       "tool": {
         "driver": {
           "name": "PREfast",
           "fullName": "PREfast Code Analysis",
-          "version": "14.38.33130.0",
+          "version": "14.37.32826.1",
           "informationUri": "https://aka.ms/cpp/ca"
         }
       },
@@ -347,7 +347,7 @@
             "resultFile"
           ],
           "hashes": {
-            "sha-256": "f7fe123a879cdf068c8e0453956f55f4c352ccb35430fa276ac3d240f361c9d4"
+            "sha-256": "b22d5e8aa8b3186d31c7bcb6141a81920d81f437ba527b4d58561b03a21c985a"
           }
         },
         {
@@ -358,7 +358,7 @@
             "resultFile"
           ],
           "hashes": {
-            "sha-256": "d4f529ef2300d4cb03ab08fa9900a429d2bbb3482229cb2bff6dc27d02e81579"
+            "sha-256": "f93e68906ec9b2db6299c57fe6a618e6f963477df9f3812449c8eefe69bfe171"
           }
         },
         {
@@ -409,7 +409,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/gamecomponent.h"
           },
           "hashes": {
-            "sha-256": "73cfa76d7495c58b701c04e5ee81c96ceb3dce10782b221ffc94670709d36049"
+            "sha-256": "e3ac14b022655883d32b266b53005073c6ac12efaef1a2f7f409d5a91d91f935"
           }
         },
         {

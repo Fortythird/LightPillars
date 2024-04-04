@@ -144,7 +144,7 @@
       <COLUMN>5</COLUMN>
     </SFA>
     <DEFECTCODE>6387</DEFECTCODE>
-    <DESCRIPTION>'this-&gt;depthTextures[2]' could be '0':  this does not adhere to the specification for the function 'ID3D11Device::CreateShaderResourceView'. See line 0 for an earlier location where this can occur</DESCRIPTION>
+    <DESCRIPTION>'this-&gt;depthTextures[2]' could be '0'.</DESCRIPTION>
     <FUNCTION>PointLight::PrepareResources</FUNCTION>
     <DECORATED>?PrepareResources@PointLight@@QEAAXV?$ComPtr@UID3D11Device@@@WRL@Microsoft@@UVector3@SimpleMath@DirectX@@@Z</DECORATED>
     <FUNCLINE>81</FUNCLINE>
@@ -188,7 +188,7 @@
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>PointLight.cpp</FILENAME>
         <LINE>88</LINE>
-        <COLUMN>15</COLUMN>
+        <COLUMN>16</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
@@ -212,7 +212,7 @@
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>PointLight.cpp</FILENAME>
         <LINE>88</LINE>
-        <COLUMN>15</COLUMN>
+        <COLUMN>16</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
@@ -236,13 +236,13 @@
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>PointLight.cpp</FILENAME>
         <LINE>101</LINE>
-        <COLUMN>10</COLUMN>
+        <COLUMN>14</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>PointLight.cpp</FILENAME>
         <LINE>108</LINE>
-        <COLUMN>10</COLUMN>
+        <COLUMN>14</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
@@ -404,7 +404,7 @@
       <COLUMN>5</COLUMN>
     </SFA>
     <DEFECTCODE>6387</DEFECTCODE>
-    <DESCRIPTION>'this-&gt;depthTextures[4]' could be '0':  this does not adhere to the specification for the function 'ID3D11Device::CreateShaderResourceView'. See line 0 for an earlier location where this can occur</DESCRIPTION>
+    <DESCRIPTION>'this-&gt;depthTextures[4]' could be '0'.</DESCRIPTION>
     <FUNCTION>PointLight::PrepareResources</FUNCTION>
     <DECORATED>?PrepareResources@PointLight@@QEAAXV?$ComPtr@UID3D11Device@@@WRL@Microsoft@@UVector3@SimpleMath@DirectX@@@Z</DECORATED>
     <FUNCLINE>81</FUNCLINE>
@@ -448,7 +448,7 @@
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>PointLight.cpp</FILENAME>
         <LINE>88</LINE>
-        <COLUMN>15</COLUMN>
+        <COLUMN>16</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
@@ -472,7 +472,7 @@
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>PointLight.cpp</FILENAME>
         <LINE>88</LINE>
-        <COLUMN>15</COLUMN>
+        <COLUMN>16</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
@@ -496,13 +496,13 @@
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>PointLight.cpp</FILENAME>
         <LINE>101</LINE>
-        <COLUMN>10</COLUMN>
+        <COLUMN>14</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
         <FILENAME>PointLight.cpp</FILENAME>
         <LINE>108</LINE>
-        <COLUMN>10</COLUMN>
+        <COLUMN>14</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>

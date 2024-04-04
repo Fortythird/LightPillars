@@ -67,7 +67,7 @@
         "driver": {
           "name": "PREfast",
           "fullName": "PREfast Code Analysis",
-          "version": "14.38.33130.0",
+          "version": "14.37.32826.1",
           "informationUri": "https://aka.ms/cpp/ca"
         }
       },

@@ -67,7 +67,7 @@
         "driver": {
           "name": "PREfast",
           "fullName": "PREfast Code Analysis",
-          "version": "14.38.33130.0",
+          "version": "14.37.32826.1",
           "informationUri": "https://aka.ms/cpp/ca"
         }
       },
@@ -160,7 +160,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/gamecomponent.h"
           },
           "hashes": {
-            "sha-256": "73cfa76d7495c58b701c04e5ee81c96ceb3dce10782b221ffc94670709d36049"
+            "sha-256": "e3ac14b022655883d32b266b53005073c6ac12efaef1a2f7f409d5a91d91f935"
           }
         },
         {
@@ -176,7 +176,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/trianglecomponent.h"
           },
           "hashes": {
-            "sha-256": "d4f529ef2300d4cb03ab08fa9900a429d2bbb3482229cb2bff6dc27d02e81579"
+            "sha-256": "f93e68906ec9b2db6299c57fe6a618e6f963477df9f3812449c8eefe69bfe171"
           }
         },
         {
@@ -192,7 +192,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/pointlight.h"
           },
           "hashes": {
-            "sha-256": "c1e53d707bdf22c96fa6cb74e1d95a8eab6cd18a470cfa9fe7d565074999cc32"
+            "sha-256": "b46a6a7635f7fa9fc056f03d0e22cb95090c73b983cc7974ccdd82ac6674e579"
           }
         },
         {

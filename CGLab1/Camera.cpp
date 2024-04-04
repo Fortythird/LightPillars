@@ -22,7 +22,9 @@ void Camera::Initialize(DirectX::SimpleMath::Vector3 pos, float yawVal, float pi
 	pitchAxis = pitchVal;
 	position = pos;
 
-	position = { 0.0f, 3.0f, -5.0f };
+	position = { 30.0f, 1.0f, 0.0f };
+	yawAxis = 1.57f;
+	pitchAxis = .7f;
 	
 	if (inputDeviceCameraInstance != nullptr) {
 		inputDeviceCameraInstance->MouseMove.AddRaw(this, &Camera::OnMouseMove);

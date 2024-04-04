@@ -15,7 +15,7 @@ public:
 	DirectX::SimpleMath::Vector3 position;
 	DirectX::SimpleMath::Vector3 color;
 
-	DirectX::SimpleMath::Matrix views[6];
+	DirectX::SimpleMath::Matrix viewMtrcs[6];
 	DirectX::SimpleMath::Matrix projectionMtrx;
 
 	float intensity;
@@ -23,7 +23,7 @@ public:
 	float farDistance;
 
 	ID3D11Texture2D* depthTextures[6] = {};
-	ID3D11ShaderResourceView* depthView[6] = {};
+	ID3D11ShaderResourceView* depthViews[6] = {};
 	ID3D11SamplerState* samplerState;
 
 	PointLight();

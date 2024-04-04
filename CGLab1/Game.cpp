@@ -31,7 +31,7 @@ void Game::Init()
 	display.CreateDisplay(&inputDevice);
 
 	pointLights.push_back(new PointLight(
-		DirectX::SimpleMath::Vector3(5.0f, 5.0f, 0),
+		DirectX::SimpleMath::Vector3(0, 5.0f, 0),
 		DirectX::SimpleMath::Vector3(0.5f, 0.6f, 0.8f)
 	));
 
@@ -376,15 +376,22 @@ void Game::DrawShadows()
 	ID3D11RenderTargetView* nullrtv[8] = {nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr};
 	context->OMSetRenderTargets(1, nullrtv, shadowDepthView);
 
-	for (int i = 0; i < Components.size(); i++) Components[i]->DrawShadow(context, device);	
+	for (int i = 0; i < Components.size(); i++) Components[i]->DrawShadow(context);	
 }
 
 void Game::DrawPillars()
 {
+	context->RSSetViewports(1, &shadowViewport);
+	ID3D11RenderTargetView* nullrtv[8] = { nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr };
+	context->OMSetRenderTargets(1, nullrtv, shadowDepthView);
+
 	for (int i = 0; i < pointLights.size(); i++)
 	{
 		pointLights[i]->Update(context, camera.at(0)->position);
 	}
+
+	context->RSSetViewports(1, &viewport);
+	context->OMSetRenderTargets(1, &rtv, depthView);
 
 	constPillarsData.viewerPos = camera.at(0)->position;
 	constPillarsData.invertedCamViewProjection = (camera.at(0)->viewMatrix * camera.at(0)->projectionMatrix).Transpose().Invert();
@@ -408,8 +415,8 @@ void Game::DrawPillars()
 
 	pointLightData.lightSourcePosition = DirectX::SimpleMath::Vector4(pointLights[0]->position.x, pointLights[0]->position.y, pointLights[0]->position.z, 1.0f);
 	pointLightData.lightColor = DirectX::SimpleMath::Vector4(pointLights[0]->color.x, pointLights[0]->color.y, pointLights[0]->color.z, 1.0f);
-	pointLightData.frontFaceViewProjection = (pointLights.at(0)->views[2] * pointLights.at(0)->projectionMtrx).Transpose();
-	pointLightData.frontFaceViewProjection = (pointLights.at(0)->views[4] * pointLights.at(0)->projectionMtrx).Transpose();
+	pointLightData.frontFaceViewProjection = (pointLights.at(0)->viewMtrcs[2] * pointLights.at(0)->projectionMtrx).Transpose();
+	pointLightData.upperFaceViewProjection = (pointLights.at(0)->viewMtrcs[4] * pointLights.at(0)->projectionMtrx).Transpose();
 
 	D3D11_MAPPED_SUBRESOURCE subresourse2 = {};
 	context->Map(
@@ -491,8 +498,8 @@ void Game::DrawPillars()
 	context->PSSetConstantBuffers(1, 1, &pointLightBuffer);
 
 	context->PSSetShaderResources(0, 1, &camDepthView);
-	context->PSSetShaderResources(1, 1, &(pointLights.at(0)->depthView[2]));
-	context->PSSetShaderResources(2, 1, &(pointLights.at(0)->depthView[4]));
+	context->PSSetShaderResources(1, 1, &(pointLights.at(0)->depthViews[2]));
+	context->PSSetShaderResources(2, 1, &(pointLights.at(0)->depthViews[4]));
 	context->PSSetSamplers(0, 1, &samplerState);
 	context->PSSetSamplers(1, 1, &(pointLights.at(0)->samplerState));
 

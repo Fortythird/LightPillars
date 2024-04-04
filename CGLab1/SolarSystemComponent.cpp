@@ -10,11 +10,11 @@ void SolarSystemComponent::Init()
 {
 	Ball = new TriangleComponent(CreateSphere(1.0, L"../Textures/yoba.dds"));
 
-	Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Rat2.obj", Ball, L"../Textures/Rat.dds")));
-	Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Cheems.obj", Ball, L"../Textures/Cheems.dds")));
-	Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Livesey.obj", Ball, L"../Textures/Livesey.dds")));
-	Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Skull.obj", Ball, L"../Textures/Livesey.dds")));
-	Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Rom.obj", Ball, L"../Textures/Livesey.dds")));
+	//Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Rat2.obj", Ball, L"../Textures/Rat.dds")));
+	//Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Cheems.obj", Ball, L"../Textures/Cheems.dds")));
+	//Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Livesey.obj", Ball, L"../Textures/Livesey.dds")));
+	//Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Skull.obj", Ball, L"../Textures/Livesey.dds")));
+	//Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Rom.obj", Ball, L"../Textures/Livesey.dds")));
 
 	std::random_device rd;
 	std::mt19937 rng(rd());
@@ -33,8 +33,8 @@ void SolarSystemComponent::Init()
 	floor->pos = { 0.0, 0.0, 0.0 };
 	Components.push_back(floor);
 
-	Components.push_back(Ball);
-	Ball->pos = { 5.0f, 0.0f, 0.0f };
+	//Components.push_back(Ball);
+	//Ball->pos = { 5.0f, 0.0f, 0.0f };
 
 	auto cameraInstance = new Camera(&Ball->pos);
 	cameraInstance->Initialize(

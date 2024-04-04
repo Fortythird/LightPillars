@@ -7,7 +7,7 @@
         {
           "ruleId": "C26495",
           "message": {
-            "text": "Variable 'Camera::pitchAxis' is uninitialized. Always initialize a member variable (type.6)."
+            "text": "Variable 'Camera::inputDeviceCameraInstance' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
             {
@@ -30,7 +30,7 @@
             }
           ],
           "properties": {
-            "targetSymbol": "Camera::pitchAxis"
+            "targetSymbol": "Camera::inputDeviceCameraInstance"
           }
         },
         {
@@ -65,7 +65,7 @@
         {
           "ruleId": "C26495",
           "message": {
-            "text": "Variable 'Camera::inputDeviceCameraInstance' is uninitialized. Always initialize a member variable (type.6)."
+            "text": "Variable 'Camera::pitchAxis' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
             {
@@ -88,7 +88,7 @@
             }
           ],
           "properties": {
-            "targetSymbol": "Camera::inputDeviceCameraInstance"
+            "targetSymbol": "Camera::pitchAxis"
           }
         },
         {
@@ -154,7 +154,7 @@
         "driver": {
           "name": "PREfast",
           "fullName": "PREfast Code Analysis",
-          "version": "14.38.33130.0",
+          "version": "14.37.32826.1",
           "informationUri": "https://aka.ms/cpp/ca"
         }
       },
@@ -173,7 +173,7 @@
             "resultFile"
           ],
           "hashes": {
-            "sha-256": "f5da50481519d9d49565ef1faf31d263d0b1479c359f4876ea0e98d2db6f7545"
+            "sha-256": "e09aa21d18fa63fe74af99986b3d5da12d9dbb312ecc1cba5baaa63a2fe35ce6"
           }
         },
         {

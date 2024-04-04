@@ -436,7 +436,7 @@ void TriangleComponent::Draw(ID3D11DeviceContext* context, Camera* camera, ID3D1
 	}
 }
 
-void TriangleComponent::DrawShadow(ID3D11DeviceContext* context, Microsoft::WRL::ComPtr<ID3D11Device> device)
+void TriangleComponent::DrawShadow(ID3D11DeviceContext* context)
 {
 	auto dir = DirectX::SimpleMath::Vector3(dirLightData.direction.x, dirLightData.direction.y, dirLightData.direction.z);
 	dir.Normalize();

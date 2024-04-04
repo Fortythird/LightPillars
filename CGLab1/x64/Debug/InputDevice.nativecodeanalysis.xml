@@ -8,12 +8,12 @@
       <COLUMN>13</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'InputDevice::ScreenParam' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'InputDevice::hWnd' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>InputDevice::{ctor}</FUNCTION>
     <DECORATED>??0InputDevice@@QEAA@XZ</DECORATED>
     <FUNCLINE>6</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>InputDevice::ScreenParam</targetSymbol>
+      <targetSymbol>InputDevice::hWnd</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -25,12 +25,12 @@
       <COLUMN>13</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'InputDevice::hWnd' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'InputDevice::ScreenParam' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>InputDevice::{ctor}</FUNCTION>
     <DECORATED>??0InputDevice@@QEAA@XZ</DECORATED>
     <FUNCLINE>6</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>InputDevice::hWnd</targetSymbol>
+      <targetSymbol>InputDevice::ScreenParam</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
