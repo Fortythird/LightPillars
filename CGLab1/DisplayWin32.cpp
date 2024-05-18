@@ -81,8 +81,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT umessage, WPARAM wparam, LPARAM lparam)
 void DisplayWin32::CreateDisplay(InputDevice* inputDevice) 
 {
 	applicationName = L"CGLabFramework";
-	screenWidth = 800;
-	screenHeight = 800;
+	screenWidth = 1920;
+	screenHeight = 1080;
 
 	hInstance = GetModuleHandle(nullptr);
 

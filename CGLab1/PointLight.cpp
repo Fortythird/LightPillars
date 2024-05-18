@@ -44,7 +44,7 @@ PointLight::PointLight(DirectX::SimpleMath::Vector3 pos, DirectX::SimpleMath::Ve
 	farDistance = nearDist < farDist ? farDist : nearDist;
 }
 
-void PointLight::Update(ID3D11DeviceContext* context, DirectX::SimpleMath::Vector3 viewerPos)
+void PointLight::Update(DirectX::SimpleMath::Vector3 viewerPos)
 {
 	// Right view
 	// Left view
@@ -56,14 +56,14 @@ void PointLight::Update(ID3D11DeviceContext* context, DirectX::SimpleMath::Vecto
 	// Down view
 	viewMtrcs[4] = DirectX::SimpleMath::Matrix::CreateLookAt(
 		position,
-		DirectX::SimpleMath::Vector3::Up,
+		position + DirectX::SimpleMath::Vector3::Up,
 		-DirectX::SimpleMath::Vector3(viewerPos.x, position.y, viewerPos.z) - position
 	);
 	// Back view
 
 	/*context->RSSetViewports(1, &shadowViewport);
 	ID3D11RenderTargetView* nullrtv[8] = { nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr };
-	context->OMSetRenderTargets(1, (depthView[2]), &shadowViewport);*/
+	context->OMSetRenderTargets(1, nullrtv, shadowViewport);*/
 }
 
 void PointLight::DestroyResources()
@@ -73,7 +73,8 @@ void PointLight::DestroyResources()
 		if (i == 2 || i == 4) // Temporary for testing
 		{
 			depthTextures[i]->Release();
-			depthViews[i]->Release();
+			depthStencilViews[i]->Release();
+			depthShaderRes[i]->Release();
 		}
 	}
 }
@@ -85,7 +86,8 @@ void PointLight::PrepareResources(Microsoft::WRL::ComPtr<ID3D11Device> device, D
 	for (int i = 0; i < 6; i++)
 	{
 		depthTextures[i] = nullptr;
-		depthViews[i] = nullptr;
+		depthStencilViews[i] = nullptr;
+		depthShaderRes[i] = nullptr;
 	}
 
 	projectionMtrx = DirectX::SimpleMath::Matrix::CreatePerspectiveFieldOfView(
@@ -125,20 +127,31 @@ void PointLight::PrepareResources(Microsoft::WRL::ComPtr<ID3D11Device> device, D
 	depthTexDesc.SampleDesc = { 1, 0 };
 
 	res = device->CreateTexture2D(&depthTexDesc, nullptr, &(depthTextures[2]));
-	if (FAILED(res)) std::cout << "Failed create cube map depth texture 2" << std::endl;
+	if (FAILED(res)) std::cout << "Failed creating cube map depth texture 2" << std::endl;
 
-	device->CreateTexture2D(&depthTexDesc, nullptr, &(depthTextures[4]));
-	if (FAILED(res)) std::cout << "Failed create cube map depth texture 4" << std::endl;
+	res = device->CreateTexture2D(&depthTexDesc, nullptr, &(depthTextures[4]));
+	if (FAILED(res)) std::cout << "Failed creating cube map depth texture 4" << std::endl;
+
+	D3D11_DEPTH_STENCIL_VIEW_DESC depthStenDesc = {};
+	depthStenDesc.Format = DXGI_FORMAT_D32_FLOAT;
+	depthStenDesc.ViewDimension = D3D11_DSV_DIMENSION_TEXTURE2D;
+	depthStenDesc.Texture2D.MipSlice = 0;
+
+	res = device->CreateDepthStencilView(depthTextures[2], &depthStenDesc, &(depthStencilViews[2]));
+	if (FAILED(res)) std::cout << "Failed creating cube map depth stencil view 2" << std::endl;
+
+	res = device->CreateDepthStencilView(depthTextures[4], &depthStenDesc, &(depthStencilViews[4]));
+	if (FAILED(res)) std::cout << "Failed creating cube map depth stencil view 4" << std::endl;
 
 	D3D11_SHADER_RESOURCE_VIEW_DESC shaderResViewDesc = {};
 	shaderResViewDesc.ViewDimension = D3D11_SRV_DIMENSION_TEXTURE2D;
 	shaderResViewDesc.Format = DXGI_FORMAT_R32_FLOAT;
 	shaderResViewDesc.Texture2D.MipLevels = 1;
-	res = device->CreateShaderResourceView(depthTextures[2], &shaderResViewDesc, &(depthViews[2]));
-	if (FAILED(res)) std::cout << "Failed create cube map depth shader resource view 2" << std::endl;
+	res = device->CreateShaderResourceView(depthTextures[2], &shaderResViewDesc, &(depthShaderRes[2]));
+	if (FAILED(res)) std::cout << "Failed creating cube map depth shader resource view 2" << std::endl;
 
-	res = device->CreateShaderResourceView(depthTextures[4], &shaderResViewDesc, &(depthViews[4]));
-	if (FAILED(res)) std::cout << "Failed create cube map depth shader resource view 4" << std::endl;
+	res = device->CreateShaderResourceView(depthTextures[4], &shaderResViewDesc, &(depthShaderRes[4]));
+	if (FAILED(res)) std::cout << "Failed creating cube map depth shader resource view 4" << std::endl;
 
 	D3D11_SAMPLER_DESC SamplerDesc = {};
 	SamplerDesc.Filter = D3D11_FILTER_MIN_MAG_MIP_LINEAR;

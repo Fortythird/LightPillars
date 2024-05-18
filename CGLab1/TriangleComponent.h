@@ -27,6 +27,12 @@ struct ConstData
 	DirectX::SimpleMath::Matrix invertedWorldTransform;
 };
 
+struct DepthConstData
+{
+	DirectX::SimpleMath::Matrix worldViewProj;
+	DirectX::SimpleMath::Matrix model;
+};
+
 struct DirectionalLightData {
 	DirectX::SimpleMath::Vector4 direction;
 	DirectX::SimpleMath::Vector4 color;
@@ -48,6 +54,8 @@ private:
 	ID3DBlob* pixelBC;
 	ID3D11VertexShader* vertexShader;
 	ID3D11PixelShader* pixelShader;
+	ID3D11VertexShader* depthVertexShader;
+	ID3D11PixelShader* depthPixelShader;
 	UINT strides[4];
 	UINT offsets[4];
 	ID3D11Buffer* vertexBuffer;
@@ -68,6 +76,8 @@ public:
 
 	ConstData constData;
 	ID3D11Buffer* constBuffer;
+	ID3D11Buffer* depthConstBuffer;
+	DepthConstData depthConstData;
 	ID3D11Buffer* lightConstBuffer;
 	DirectionalLightData dirLightData;
 	LightConstData lightConstData;
@@ -90,6 +100,7 @@ public:
 	void DestroyResources();
 	void Draw(ID3D11DeviceContext* context, Camera* camera, ID3D11ShaderResourceView* resView);
 	void DrawShadow(ID3D11DeviceContext* context);
+	void DrawDepth(ID3D11DeviceContext* context, DirectX::SimpleMath::Matrix viewProjMtrx);
 	void Update(ID3D11DeviceContext* context, Camera* camera) override;
 	void SetPos(DirectX::SimpleMath::Vector3 _pos) override;
 	void SetRot(DirectX::SimpleMath::Vector3 _rot) override;

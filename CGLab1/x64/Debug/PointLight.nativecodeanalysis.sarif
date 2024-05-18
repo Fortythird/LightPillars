@@ -248,10 +248,10 @@
                   "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                 },
                 "region": {
-                  "startLine": 137,
+                  "startLine": 140,
                   "startColumn": 2,
-                  "endLine": 137,
-                  "endColumn": 93
+                  "endLine": 140,
+                  "endColumn": 94
                 }
               },
               "logicalLocations": [
@@ -275,7 +275,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                           },
                           "region": {
-                            "startLine": 81,
+                            "startLine": 82,
                             "startColumn": 72
                           }
                         }
@@ -289,7 +289,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                           },
                           "region": {
-                            "startLine": 83,
+                            "startLine": 84,
                             "startColumn": 10
                           }
                         }
@@ -303,7 +303,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                           },
                           "region": {
-                            "startLine": 85,
+                            "startLine": 86,
                             "startColumn": 11
                           }
                         }
@@ -317,21 +317,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                           },
                           "region": {
-                            "startLine": 85,
-                            "startColumn": 20
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 87,
+                            "startLine": 86,
                             "startColumn": 20
                           }
                         }
@@ -346,34 +332,6 @@
                           },
                           "region": {
                             "startLine": 88,
-                            "startColumn": 17
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 85,
-                            "startColumn": 26
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 85,
                             "startColumn": 20
                           }
                         }
@@ -387,7 +345,49 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                           },
                           "region": {
-                            "startLine": 87,
+                            "startLine": 89,
+                            "startColumn": 24
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 90,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 86,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 86,
                             "startColumn": 20
                           }
                         }
@@ -402,34 +402,6 @@
                           },
                           "region": {
                             "startLine": 88,
-                            "startColumn": 17
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 85,
-                            "startColumn": 26
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 85,
                             "startColumn": 20
                           }
                         }
@@ -443,7 +415,63 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                           },
                           "region": {
-                            "startLine": 91,
+                            "startLine": 89,
+                            "startColumn": 24
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 90,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 86,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 86,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 93,
                             "startColumn": 17
                           }
                         }
@@ -457,7 +485,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                           },
                           "region": {
-                            "startLine": 101,
+                            "startLine": 103,
                             "startColumn": 15
                           }
                         }
@@ -471,36 +499,8 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                           },
                           "region": {
-                            "startLine": 108,
+                            "startLine": 110,
                             "startColumn": 15
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 115,
-                            "startColumn": 23
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 116,
-                            "startColumn": 22
                           }
                         }
                       },
@@ -514,7 +514,7 @@
                           },
                           "region": {
                             "startLine": 117,
-                            "startColumn": 25
+                            "startColumn": 23
                           }
                         }
                       },
@@ -528,7 +528,7 @@
                           },
                           "region": {
                             "startLine": 118,
-                            "startColumn": 25
+                            "startColumn": 22
                           }
                         }
                       },
@@ -556,7 +556,7 @@
                           },
                           "region": {
                             "startLine": 120,
-                            "startColumn": 30
+                            "startColumn": 25
                           }
                         }
                       },
@@ -584,7 +584,7 @@
                           },
                           "region": {
                             "startLine": 122,
-                            "startColumn": 21
+                            "startColumn": 30
                           }
                         }
                       },
@@ -598,95 +598,6 @@
                           },
                           "region": {
                             "startLine": 123,
-                            "startColumn": 21
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 124,
-                            "startColumn": 22
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 125,
-                            "startColumn": 26
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 127,
-                            "startColumn": 6
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 128,
-                            "startColumn": 6
-                          }
-                        },
-                        "message": {
-                          "text": "Enter this branch, (assume 'FAILED(res)')"
-                        }
-                      },
-                      "kinds": [
-                        "branch"
-                      ]
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 128,
-                            "startColumn": 73
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 130,
                             "startColumn": 25
                           }
                         }
@@ -700,7 +611,77 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                           },
                           "region": {
-                            "startLine": 131,
+                            "startLine": 124,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 125,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 126,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 127,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 129,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 130,
                             "startColumn": 6
                           }
                         },
@@ -719,8 +700,22 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                           },
                           "region": {
-                            "startLine": 131,
-                            "startColumn": 73
+                            "startLine": 130,
+                            "startColumn": 75
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 132,
+                            "startColumn": 6
                           }
                         }
                       },
@@ -734,11 +729,16 @@
                           },
                           "region": {
                             "startLine": 133,
-                            "startColumn": 34
+                            "startColumn": 6
                           }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume 'FAILED(res)')"
                         }
                       },
-                      "importance": "unimportant"
+                      "kinds": [
+                        "branch"
+                      ]
                     },
                     {
                       "location": {
@@ -747,8 +747,8 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                           },
                           "region": {
-                            "startLine": 134,
-                            "startColumn": 34
+                            "startLine": 133,
+                            "startColumn": 75
                           }
                         }
                       },
@@ -762,7 +762,7 @@
                           },
                           "region": {
                             "startLine": 135,
-                            "startColumn": 27
+                            "startColumn": 32
                           }
                         }
                       },
@@ -776,7 +776,7 @@
                           },
                           "region": {
                             "startLine": 136,
-                            "startColumn": 40
+                            "startColumn": 23
                           }
                         }
                       },
@@ -790,6 +790,1465 @@
                           },
                           "region": {
                             "startLine": 137,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 138,
+                            "startColumn": 35
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 140,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "'this->depthTextures[2]' should not be NULL, because this is not consistent with the SAL annotation on 'ID3D11Device::CreateDepthStencilView'"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6387",
+          "message": {
+            "text": "'this->depthTextures[4]' could be '0'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                },
+                "region": {
+                  "startLine": 143,
+                  "startColumn": 2,
+                  "endLine": 143,
+                  "endColumn": 94
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PointLight::PrepareResources",
+                  "decoratedName": "?PrepareResources@PointLight@@QEAAXV?$ComPtr@UID3D11Device@@@WRL@Microsoft@@UVector3@SimpleMath@DirectX@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 82,
+                            "startColumn": 72
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 84,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 86,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 86,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 88,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 89,
+                            "startColumn": 24
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 90,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 86,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 86,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 88,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 89,
+                            "startColumn": 24
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 90,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 86,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 86,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 93,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 103,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 110,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 117,
+                            "startColumn": 23
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 118,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 119,
+                            "startColumn": 25
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 120,
+                            "startColumn": 25
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 121,
+                            "startColumn": 25
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 122,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 123,
+                            "startColumn": 25
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 124,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 125,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 126,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 127,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 129,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 130,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume 'FAILED(res)')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 130,
+                            "startColumn": 75
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 132,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 133,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume 'FAILED(res)')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 133,
+                            "startColumn": 75
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 135,
+                            "startColumn": 32
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 136,
+                            "startColumn": 23
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 137,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 138,
+                            "startColumn": 35
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 140,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "'depthTextures' is an In/Out argument to 'ID3D11Device::CreateDepthStencilView' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.19041.0\\um\\d3d11.h:13619)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 141,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume 'FAILED(res)')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 141,
+                            "startColumn": 80
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 143,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "'depthTextures' is an In/Out argument to 'ID3D11Device::CreateDepthStencilView' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.19041.0\\um\\d3d11.h:13619)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 143,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "'this->depthTextures[4]' should not be NULL, because this is not consistent with the SAL annotation on 'ID3D11Device::CreateDepthStencilView'"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6387",
+          "message": {
+            "text": "'this->depthTextures[2]' could be '0'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                },
+                "region": {
+                  "startLine": 150,
+                  "startColumn": 2,
+                  "endLine": 150,
+                  "endColumn": 97
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PointLight::PrepareResources",
+                  "decoratedName": "?PrepareResources@PointLight@@QEAAXV?$ComPtr@UID3D11Device@@@WRL@Microsoft@@UVector3@SimpleMath@DirectX@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 82,
+                            "startColumn": 72
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 84,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 86,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 86,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 88,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 89,
+                            "startColumn": 24
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 90,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 86,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 86,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 88,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 89,
+                            "startColumn": 24
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 90,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 86,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 86,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 93,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 103,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 110,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 117,
+                            "startColumn": 23
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 118,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 119,
+                            "startColumn": 25
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 120,
+                            "startColumn": 25
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 121,
+                            "startColumn": 25
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 122,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 123,
+                            "startColumn": 25
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 124,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 125,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 126,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 127,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 129,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 130,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume 'FAILED(res)')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 130,
+                            "startColumn": 75
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 132,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 133,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume 'FAILED(res)')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 133,
+                            "startColumn": 75
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 135,
+                            "startColumn": 32
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 136,
+                            "startColumn": 23
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 137,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 138,
+                            "startColumn": 35
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 140,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "'depthTextures' is an In/Out argument to 'ID3D11Device::CreateDepthStencilView' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.19041.0\\um\\d3d11.h:13619)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 141,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume 'FAILED(res)')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 141,
+                            "startColumn": 80
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 143,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "'depthTextures' is an In/Out argument to 'ID3D11Device::CreateDepthStencilView' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.19041.0\\um\\d3d11.h:13619)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 144,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume 'FAILED(res)')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 144,
+                            "startColumn": 80
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 146,
+                            "startColumn": 34
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 147,
+                            "startColumn": 34
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 148,
+                            "startColumn": 27
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 149,
+                            "startColumn": 40
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 150,
                             "startColumn": 6
                           }
                         },
@@ -820,10 +2279,10 @@
                   "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                 },
                 "region": {
-                  "startLine": 140,
+                  "startLine": 153,
                   "startColumn": 2,
-                  "endLine": 140,
-                  "endColumn": 93
+                  "endLine": 153,
+                  "endColumn": 97
                 }
               },
               "logicalLocations": [
@@ -847,7 +2306,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                           },
                           "region": {
-                            "startLine": 81,
+                            "startLine": 82,
                             "startColumn": 72
                           }
                         }
@@ -861,7 +2320,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                           },
                           "region": {
-                            "startLine": 83,
+                            "startLine": 84,
                             "startColumn": 10
                           }
                         }
@@ -875,7 +2334,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                           },
                           "region": {
-                            "startLine": 85,
+                            "startLine": 86,
                             "startColumn": 11
                           }
                         }
@@ -889,21 +2348,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                           },
                           "region": {
-                            "startLine": 85,
-                            "startColumn": 20
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 87,
+                            "startLine": 86,
                             "startColumn": 20
                           }
                         }
@@ -918,34 +2363,6 @@
                           },
                           "region": {
                             "startLine": 88,
-                            "startColumn": 17
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 85,
-                            "startColumn": 26
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 85,
                             "startColumn": 20
                           }
                         }
@@ -959,7 +2376,49 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                           },
                           "region": {
-                            "startLine": 87,
+                            "startLine": 89,
+                            "startColumn": 24
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 90,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 86,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 86,
                             "startColumn": 20
                           }
                         }
@@ -974,34 +2433,6 @@
                           },
                           "region": {
                             "startLine": 88,
-                            "startColumn": 17
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 85,
-                            "startColumn": 26
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 85,
                             "startColumn": 20
                           }
                         }
@@ -1015,7 +2446,63 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                           },
                           "region": {
-                            "startLine": 91,
+                            "startLine": 89,
+                            "startColumn": 24
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 90,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 86,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 86,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 93,
                             "startColumn": 17
                           }
                         }
@@ -1029,7 +2516,7 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                           },
                           "region": {
-                            "startLine": 101,
+                            "startLine": 103,
                             "startColumn": 15
                           }
                         }
@@ -1043,36 +2530,8 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                           },
                           "region": {
-                            "startLine": 108,
+                            "startLine": 110,
                             "startColumn": 15
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 115,
-                            "startColumn": 23
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 116,
-                            "startColumn": 22
                           }
                         }
                       },
@@ -1086,7 +2545,7 @@
                           },
                           "region": {
                             "startLine": 117,
-                            "startColumn": 25
+                            "startColumn": 23
                           }
                         }
                       },
@@ -1100,7 +2559,7 @@
                           },
                           "region": {
                             "startLine": 118,
-                            "startColumn": 25
+                            "startColumn": 22
                           }
                         }
                       },
@@ -1128,7 +2587,7 @@
                           },
                           "region": {
                             "startLine": 120,
-                            "startColumn": 30
+                            "startColumn": 25
                           }
                         }
                       },
@@ -1156,7 +2615,7 @@
                           },
                           "region": {
                             "startLine": 122,
-                            "startColumn": 21
+                            "startColumn": 30
                           }
                         }
                       },
@@ -1170,95 +2629,6 @@
                           },
                           "region": {
                             "startLine": 123,
-                            "startColumn": 21
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 124,
-                            "startColumn": 22
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 125,
-                            "startColumn": 26
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 127,
-                            "startColumn": 6
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 128,
-                            "startColumn": 6
-                          }
-                        },
-                        "message": {
-                          "text": "Enter this branch, (assume 'FAILED(res)')"
-                        }
-                      },
-                      "kinds": [
-                        "branch"
-                      ]
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 128,
-                            "startColumn": 73
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 130,
                             "startColumn": 25
                           }
                         }
@@ -1272,7 +2642,77 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                           },
                           "region": {
-                            "startLine": 131,
+                            "startLine": 124,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 125,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 126,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 127,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 129,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 130,
                             "startColumn": 6
                           }
                         },
@@ -1291,8 +2731,22 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                           },
                           "region": {
-                            "startLine": 131,
-                            "startColumn": 73
+                            "startLine": 130,
+                            "startColumn": 75
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 132,
+                            "startColumn": 6
                           }
                         }
                       },
@@ -1306,81 +2760,6 @@
                           },
                           "region": {
                             "startLine": 133,
-                            "startColumn": 34
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 134,
-                            "startColumn": 34
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 135,
-                            "startColumn": 27
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 136,
-                            "startColumn": 40
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 137,
-                            "startColumn": 6
-                          }
-                        },
-                        "message": {
-                          "text": "'depthTextures' is an In/Out argument to 'ID3D11Device::CreateShaderResourceView' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.19041.0\\um\\d3d11.h:13595)"
-                        }
-                      },
-                      "kinds": [
-                        "declaration"
-                      ]
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
-                          },
-                          "region": {
-                            "startLine": 138,
                             "startColumn": 6
                           }
                         },
@@ -1399,8 +2778,64 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                           },
                           "region": {
+                            "startLine": 133,
+                            "startColumn": 75
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 135,
+                            "startColumn": 32
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 136,
+                            "startColumn": 23
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 137,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
                             "startLine": 138,
-                            "startColumn": 86
+                            "startColumn": 35
                           }
                         }
                       },
@@ -1414,6 +2849,166 @@
                           },
                           "region": {
                             "startLine": 140,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "'depthTextures' is an In/Out argument to 'ID3D11Device::CreateDepthStencilView' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.19041.0\\um\\d3d11.h:13619)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 141,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume 'FAILED(res)')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 141,
+                            "startColumn": 80
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 143,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "'depthTextures' is an In/Out argument to 'ID3D11Device::CreateDepthStencilView' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.19041.0\\um\\d3d11.h:13619)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 144,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume 'FAILED(res)')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 144,
+                            "startColumn": 80
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 146,
+                            "startColumn": 34
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 147,
+                            "startColumn": 34
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 148,
+                            "startColumn": 27
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 149,
+                            "startColumn": 40
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 150,
                             "startColumn": 6
                           }
                         },
@@ -1432,7 +3027,59 @@
                             "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
                           },
                           "region": {
-                            "startLine": 140,
+                            "startLine": 151,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume 'FAILED(res)')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 151,
+                            "startColumn": 88
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 153,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "'depthTextures' is an In/Out argument to 'ID3D11Device::CreateShaderResourceView' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.19041.0\\um\\d3d11.h:13595)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/PointLight.cpp"
+                          },
+                          "region": {
+                            "startLine": 153,
                             "startColumn": 6
                           }
                         },
@@ -1475,7 +3122,7 @@
             "resultFile"
           ],
           "hashes": {
-            "sha-256": "7e8346141f5ffc1407b62bbe5b9f81c1bb1f46075b4bcdcaae4f6d6a7616e4d8"
+            "sha-256": "a23b662675cf88f5d22e19cf30c42932c8b117362a95f7bfad60b9d6767944be"
           }
         },
         {
@@ -1483,7 +3130,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/pointlight.h"
           },
           "hashes": {
-            "sha-256": "b46a6a7635f7fa9fc056f03d0e22cb95090c73b983cc7974ccdd82ac6674e579"
+            "sha-256": "d28eca8d75ecc27579745d9bea9ed9572a3d2ad740819cc52c798ff1c679794b"
           }
         },
         {

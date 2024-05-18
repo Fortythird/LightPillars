@@ -1,6 +1,7 @@
 #include "export.h"
 #include "Game.h"
 #include "TriangleComponent.h"
+#include <random>
 
 Game::Game() 
 {
@@ -8,7 +9,7 @@ Game::Game()
 	swapChain = nullptr;
 	rtv = nullptr;
 	debug = nullptr;
-	BGcolor = new float[4] { 0.0f, 0.0f, 0.0f, 0.0f };
+	BGcolor = new float[4] { 0.3f, 0.3f, 0.3f, 1.0f };
 
 	shadowDepthTexture = nullptr;
 	sceneDepthTexture = nullptr;
@@ -34,6 +35,19 @@ void Game::Init()
 		DirectX::SimpleMath::Vector3(0, 5.0f, 0),
 		DirectX::SimpleMath::Vector3(0.5f, 0.6f, 0.8f)
 	));
+
+	/*std::random_device rd;
+	std::mt19937 rng(rd());
+	std::uniform_real_distribution<float> pos_uni(-10, 10);
+	std::uniform_real_distribution<float> col_uni(0, 1);
+
+	for (int i = 0; i < 19; i++)
+	{
+		pointLights.push_back(new PointLight(
+			DirectX::SimpleMath::Vector3((float)pos_uni(rng), 5.0f, (float)pos_uni(rng) * 3),
+			DirectX::SimpleMath::Vector3((float)col_uni(rng), (float)col_uni(rng), (float)col_uni(rng))
+		));
+	}*/
 
 	PrepareResources();
 }
@@ -72,6 +86,8 @@ void Game::Run()
 
 int Game::PrepareResources() 
 {
+	perf_FrameCount = -2;
+
 	D3D_FEATURE_LEVEL featureLevel[] = {D3D_FEATURE_LEVEL_11_1};
 
 	DXGI_SWAP_CHAIN_DESC swapDesc = {};
@@ -139,13 +155,13 @@ int Game::PrepareResources()
 	depthTexDesc.Height = 5000;
 	depthTexDesc.SampleDesc = { 1, 0 };
 
-	res = device->CreateTexture2D(&depthTexDesc, nullptr, &shadowDepthTexture);
+	res = device->CreateTexture2D(&depthTexDesc, nullptr, &shadowDepthTexture); //----------1
 	if (FAILED(res)) std::cout << "Error while creating texture 2D" << std::endl;
 
 	depthTexDesc.Width = display.getScreenWidth();
 	depthTexDesc.Height = display.getScreenHeight();
 
-	res = device->CreateTexture2D(&depthTexDesc, nullptr, &sceneDepthTexture);
+	res = device->CreateTexture2D(&depthTexDesc, nullptr, &sceneDepthTexture); //-------------2
 	if (FAILED(res)) std::cout << "Error while creating texture 2D" << std::endl;
 
 	D3D11_DEPTH_STENCIL_VIEW_DESC depthStenDesc = {};
@@ -167,7 +183,7 @@ int Game::PrepareResources()
 	res = device->CreateShaderResourceView(shadowDepthTexture, &shaderResViewDesc, &resView);
 	if (FAILED(res)) std::cout << "Error while creating shader resource view" << std::endl;
 
-	res = device->CreateShaderResourceView(sceneDepthTexture, &shaderResViewDesc, &camDepthView);
+	res = device->CreateShaderResourceView(sceneDepthTexture, &shaderResViewDesc, &camDepthView); //----------3
 	if (FAILED(res)) std::cout << "Error while creating shader resource view" << std::endl;
 
 	D3D11_RASTERIZER_DESC drawRenderStateDesc = {};
@@ -320,6 +336,9 @@ void Game::PrepareFrame()
 	totalTime += deltaTime;
 	frameCount++;
 
+	perf_FrameCount++;
+	perf_timer += deltaTime;
+
 	if (totalTime > 1.0f) 
 	{
 		float fps = frameCount / totalTime;
@@ -328,6 +347,19 @@ void Game::PrepareFrame()
 		swprintf_s(text, TEXT("FPS: %f"), fps);
 		SetWindowText(display.getHWND(), text);
 		frameCount = 0;
+	}
+
+	if (perf_FrameCount == -1)
+	{
+		perf_FrameCount = 0;
+		perf_timer = 0;
+	}
+
+	if (perf_FrameCount > 5000)
+	{
+		std::cout << "Av. sec. per frame " << (perf_timer / perf_FrameCount) / 1.0f << std::endl;
+		perf_FrameCount = 0;
+		perf_timer = 0;
 	}
 
 	context->ClearState();
@@ -353,11 +385,11 @@ void Game::Update()
 
 void Game::Draw() 
 {
-	camera.at(0)->Update(
+	/*camera.at(0)->Update(
 		deltaTime,
 		display.getScreenWidth(),
 		display.getScreenHeight()
-	);
+	);*/
 	
 	context->ClearRenderTargetView(rtv, BGcolor);
 
@@ -381,13 +413,29 @@ void Game::DrawShadows()
 
 void Game::DrawPillars()
 {
-	context->RSSetViewports(1, &shadowViewport);
+	context->RSSetViewports(1, &pointLights.at(0)->shadowViewport);
 	ID3D11RenderTargetView* nullrtv[8] = { nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr };
-	context->OMSetRenderTargets(1, nullrtv, shadowDepthView);
 
 	for (int i = 0; i < pointLights.size(); i++)
 	{
-		pointLights[i]->Update(context, camera.at(0)->position);
+		pointLights[i]->Update(camera.at(0)->position);
+
+		context->ClearDepthStencilView(pointLights[i]->depthStencilViews[2], D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
+		context->ClearDepthStencilView(pointLights[i]->depthStencilViews[4], D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
+
+		context->OMSetRenderTargets(1, nullrtv, pointLights[i]->depthStencilViews[2]);
+
+		for (int j = 0; j < Components.size(); j++)
+		{
+			Components[j]->DrawDepth(context, ((pointLights[i]->viewMtrcs[2]) * pointLights[i]->projectionMtrx));
+		}
+
+		context->OMSetRenderTargets(1, nullrtv, pointLights[i]->depthStencilViews[4]);
+
+		for (int j = 0; j < Components.size(); j++)
+		{
+			Components[j]->DrawDepth(context, ((pointLights[i]->viewMtrcs[4]) * pointLights[i]->projectionMtrx));
+		}
 	}
 
 	context->RSSetViewports(1, &viewport);
@@ -395,6 +443,7 @@ void Game::DrawPillars()
 
 	constPillarsData.viewerPos = camera.at(0)->position;
 	constPillarsData.invertedCamViewProjection = (camera.at(0)->viewMatrix * camera.at(0)->projectionMatrix).Transpose().Invert();
+	constPillarsData.invertedCamTransform = (camera.at(0)->transformMatrix).Transpose().Invert();
 	constPillarsData.camViewProjection = camera.at(0)->projectionMatrix.Transpose();
 
 	D3D11_MAPPED_SUBRESOURCE subresourse = {};
@@ -412,27 +461,6 @@ void Game::DrawPillars()
 		sizeof(ConstPillarData)
 	);
 	context->Unmap(constPillarsBuffer, 0);
-
-	pointLightData.lightSourcePosition = DirectX::SimpleMath::Vector4(pointLights[0]->position.x, pointLights[0]->position.y, pointLights[0]->position.z, 1.0f);
-	pointLightData.lightColor = DirectX::SimpleMath::Vector4(pointLights[0]->color.x, pointLights[0]->color.y, pointLights[0]->color.z, 1.0f);
-	pointLightData.frontFaceViewProjection = (pointLights.at(0)->viewMtrcs[2] * pointLights.at(0)->projectionMtrx).Transpose();
-	pointLightData.upperFaceViewProjection = (pointLights.at(0)->viewMtrcs[4] * pointLights.at(0)->projectionMtrx).Transpose();
-
-	D3D11_MAPPED_SUBRESOURCE subresourse2 = {};
-	context->Map(
-		pointLightBuffer,
-		0,
-		D3D11_MAP_WRITE_DISCARD,
-		0,
-		&subresourse2
-	);
-
-	memcpy(
-		reinterpret_cast<float*>(subresourse2.pData),
-		&pointLightData,
-		sizeof(PointLightData)
-	);
-	context->Unmap(pointLightBuffer, 0);
 
 	ID3D11BlendState* blendState = nullptr;
 	D3D11_BLEND_DESC blendDesc = {};
@@ -495,14 +523,45 @@ void Game::DrawPillars()
 	context->PSSetShader(pixelPillarsShader, nullptr, 0);
 
 	context->PSSetConstantBuffers(0, 1, &constPillarsBuffer);
-	context->PSSetConstantBuffers(1, 1, &pointLightBuffer);
 
 	context->PSSetShaderResources(0, 1, &camDepthView);
-	context->PSSetShaderResources(1, 1, &(pointLights.at(0)->depthViews[2]));
-	context->PSSetShaderResources(2, 1, &(pointLights.at(0)->depthViews[4]));
 	context->PSSetSamplers(0, 1, &samplerState);
 	context->PSSetSamplers(1, 1, &(pointLights.at(0)->samplerState));
 
 	context->OMSetBlendState(blendState, blendFactor, 0xFFFFFF);
-	context->Draw(4, 0);
+
+
+	for (int i = 0; i < pointLights.size(); i++)
+	{
+		pointLightData.lightSourcePosition = DirectX::SimpleMath::Vector4(pointLights[i]->position.x, pointLights[i]->position.y, pointLights[i]->position.z, 1.0f);
+		pointLightData.lightColor = DirectX::SimpleMath::Vector4(pointLights[i]->color.x, pointLights[i]->color.y, pointLights[i]->color.z, 1.0f);
+		pointLightData.transformMtrx = DirectX::SimpleMath::Matrix::CreateWorld(
+			pointLights[i]->position, 
+			camera.at(0)->position - pointLights[i]->position, 
+			DirectX::SimpleMath::Vector3::Up
+		);
+		pointLightData.frontFaceViewProjection = (pointLights.at(i)->viewMtrcs[2] * pointLights.at(i)->projectionMtrx).Transpose();
+		pointLightData.upperFaceViewProjection = (pointLights.at(i)->viewMtrcs[4] * pointLights.at(i)->projectionMtrx).Transpose();
+
+		D3D11_MAPPED_SUBRESOURCE subresourse2 = {};
+		context->Map(
+			pointLightBuffer,
+			0,
+			D3D11_MAP_WRITE_DISCARD,
+			0,
+			&subresourse2
+		);
+
+		memcpy(
+			reinterpret_cast<float*>(subresourse2.pData),
+			&pointLightData,
+			sizeof(PointLightData)
+		);
+		context->Unmap(pointLightBuffer, 0);
+
+		context->PSSetConstantBuffers(1, 1, &pointLightBuffer);
+		context->PSSetShaderResources(1, 1, &(pointLights.at(i)->depthShaderRes[2]));
+		context->PSSetShaderResources(2, 1, &(pointLights.at(i)->depthShaderRes[4]));
+		context->Draw(4, 0);
+	}
 }

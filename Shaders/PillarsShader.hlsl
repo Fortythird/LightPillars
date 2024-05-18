@@ -1,8 +1,10 @@
 static const int DEPTH_CALC_ENABLED = 1;
+static const int PILLAR_ENABLED = 0;
 
 struct ConstData
 {
     float4x4 invertedCamViewProjection;
+    float4x4 invertedCamTransform;
     float4x4 camViewProjection;
     float3 viewerPos;
     float dummy;
@@ -12,6 +14,7 @@ struct PointLightData
 {
     float4 lightSourcePosition;
     float4 lightColor;
+    float4x4 lightTransform;
     float4x4 frontFaceViewProjection;
     float4x4 upperFaceViewProjection;
 };
@@ -82,7 +85,9 @@ float4 VSMain(uint vI : SV_VERTEXID) : SV_POSITION
 
 float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
 {
-    float4 NDC = float4(pos.x * 2.0f / 800.0f - 1.0f, -pos.y * 2.0f / 800.0f + 1.0f, 0.0f, 1.0f);
+    if (!PILLAR_ENABLED) return float4(0, 0, 0, 0);
+    
+    float4 NDC = float4(pos.x * 2.0f / 1920.0f - 1.0f, -pos.y * 2.0f / 1080.0f + 1.0f, 0.0f, 1.0f);
     float4 worldPoint = mul(NDC, constData.invertedCamViewProjection);
     worldPoint /= worldPoint.w;
     
@@ -90,7 +95,7 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
     
     if (viewDir.y == 0 || viewDir.x == 0 && viewDir.z == 0) return float4(0, 0, 0, 1);
     else 
-    {
+    {   
         float shiftY = (pointLightData.lightSourcePosition.y - constData.viewerPos.y) / viewDir.y;
     
         float R0x = (pointLightData.lightSourcePosition.x + constData.viewerPos.x + viewDir.x * shiftY) / 2.0f;
@@ -101,13 +106,13 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
                 : constData.viewerPos.y + viewDir.y * (R0x - constData.viewerPos.x) / viewDir.x,
             R0z
         );
-        
-
-    
+     
         float3 reflectionDir0 = normalize(pointLightData.lightSourcePosition.xyz - R0);
     
         float3 normal0 = normalize(viewDir - reflectionDir0);
     
+        float3 normalCheck = normalize(R0);  
+        
         if (normal0.y < cos(CRIT_ANGLE_RAD)) return float4(0, 0, 0, 0); // abs() to normal0.y to calculate lower pillar
         else
         {
@@ -165,88 +170,8 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
                 ));
             }
             
-            /*float a = pow(viewDir.x * reflectionDir.y - viewDir.y * reflectionDir.x, 2) + pow(viewDir.y * reflectionDir.z - viewDir.z * reflectionDir.y, 2);
-            
-            float b;
-            
-            float c;
-            
-            float3 n1;
-            
-            float3 n2;
-            
-            if (viewDir.z != 0 || reflectionDir.z != 0)
-            {
-                b = -2 * cos(CRIT_ANGLE_RAD) * (viewDir.x * reflectionDir.z - viewDir.z * reflectionDir.x) * (viewDir.x * reflectionDir.y - viewDir.y * reflectionDir.x);
-        
-                c = pow(cos(CRIT_ANGLE_RAD), 2) * pow(viewDir.x * reflectionDir.z - viewDir.z * reflectionDir.x, 2)
-                    - pow(sin(CRIT_ANGLE_RAD), 2) * pow(viewDir.y * reflectionDir.z - viewDir.z * reflectionDir.y, 2);
-                
-                float discriminant = pow(b, 2) - 4 * a * c;
-        
-                float n1z = (-b + sqrt(discriminant)) / 2.0f / a;
-        
-                n1 = normalize(float3(
-                    (cos(CRIT_ANGLE_RAD) * (viewDir.x * reflectionDir.z - viewDir.z * reflectionDir.x) - n1z * (viewDir.x * reflectionDir.y - viewDir.y * reflectionDir.x))
-                        / (viewDir.y * reflectionDir.z - viewDir.z * reflectionDir.y),
-                    cos(CRIT_ANGLE_RAD),
-                    n1z
-                ));
-        
-                float n2z = (-b - sqrt(discriminant)) / 2.0f / a;
-            
-                n2 = normalize(float3(
-                    (cos(CRIT_ANGLE_RAD) * (viewDir.x * reflectionDir.z - viewDir.z * reflectionDir.x) - n2z * (viewDir.x * reflectionDir.y - viewDir.y * reflectionDir.x))
-                        / (viewDir.y * reflectionDir.z - viewDir.z * reflectionDir.y),
-                    cos(CRIT_ANGLE_RAD),
-                    n2z
-                ));
-            }
-            else
-            {
-                b = -2 * cos(CRIT_ANGLE_RAD) * (viewDir.x * reflectionDir.z - viewDir.z * reflectionDir.x) * (viewDir.y * reflectionDir.z - viewDir.z * reflectionDir.y);
-        
-                c = pow(cos(CRIT_ANGLE_RAD), 2) * pow(viewDir.x * reflectionDir.z - viewDir.z * reflectionDir.x, 2)
-                    - pow(sin(CRIT_ANGLE_RAD), 2) * pow(viewDir.x * reflectionDir.y - viewDir.y * reflectionDir.x, 2);
-                
-                float discriminant = pow(b, 2) - 4 * a * c;
-        
-                float n1x = (-b + sqrt(discriminant)) / 2.0f / a;
-        
-                n1 = normalize(float3(
-                    n1x,
-                    cos(CRIT_ANGLE_RAD),
-                    (cos(CRIT_ANGLE_RAD) * (viewDir.x * reflectionDir.z - viewDir.z * reflectionDir.x) - n1x * (viewDir.y * reflectionDir.z - viewDir.z * reflectionDir.y))
-                        / (viewDir.x * reflectionDir.y - viewDir.y * reflectionDir.x)
-                ));
-        
-                float n2x = (-b - sqrt(discriminant)) / 2.0f / a;
-            
-                n2 = normalize(float3(
-                    n2x,
-                    cos(CRIT_ANGLE_RAD),
-                    (cos(CRIT_ANGLE_RAD) * (viewDir.x * reflectionDir.z - viewDir.z * reflectionDir.x) - n2x * (viewDir.y * reflectionDir.z - viewDir.z * reflectionDir.y))
-                        / (viewDir.x * reflectionDir.y - viewDir.y * reflectionDir.x)
-                ));
-            }*/
-        
-            /*float t1 = (-n1.x * viewDir.x - n1.y * viewDir.y - n1.z * viewDir.z) / (pow(n1.x, 2) + pow(n1.y, 2) + pow(n1.z, 2));
-            float t2 = (-n2.x * viewDir.x - n2.y * viewDir.y - n2.z * viewDir.z) / (pow(n2.x, 2) + pow(n2.y, 2) + pow(n2.z, 2));
-            
-            float3 reflectionDir1 = normalize(float3(
-                2 * n1.x * t1 + viewDir.x,
-                2 * n1.y * t1 + viewDir.y,
-                2 * n1.z * t1 + viewDir.z
-            ));
-        
-            float3 reflectionDir2 = normalize(float3(
-                2 * n2.x * t2 + viewDir.x,
-                2 * n2.y * t2 + viewDir.y,
-                2 * n2.z * t2 + viewDir.z
-            ));*/
-            
-            float3 reflectionDir1 = reflect(viewDir, n1);
-            float3 reflectionDir2 = reflect(viewDir, n2);
+            float3 reflectionDir1 = normalize(reflect(viewDir, n1));
+            float3 reflectionDir2 = normalize(reflect(viewDir, n2));
         
             float k = 0;
         
@@ -316,7 +241,7 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
         
             float3 R2 = pointLightData.lightSourcePosition.xyz + k * reflectionDir2;
             
-            if (R1.x == R2.x && R1.y == R2.y && R1.z == R2.z) return float4(0, 0, 0, 1);
+            if (R1.x == R2.x && R1.y == R2.y && R1.z == R2.z) return float4(0, 0, 0, 0);
                
             float3 Rn = R1, Rf = R1;
             if (length(R1 - constData.viewerPos) > length(R2 - constData.viewerPos))
@@ -326,10 +251,12 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
             
             if (DEPTH_CALC_ENABLED)
             {   
-                float4 camSpacePoint = mul(constData.camViewProjection, float4(Rn.xyz, 0));
-                float depthValue = camDepthTexture.SampleLevel(camDepthSampler, float2((NDC.x + 1.0f) / 2, -(NDC.y + 1.0f) / 2), 0).x;
-                if (depthValue <= camSpacePoint.z / camSpacePoint.w && depthValue != 1.0f)
-                    return float4(0, 0, 0, 0);
+                float4 camSpacePoint = mul(constData.camViewProjection, float4(Rn.xyz, 1.0f));
+                //float depthValue = camDepthTexture.SampleLevel(camDepthSampler, float2((NDC.x + 1.0f) / 2, -(NDC.y + 1.0f) / 2), 0).x;
+                float depthValue = camDepthTexture.SampleLevel(camDepthSampler, 
+                    float2(camSpacePoint.x / camSpacePoint.z, -camSpacePoint.y / camSpacePoint.z) * 0.5f + 0.5f, 0).x;
+                /*if (depthValue < camSpacePoint.z / camSpacePoint.w && depthValue < 1.0f)
+                    return float4(0, 0, 0, 0);*/
                 
                 float3 step = (Rf - Rn) / DEPTH_READING_FREQUENCY;
             
@@ -338,30 +265,7 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
                 bool isDepthTestPassed = true;
             
                 float intensity = 0, L = 0;
-            
-                /*if (currentVector.y < sqrt(pow(currentVector.x, 2) + pow(currentVector.z, 2)))
-                {
-                    float4 lightSpacePos = mul(pointLightData.frontFaceViewProjection, float4(currentPoint.xyz, 1.0f));
-                    float depthValue = lightFrontFaceDepthTexture.SampleLevel(lightDepthSampler,
-		            float2(lightSpacePos.x / lightSpacePos.w, -lightSpacePos.y / lightSpacePos.w) * 0.5f + 0.5f, 0).x;
-                
-                    if (depthValue <= lightSpacePos.z / lightSpacePos.w && depthValue != 1.0f)
-                        isDepthTestPassed = false;
-                    else
-                        isDepthTestPassed = true;
-                }
-                else
-                {
-                    float4 lightSpacePos = mul(pointLightData.upperFaceViewProjection, float4(currentPoint.xyz, 1.0f));
-                    float depthValue = lightUpperFaceDepthTexture.SampleLevel(lightDepthSampler,
-		            float2(lightSpacePos.x / lightSpacePos.w, -lightSpacePos.y / lightSpacePos.w) * 0.5f + 0.5f, 0).x;
-                
-                    if (depthValue <= lightSpacePos.z / lightSpacePos.w && depthValue != 1.0f)
-                        isDepthTestPassed = false;
-                    else
-                        isDepthTestPassed = true;
-                }*/
-            
+                       
                 bool testDepthPass = true;
                 
                 isDepthTestPassed = true;
@@ -371,22 +275,23 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
                     currentPoint = Rn + step * i;
                     float3 currentVector = normalize(currentPoint - pointLightData.lightSourcePosition.xyz);
                     
-                    /*float lightDepthValue;
+                    float4 lightSpacePos;
+                    float lightDepthValue;
                     
                     if (currentVector.y < sqrt(pow(currentVector.x, 2) + pow(currentVector.z, 2)))
                     {
-                        float4 lightSpacePos = mul(pointLightData.frontFaceViewProjection, float4(currentPoint.xyz, 1.0f));
+                        lightSpacePos = mul(pointLightData.frontFaceViewProjection, float4(currentPoint.xyz, 1.0f));
                         lightDepthValue = lightFrontFaceDepthTexture.SampleLevel(lightDepthSampler,
-		                    float2(lightSpacePos.x / lightSpacePos.w, -lightSpacePos.y / lightSpacePos.w) * 0.5f + 0.5f, 0).x;
+		                    float2(lightSpacePos.x / lightSpacePos.w, -lightSpacePos.y / lightSpacePos.w) * 0.5f + 0.5f, 0).x; // HERE
                     }
                     else
                     {
-                        float4 lightSpacePos = mul(pointLightData.upperFaceViewProjection, float4(currentPoint.xyz, 1.0f));
+                        lightSpacePos = mul(pointLightData.upperFaceViewProjection, float4(currentPoint.xyz, 1.0f));
                         lightDepthValue = lightUpperFaceDepthTexture.SampleLevel(lightDepthSampler,
 		                    float2(lightSpacePos.x / lightSpacePos.w, -lightSpacePos.y / lightSpacePos.w) * 0.5f + 0.5f, 0).x;
-                    }*/
+                    }
                     
-                    if ( /*lightDepthValue <= lightSpacePos.z / lightSpacePos.w && depthValue != 1.0f*/!testDepthPass)
+                    if (lightDepthValue < lightSpacePos.z / lightSpacePos.w && depthValue < 1.0f)
                     {
                         if (isDepthTestPassed)
                         {
@@ -419,18 +324,18 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
                                     directionTest = true;
                             }
                                 
-                            if (length(nR0) < length(nf) && directionTest) // Problem here?
+                            if (length(nR0) < length(nf) && directionTest) // Problem's here?
                             {
                                 N = abs(CalculateGaussIntegral(acos(n1.y) / PI * 180.0f, acos(normal0.y) / PI * 180.0f))
                                     + abs(CalculateGaussIntegral(acos(n2.y) / PI * 180.0f, acos(normal0.y) / PI * 180.0f));
                                 if (N > 1.0f)
-                                    return float4(0, 0, 0, 1);
+                                    return float4(0, 0, 0, 0);
                             }
                             else
                             {
                                 N = abs(CalculateGaussIntegral(acos(n1.y) / PI * 180.0f, acos(n2.y) / PI * 180.0f));
                                 if (N > 1.0f)
-                                    return float4(0, 0, 0, 1);
+                                    return float4(0, 0, 0, 0);
                             }
                             
                             intensity = intensity + N * abs(CalculateRefractionIntegral(e1, e2))
@@ -447,20 +352,64 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
                             startPoint = currentPoint;
                         }
                     }
-                    
-                    if (i < 25)
-                        testDepthPass = true;
-                    else if (i < 35)
-                        testDepthPass = true;
-                    else if (i < 99)
-                        testDepthPass = true;
-                    else
-                        testDepthPass = false;
                 }
                 
-                //TODO: add post-loop calculation
+                if (isDepthTestPassed)
+                {
+                    float3 currentVector = normalize(currentPoint - pointLightData.lightSourcePosition.xyz);
+                            
+                    n1 = normalize(viewDir + normalize(startPoint - pointLightData.lightSourcePosition.xyz));
+                    n2 = normalize(viewDir + currentVector);
+                    float e1 = acos(n1.x * viewDir.x + n1.y * viewDir.y + n1.z * viewDir.z);
+                    float e2 = acos(n2.x * viewDir.x + n2.y * viewDir.y + n2.z * viewDir.z);
+                            
+                    float3 nR0 = R0 - startPoint;
+                    float3 nf = currentPoint - startPoint;
+                    float N;
+                            
+                    bool directionTest = false;
+                    if (nR0.x != 0)
+                    {
+                        if (nf.x / nR0.x >= 0)
+                            directionTest = true;
 
-                intensity *= clamp(L / PILLAR_WIDTH_FACTOR, 0, 1) * INTENSITY_FACTOR;
+                    }
+                    else if (nR0.y != 0)
+                    {
+                        if (nf.y / nR0.y >= 0)
+                            directionTest = true;
+                    }
+                    else if (nR0.z != 0)
+                    {
+                        if (nf.z / nR0.z >= 0)
+                            directionTest = true;
+                    }
+                                
+                    if (length(nR0) < length(nf) && directionTest) // Problem's here?
+                    {
+                        N = abs(CalculateGaussIntegral(acos(n1.y) / PI * 180.0f, acos(normal0.y) / PI * 180.0f))
+                                    + abs(CalculateGaussIntegral(acos(n2.y) / PI * 180.0f, acos(normal0.y) / PI * 180.0f));
+                        if (N > 1.0f)
+                            return float4(0, 0, 0, 0);
+                    }
+                    else
+                    {
+                        N = abs(CalculateGaussIntegral(acos(n1.y) / PI * 180.0f, acos(n2.y) / PI * 180.0f));
+                        if (N > 1.0f)
+                            return float4(0, 0, 0, 0);
+                    }
+                            
+                    intensity = intensity + N * abs(CalculateRefractionIntegral(e1, e2))
+                                * pow(2.71f, -ABSORPTION_PARAMETER * length((startPoint + currentPoint) / PILLAR_WIDTH_FACTOR - constData.viewerPos));
+                            
+                    L += length(currentPoint - startPoint);
+                }
+
+                float intMult = 1.0f;
+                /*if (pos.y > 400 && pos.y < 800)
+                    intMult = ((pos.y + 100/pos.y) / 900);*/
+                
+                intensity *= clamp(L / PILLAR_WIDTH_FACTOR, 0, 1) * INTENSITY_FACTOR * intMult;
                 
                 return float4(pointLightData.lightColor.xyz * intensity, 1.0f);
             }
@@ -477,7 +426,7 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
                 float e0 = acos(normal0.x * viewDir.x + normal0.y * viewDir.y + normal0.z * viewDir.z);
                 float e1 = acos(n1.x * viewDir.x + n1.y * viewDir.y + n1.z * viewDir.z);
                 float e2 = acos(n2.x * viewDir.x + n2.y * viewDir.y + n2.z * viewDir.z);
-            
+                
                 N *= abs(CalculateRefractionIntegral(e1, e2));
             
                 N *= pow(2.71f, -ABSORPTION_PARAMETER * length(R0 - constData.viewerPos)) * clamp(length(R2 - R1) / PILLAR_WIDTH_FACTOR, 0, 1);

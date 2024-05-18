@@ -8,12 +8,12 @@
       <COLUMN>8</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'Camera::inputDeviceCameraInstance' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'Camera::yawAxis' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>Camera::{ctor}</FUNCTION>
     <DECORATED>??0Camera@@QEAA@PEAUVector3@SimpleMath@DirectX@@@Z</DECORATED>
     <FUNCLINE>4</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>Camera::inputDeviceCameraInstance</targetSymbol>
+      <targetSymbol>Camera::yawAxis</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -25,12 +25,12 @@
       <COLUMN>8</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'Camera::yawAxis' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'Camera::inputDeviceCameraInstance' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>Camera::{ctor}</FUNCTION>
     <DECORATED>??0Camera@@QEAA@PEAUVector3@SimpleMath@DirectX@@@Z</DECORATED>
     <FUNCLINE>4</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>Camera::yawAxis</targetSymbol>
+      <targetSymbol>Camera::inputDeviceCameraInstance</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -59,12 +59,12 @@
       <COLUMN>2</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::Buffer' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::pPtr' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>InlineAllocator&lt;32&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$InlineAllocator@$0CA@@@QEAA@XZ</DECORATED>
     <FUNCLINE>409</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::Buffer</targetSymbol>
+      <targetSymbol>InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::pPtr</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -76,12 +76,12 @@
       <COLUMN>2</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::pPtr' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::Buffer' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>InlineAllocator&lt;32&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$InlineAllocator@$0CA@@@QEAA@XZ</DECORATED>
     <FUNCLINE>409</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::pPtr</targetSymbol>
+      <targetSymbol>InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::Buffer</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>

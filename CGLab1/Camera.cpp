@@ -22,7 +22,7 @@ void Camera::Initialize(DirectX::SimpleMath::Vector3 pos, float yawVal, float pi
 	pitchAxis = pitchVal;
 	position = pos;
 
-	position = { 30.0f, 1.0f, 0.0f };
+	position = { 30.0f, 1.0f, 2.0f };
 	yawAxis = 1.57f;
 	pitchAxis = .7f;
 	
@@ -62,6 +62,7 @@ void Camera::Update(float deltaTime, int screenWidth, int screenHeight)
 		0.1f,
 		100.0f
 	);
+	transformMatrix = DirectX::SimpleMath::Matrix::CreateWorld(position, position + rotation.Forward(), rotation.Up());
 }
 
 void Camera::OnMouseMove(const MouseMoveEventArgs& args) 

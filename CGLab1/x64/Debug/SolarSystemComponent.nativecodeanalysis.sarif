@@ -123,35 +123,6 @@
         {
           "ruleId": "C26495",
           "message": {
-            "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::Buffer' is uninitialized. Always initialize a member variable (type.6)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Delegates.h"
-                },
-                "region": {
-                  "startLine": 409,
-                  "startColumn": 3
-                }
-              },
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "InlineAllocator<32>::{ctor}",
-                  "decoratedName": "??0?$InlineAllocator@$0CA@@@QEAA@XZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::Buffer"
-          }
-        },
-        {
-          "ruleId": "C26495",
-          "message": {
             "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::pPtr' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
@@ -177,6 +148,35 @@
           "properties": {
             "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::pPtr"
           }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::Buffer' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Delegates.h"
+                },
+                "region": {
+                  "startLine": 409,
+                  "startColumn": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "InlineAllocator<32>::{ctor}",
+                  "decoratedName": "??0?$InlineAllocator@$0CA@@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::Buffer"
+          }
         }
       ],
       "tool": {
@@ -201,7 +201,7 @@
             "resultFile"
           ],
           "hashes": {
-            "sha-256": "f93e68906ec9b2db6299c57fe6a618e6f963477df9f3812449c8eefe69bfe171"
+            "sha-256": "cc3f7ba49769f8ca4c54f7d6a89081bbd91926838c07970b62ddc0487eb86a83"
           }
         },
         {
@@ -223,7 +223,7 @@
             "analysisTarget"
           ],
           "hashes": {
-            "sha-256": "43fd78eac6ce9ae9373c6cd9ceb75279df49c01c6ae1061035b7d4f144af5c27"
+            "sha-256": "6c88c4fa0d9de0a4003c74b5850ab3dac76c9923f6c6e165adfd2a85fa0e23de"
           }
         },
         {
@@ -231,7 +231,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/solarsystemcomponent.h"
           },
           "hashes": {
-            "sha-256": "238fdcd2d4f615bd36903b150aa816d359fb468cffd0a70eeb9d297e2890df43"
+            "sha-256": "8882880c277189ce0529e8c67799de8fb97056e484f730f4d632795eb3383ed0"
           }
         },
         {
@@ -503,7 +503,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/game.h"
           },
           "hashes": {
-            "sha-256": "b391cc24b9433d4674610eba3fa71c169700f54a0721b7629837917fa5a818b0"
+            "sha-256": "79006d07892253248793dffcfacd093ffe051909f5ea2d7943d81d6548e34559"
           }
         },
         {
@@ -535,7 +535,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/gamecomponent.h"
           },
           "hashes": {
-            "sha-256": "e3ac14b022655883d32b266b53005073c6ac12efaef1a2f7f409d5a91d91f935"
+            "sha-256": "40fd21da0d80178ebf693b665a76314543fbecea3824a33c1b9df8683ca1820f"
           }
         },
         {
@@ -543,7 +543,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/camera.h"
           },
           "hashes": {
-            "sha-256": "c87c9a3bbd3b64322d9d0a17f08123abd28236b43bd2b91b66a607a18d8b4aa5"
+            "sha-256": "cef091416270c5a980a5260e9bd46285ed572f2db8d1967387286241ba468eee"
           }
         },
         {
@@ -559,7 +559,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/pointlight.h"
           },
           "hashes": {
-            "sha-256": "b46a6a7635f7fa9fc056f03d0e22cb95090c73b983cc7974ccdd82ac6674e579"
+            "sha-256": "d28eca8d75ecc27579745d9bea9ed9572a3d2ad740819cc52c798ff1c679794b"
           }
         }
       ]

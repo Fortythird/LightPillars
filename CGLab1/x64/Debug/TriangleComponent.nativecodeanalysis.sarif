@@ -7,6 +7,35 @@
         {
           "ruleId": "C26495",
           "message": {
+            "text": "Variable 'TriangleComponent::depthPixelShader' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/TriangleComponent.cpp"
+                },
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 20
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TriangleComponent::{ctor}",
+                  "decoratedName": "??0TriangleComponent@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "TriangleComponent::depthPixelShader"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
             "text": "Variable 'TriangleComponent::texturePath' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
@@ -94,59 +123,30 @@
         {
           "ruleId": "C26495",
           "message": {
-            "text": "Variable 'TriangleComponentParameters::numPoints' is uninitialized. Always initialize a member variable (type.6)."
+            "text": "Variable 'TriangleComponent::depthVertexShader' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/TriangleComponent.h"
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/TriangleComponent.cpp"
                 },
                 "region": {
-                  "startLine": 21,
-                  "startColumn": 1
+                  "startLine": 5,
+                  "startColumn": 20
                 }
               },
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TriangleComponentParameters::{ctor}",
-                  "decoratedName": "??0TriangleComponentParameters@@QEAA@XZ",
+                  "fullyQualifiedName": "TriangleComponent::{ctor}",
+                  "decoratedName": "??0TriangleComponent@@QEAA@XZ",
                   "kind": "function"
                 }
               ]
             }
           ],
           "properties": {
-            "targetSymbol": "TriangleComponentParameters::numPoints"
-          }
-        },
-        {
-          "ruleId": "C26495",
-          "message": {
-            "text": "Variable 'TriangleComponentParameters::numIndeces' is uninitialized. Always initialize a member variable (type.6)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/TriangleComponent.h"
-                },
-                "region": {
-                  "startLine": 21,
-                  "startColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TriangleComponentParameters::{ctor}",
-                  "decoratedName": "??0TriangleComponentParameters@@QEAA@XZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "targetSymbol": "TriangleComponentParameters::numIndeces"
+            "targetSymbol": "TriangleComponent::depthVertexShader"
           }
         },
         {
@@ -181,6 +181,35 @@
         {
           "ruleId": "C26495",
           "message": {
+            "text": "Variable 'TriangleComponentParameters::numIndeces' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/TriangleComponent.h"
+                },
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TriangleComponentParameters::{ctor}",
+                  "decoratedName": "??0TriangleComponentParameters@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "TriangleComponentParameters::numIndeces"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
             "text": "Variable 'TriangleComponentParameters::indeces' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
@@ -210,6 +239,64 @@
         {
           "ruleId": "C26495",
           "message": {
+            "text": "Variable 'TriangleComponentParameters::numPoints' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/TriangleComponent.h"
+                },
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TriangleComponentParameters::{ctor}",
+                  "decoratedName": "??0TriangleComponentParameters@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "TriangleComponentParameters::numPoints"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'TriangleComponent::depthPixelShader' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/TriangleComponent.cpp"
+                },
+                "region": {
+                  "startLine": 48,
+                  "startColumn": 20
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TriangleComponent::{ctor}",
+                  "decoratedName": "??0TriangleComponent@@QEAA@UTriangleComponentParameters@@PEB_W@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "TriangleComponent::depthPixelShader"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
             "text": "Variable 'TriangleComponent::textureView' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
@@ -219,7 +306,7 @@
                   "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/TriangleComponent.cpp"
                 },
                 "region": {
-                  "startLine": 47,
+                  "startLine": 48,
                   "startColumn": 20
                 }
               },
@@ -239,6 +326,64 @@
         {
           "ruleId": "C26495",
           "message": {
+            "text": "Variable 'TriangleComponent::depthVertexShader' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/TriangleComponent.cpp"
+                },
+                "region": {
+                  "startLine": 48,
+                  "startColumn": 20
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TriangleComponent::{ctor}",
+                  "decoratedName": "??0TriangleComponent@@QEAA@UTriangleComponentParameters@@PEB_W@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "TriangleComponent::depthVertexShader"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'TriangleComponent::depthConstBuffer' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/TriangleComponent.cpp"
+                },
+                "region": {
+                  "startLine": 48,
+                  "startColumn": 20
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TriangleComponent::{ctor}",
+                  "decoratedName": "??0TriangleComponent@@QEAA@UTriangleComponentParameters@@PEB_W@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "TriangleComponent::depthConstBuffer"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
             "text": "Variable 'TriangleComponent::normals' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
@@ -248,7 +393,7 @@
                   "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/TriangleComponent.cpp"
                 },
                 "region": {
-                  "startLine": 47,
+                  "startLine": 48,
                   "startColumn": 20
                 }
               },
@@ -347,7 +492,7 @@
             "resultFile"
           ],
           "hashes": {
-            "sha-256": "b22d5e8aa8b3186d31c7bcb6141a81920d81f437ba527b4d58561b03a21c985a"
+            "sha-256": "b0c9d7956445c322c4d32900c375adfd1fe768e856b1303b22ad7c1351bc6337"
           }
         },
         {
@@ -358,7 +503,7 @@
             "resultFile"
           ],
           "hashes": {
-            "sha-256": "f93e68906ec9b2db6299c57fe6a618e6f963477df9f3812449c8eefe69bfe171"
+            "sha-256": "cc3f7ba49769f8ca4c54f7d6a89081bbd91926838c07970b62ddc0487eb86a83"
           }
         },
         {
@@ -409,7 +554,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/gamecomponent.h"
           },
           "hashes": {
-            "sha-256": "e3ac14b022655883d32b266b53005073c6ac12efaef1a2f7f409d5a91d91f935"
+            "sha-256": "40fd21da0d80178ebf693b665a76314543fbecea3824a33c1b9df8683ca1820f"
           }
         },
         {
@@ -441,7 +586,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/camera.h"
           },
           "hashes": {
-            "sha-256": "c87c9a3bbd3b64322d9d0a17f08123abd28236b43bd2b91b66a607a18d8b4aa5"
+            "sha-256": "cef091416270c5a980a5260e9bd46285ed572f2db8d1967387286241ba468eee"
           }
         }
       ]

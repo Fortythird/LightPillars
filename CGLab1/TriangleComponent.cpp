@@ -25,6 +25,7 @@ TriangleComponent::TriangleComponent()
 	vertexBuffer = nullptr;
 	indexBuffer = nullptr;
 	constBuffer = nullptr;
+	depthConstBuffer = nullptr;
 	lightConstBuffer = nullptr;
 	textureBuffer = nullptr;
 	samplerState = nullptr;
@@ -131,6 +132,19 @@ int TriangleComponent::Init(Microsoft::WRL::ComPtr<ID3D11Device> device, Display
 		std::cout << "Error while const buffer creating...";
 	}
 
+	D3D11_BUFFER_DESC depthConstBufDesc = {};
+	depthConstBufDesc.Usage = D3D11_USAGE_DYNAMIC;
+	depthConstBufDesc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
+	depthConstBufDesc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE;
+	depthConstBufDesc.MiscFlags = 0;
+	depthConstBufDesc.StructureByteStride = 0;
+	depthConstBufDesc.ByteWidth = sizeof(DepthConstData);
+	result = device->CreateBuffer(&depthConstBufDesc, nullptr, &depthConstBuffer);
+
+	if (FAILED(result)) {
+		std::cout << "Error while depth const buffer creating...";
+	}
+
 	D3D_SHADER_MACRO Shader_Macros[] = {
 		"TEST",
 		"1",
@@ -231,6 +245,70 @@ int TriangleComponent::Init(Microsoft::WRL::ComPtr<ID3D11Device> device, Display
 		&layout
 	);
 
+	ID3DBlob* vertexBC = nullptr;
+	ID3DBlob* errorVCode = nullptr;
+
+	result = D3DCompileFromFile(
+		L"../Shaders/DepthShader.hlsl",
+		nullptr,
+		nullptr,
+		"VSMain",
+		"vs_5_0",
+		D3DCOMPILE_DEBUG | D3DCOMPILE_SKIP_OPTIMIZATION,
+		0,
+		&vertexBC,
+		&errorVCode
+	);
+
+	if (FAILED(result))
+	{
+		if (errorVCode)
+		{
+			char* compileErrors = (char*)(errorVCode->GetBufferPointer());
+			std::cout << compileErrors << std::endl;
+		}
+		else MessageBox(display.getHWND(), L"../Shaders/DepthShader.hlsl", L"Missing Shader File", MB_OK);
+	}
+
+	ID3DBlob* pixelBC = nullptr;
+	ID3DBlob* errorPCode = nullptr;
+
+	result = D3DCompileFromFile(
+		L"../Shaders/DepthShader.hlsl",
+		nullptr,
+		nullptr,
+		"PSMain",
+		"ps_5_0",
+		D3DCOMPILE_DEBUG | D3DCOMPILE_SKIP_OPTIMIZATION,
+		0,
+		&pixelBC,
+		&errorPCode
+	);
+
+	if (FAILED(result))
+	{
+		if (errorPCode)
+		{
+			char* compileErrors = (char*)(errorPCode->GetBufferPointer());
+			std::cout << compileErrors << std::endl;
+		}
+		else MessageBox(display.getHWND(), L"../Shaders/DepthShader.hlsl", L"Missing Shader File", MB_OK);
+	}
+
+	device->CreateVertexShader(
+		vertexBC->GetBufferPointer(),
+		vertexBC->GetBufferSize(),
+		nullptr,
+		&depthVertexShader
+	);
+
+	device->CreatePixelShader(
+		pixelBC->GetBufferPointer(),
+		pixelBC->GetBufferSize(),
+		nullptr,
+		&depthPixelShader
+	);
+
 	int size = parameters.numPoints;
 
 	D3D11_BUFFER_DESC vertexBufDesc = {};
@@ -308,6 +386,10 @@ void TriangleComponent::DestroyResources()
 	if (vertexShader != nullptr) vertexShader->Release();
 
 	if (pixelShader != nullptr) pixelShader->Release();
+
+	if (depthVertexShader != nullptr) depthVertexShader->Release();
+	
+	if (depthPixelShader != nullptr) depthPixelShader->Release();
 
 	if (layout != nullptr) layout->Release();
 
@@ -471,6 +553,40 @@ void TriangleComponent::DrawShadow(ID3D11DeviceContext* context)
 	context->IASetVertexBuffers(0, 1, &vertexBuffer, strides, offsets);
 	context->VSSetShader(vertexShader, nullptr, 0);
 	context->VSSetConstantBuffers(0, 1, &constBuffer);
+	context->DrawIndexed(parameters.numIndeces, 0, 0);
+}
+
+void TriangleComponent::DrawDepth(ID3D11DeviceContext* context, DirectX::SimpleMath::Matrix viewProjMtrx)
+{
+	depthConstData.worldViewProj = viewProjMtrx;
+	depthConstData.worldViewProj = depthConstData.worldViewProj.Transpose();
+	depthConstData.model = DirectX::SimpleMath::Matrix::CreateTranslation(parameters.compPosition);
+	depthConstData.model = GetModelMatrix().Transpose();
+
+	D3D11_MAPPED_SUBRESOURCE subresourse = {};
+	context->Map(
+		depthConstBuffer,
+		0,
+		D3D11_MAP_WRITE_DISCARD,
+		0,
+		&subresourse
+	);
+
+	memcpy(
+		reinterpret_cast<float*>(subresourse.pData),
+		&depthConstData,
+		sizeof(DepthConstData)
+	);
+
+	context->Unmap(depthConstBuffer, 0);
+
+	context->IASetInputLayout(layout);
+	context->IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
+	context->IASetIndexBuffer(indexBuffer, DXGI_FORMAT_R32_UINT, 0);
+	context->IASetVertexBuffers(0, 1, &vertexBuffer, strides, offsets);
+	context->VSSetShader(depthVertexShader, nullptr, 0);
+	context->PSSetShader(depthPixelShader, nullptr, 0);
+	context->VSSetConstantBuffers(0, 1, &depthConstBuffer);
 	context->DrawIndexed(parameters.numIndeces, 0, 0);
 }
 

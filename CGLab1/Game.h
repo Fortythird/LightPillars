@@ -10,6 +10,7 @@
 struct ConstPillarData
 {
 	DirectX::SimpleMath::Matrix invertedCamViewProjection;
+	DirectX::SimpleMath::Matrix invertedCamTransform;
 	DirectX::SimpleMath::Matrix camViewProjection;
 	DirectX::SimpleMath::Vector3 viewerPos;
 	float dummy = 1.0f;
@@ -19,12 +20,17 @@ struct PointLightData
 {
 	DirectX::SimpleMath::Vector4 lightSourcePosition;
 	DirectX::SimpleMath::Vector4 lightColor;
+	DirectX::SimpleMath::Matrix transformMtrx;
 	DirectX::SimpleMath::Matrix frontFaceViewProjection;
 	DirectX::SimpleMath::Matrix upperFaceViewProjection;
 };
 
 class Game 
 {
+private:
+	int perf_FrameCount = 0;
+	float perf_timer = 0;
+
 public:
 	Microsoft::WRL::ComPtr<ID3D11Device> device;
 

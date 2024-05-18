@@ -13,6 +13,7 @@ class Camera {
 		InputDevice* inputDeviceCameraInstance;
 		DirectX::SimpleMath::Matrix viewMatrix;
 		DirectX::SimpleMath::Matrix projectionMatrix;
+		DirectX::SimpleMath::Matrix transformMatrix;
 		DirectX::SimpleMath::Vector3 position;
 		DirectX::SimpleMath::Vector3 camDirection;
 

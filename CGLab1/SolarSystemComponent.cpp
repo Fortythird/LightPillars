@@ -8,13 +8,14 @@ SolarSystemComponent::SolarSystemComponent()
 
 void SolarSystemComponent::Init()
 {
-	Ball = new TriangleComponent(CreateSphere(1.0, L"../Textures/yoba.dds"));
+	Ball = new TriangleComponent(CreateSphere(1.0, L"../Textures/test.dds"));
 
-	//Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Rat2.obj", Ball, L"../Textures/Rat.dds")));
-	//Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Cheems.obj", Ball, L"../Textures/Cheems.dds")));
-	//Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Livesey.obj", Ball, L"../Textures/Livesey.dds")));
-	//Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Skull.obj", Ball, L"../Textures/Livesey.dds")));
-	//Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Rom.obj", Ball, L"../Textures/Livesey.dds")));
+	Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Rat2.obj", Ball, L"../Textures/test.dds")));
+	Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Cheems.obj", Ball, L"../Textures/Cheems.dds")));
+	Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Livesey.obj", Ball, L"../Textures/Livesey.dds")));
+	Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Skull.obj", Ball, L"../Textures/Livesey.dds")));
+	Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Rom.obj", Ball, L"../Textures/Livesey.dds")));
+	Components.push_back(Ball);
 
 	std::random_device rd;
 	std::mt19937 rng(rd());
@@ -23,15 +24,20 @@ void SolarSystemComponent::Init()
 
 	for (int i = 0; i < Components.size(); i++)
 	{
-		int radius = rad_uni(rng);
+		/*int radius = rad_uni(rng);
 		float angle = (float)ang_uni(rng);
-		Components[i]->SetPos({ radius * sin(angle), 0.0, radius * cos(angle) });
-		Components[i]->SetRot({ -(1.57), angle, 0.0});
+		Components[i]->SetPos({ radius * 1.0f, radius * 1.0f / 1.5f, radius * 1.0f - 10 });
+		Components[i]->SetRot({ -(1.57), angle, 0.0});*/
+		Components[i]->SetPos({ 2.0f * i , 10.0f * (Components.size() - i) / Components.size(), 1.0f * i * (float)pow(-1.0f, i) });
 	}
 
-	floor = new TriangleComponent(CreateFloor(L"../Textures/ground.dds"));
+	floor = new TriangleComponent(CreateFloor(L"../Textures/ground.dds", 1.0f));
 	floor->pos = { 0.0, 0.0, 0.0 };
 	Components.push_back(floor);
+
+	//floor = new TriangleComponent(CreateFloor(L"../Textures/ground.dds", 0.1f));
+	//floor->pos = { 10.0f, 10.0f, 0 };
+	//Components.push_back(floor);
 
 	//Components.push_back(Ball);
 	//Ball->pos = { 5.0f, 0.0f, 0.0f };
@@ -342,7 +348,7 @@ TriangleComponent SolarSystemComponent::CreateSphere(float radius, const wchar_t
 
 }
 
-TriangleComponent SolarSystemComponent::CreateFloor(const wchar_t* _texturePath)
+TriangleComponent SolarSystemComponent::CreateFloor(const wchar_t* _texturePath, float scale)
 {
 	TriangleComponentParameters _floor;
 
@@ -350,14 +356,14 @@ TriangleComponent SolarSystemComponent::CreateFloor(const wchar_t* _texturePath)
 	_floor.numIndeces = 36;
 
 	_floor.points = new TriangleComponentParameters::Vertex[_floor.numPoints]{
-		DirectX::SimpleMath::Vector4(20.0, 0.0, 20.0, 1.0),		DirectX::SimpleMath::Vector2(1.0, 1.0),		DirectX::SimpleMath::Vector4(0.0, 1.0, 0.0, 1.0),
-		DirectX::SimpleMath::Vector4(20.0, 0.0, -20.0, 1.0),	DirectX::SimpleMath::Vector2(1.0, -1.0),	DirectX::SimpleMath::Vector4(0.0, 1.0, 0.0, 1.0),
-		DirectX::SimpleMath::Vector4(-20.0, 0.0, -20.0, 1.0),	DirectX::SimpleMath::Vector2(-1.0, -1.0),	DirectX::SimpleMath::Vector4(0.0, 1.0, 0.0, 1.0),
-		DirectX::SimpleMath::Vector4(-20.0, 0.0, 20.0, 1.0),	DirectX::SimpleMath::Vector2(-1.0, 1.0),	DirectX::SimpleMath::Vector4(0.0, 1.0, 0.0, 1.0),
-		DirectX::SimpleMath::Vector4(20.0, -10.0, 20.0, 1.0),	DirectX::SimpleMath::Vector2(1.0, 1.0),		DirectX::SimpleMath::Vector4(0.0, -1.0, 0.0, 1.0),
-		DirectX::SimpleMath::Vector4(20.0, -10.0, -20.0, 1.0),	DirectX::SimpleMath::Vector2(1.0, 1.0),		DirectX::SimpleMath::Vector4(0.0, -1.0, 0.0, 1.0),
-		DirectX::SimpleMath::Vector4(-20.0, -10.0, -20.0, 1.0), DirectX::SimpleMath::Vector2(1.0, 1.0),		DirectX::SimpleMath::Vector4(0.0, -1.0, 0.0, 1.0),
-		DirectX::SimpleMath::Vector4(-20.0, -10.0, 20.0, 1.0),	DirectX::SimpleMath::Vector2(1.0, 1.0),		DirectX::SimpleMath::Vector4(0.0, -1.0, 0.0, 1.0)
+		DirectX::SimpleMath::Vector4(20.0 * scale, 0.0, 20.0 * scale, 1.0),		DirectX::SimpleMath::Vector2(1.0, 1.0),		DirectX::SimpleMath::Vector4(0.0, 1.0, 0.0, 1.0),
+		DirectX::SimpleMath::Vector4(20.0 * scale, 0.0, -20.0 * scale, 1.0),	DirectX::SimpleMath::Vector2(1.0, -1.0),	DirectX::SimpleMath::Vector4(0.0, 1.0, 0.0, 1.0),
+		DirectX::SimpleMath::Vector4(-20.0 * scale, 0.0, -20.0 * scale, 1.0),	DirectX::SimpleMath::Vector2(-1.0, -1.0),	DirectX::SimpleMath::Vector4(0.0, 1.0, 0.0, 1.0),
+		DirectX::SimpleMath::Vector4(-20.0 * scale, 0.0, 20.0 * scale, 1.0),	DirectX::SimpleMath::Vector2(-1.0, 1.0),	DirectX::SimpleMath::Vector4(0.0, 1.0, 0.0, 1.0),
+		DirectX::SimpleMath::Vector4(20.0 * scale, -10.0 * scale, 20.0 * scale, 1.0),	DirectX::SimpleMath::Vector2(1.0, 1.0),		DirectX::SimpleMath::Vector4(0.0, -1.0, 0.0, 1.0),
+		DirectX::SimpleMath::Vector4(20.0 * scale, -10.0 * scale, -20.0 * scale, 1.0),	DirectX::SimpleMath::Vector2(1.0, 1.0),		DirectX::SimpleMath::Vector4(0.0, -1.0, 0.0, 1.0),
+		DirectX::SimpleMath::Vector4(-20.0 * scale, -10.0 * scale, -20.0 * scale, 1.0), DirectX::SimpleMath::Vector2(1.0, 1.0),		DirectX::SimpleMath::Vector4(0.0, -1.0, 0.0, 1.0),
+		DirectX::SimpleMath::Vector4(-20.0 * scale, -10.0 * scale, 20.0 * scale, 1.0),	DirectX::SimpleMath::Vector2(1.0, 1.0),		DirectX::SimpleMath::Vector4(0.0, -1.0, 0.0, 1.0)
 	};
 	_floor.indeces = new int[_floor.numIndeces] {
 		0, 1, 2, 2, 3, 0,

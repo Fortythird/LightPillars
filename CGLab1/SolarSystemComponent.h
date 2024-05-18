@@ -34,7 +34,7 @@ public:
 
 	TriangleComponent CreateSphere(float _radius, const wchar_t* _texturePath);
 	TriangleComponent CreateSphere(float _radius, TriangleComponent* _parent, const wchar_t* _texturePath);
-	TriangleComponent CreateFloor(const wchar_t* _texturePath);
+	TriangleComponent CreateFloor(const wchar_t* _texturePath, float scale);
 	TriangleComponent CreateMesh(float _radius, const std::string& _modelPath, TriangleComponent* _parent, const wchar_t* _texturePath);
 	void ReadNode(aiNode* node, const aiScene* scene, std::vector<TriangleComponentParameters::Vertex>* _points, std::vector<int>* _indeces);
 
