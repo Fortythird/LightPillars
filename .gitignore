@@ -34,3 +34,9 @@
 *.pdb
 *.ipch
 *.log
+*.db
+*.db-wal
+*.db-shm
+*.testlog
+*.vsidx
+*.opendb
