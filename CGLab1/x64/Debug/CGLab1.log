@@ -1,13 +1,12 @@
-﻿  Game.cpp
-  CGLab1.vcxproj -> C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\x64\Debug\CGLab1.exe
+﻿  CGLab1.vcxproj -> C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\x64\Debug\CGLab1.exe
 C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Camera.cpp(4): warning C26495: Variable 'Camera::yawAxis' is uninitialized. Always initialize a member variable (type.6).
 C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Delegates.h(409): warning C26495: Variable 'InlineAllocator<32>::<unnamed-tag>::pPtr' is uninitialized. Always initialize a member variable (type.6).
 C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Game.cpp(6): warning C26495: Variable 'Game::shadowViewport' is uninitialized. Always initialize a member variable (type.6).
-C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Game.cpp(172): warning C6387: 'sceneDepthTexture' could be '0'.
-C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Game.cpp(175): warning C6387: 'shadowDepthTexture' could be '0'.
-C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Game.cpp(183): warning C6387: 'shadowDepthTexture' could be '0'.
-C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Game.cpp(186): warning C6387: 'sceneDepthTexture' could be '0'.
-C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Game.cpp(197): warning C6387: 'backTexture' could be '0'.
+C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Game.cpp(208): warning C6387: 'sceneDepthTexture' could be '0'.
+C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Game.cpp(211): warning C6387: 'shadowDepthTexture' could be '0'.
+C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Game.cpp(219): warning C6387: 'shadowDepthTexture' could be '0'.
+C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Game.cpp(222): warning C6387: 'sceneDepthTexture' could be '0'.
+C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Game.cpp(233): warning C6387: 'backTexture' could be '0'.
 C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\InputDevice.cpp(6): warning C26495: Variable 'InputDevice::hWnd' is uninitialized. Always initialize a member variable (type.6).
 C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\InputDevice.h(19): warning C26495: Variable 'MouseMoveEventArgs::WheelDelta' is uninitialized. Always initialize a member variable (type.6).
 C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\PointLight.cpp(3): warning C26495: Variable 'PointLight::shadowViewport' is uninitialized. Always initialize a member variable (type.6).

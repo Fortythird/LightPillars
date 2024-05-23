@@ -10,11 +10,11 @@ void SolarSystemComponent::Init()
 {
 	Ball = new TriangleComponent(CreateSphere(1.0, L"../Textures/test.dds"));
 
-	Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Rat2.obj", Ball, L"../Textures/test.dds")));
+	/*Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Rat2.obj", Ball, L"../Textures/test.dds")));
 	Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Cheems.obj", Ball, L"../Textures/Cheems.dds")));
 	Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Livesey.obj", Ball, L"../Textures/Livesey.dds")));
 	Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Skull.obj", Ball, L"../Textures/Livesey.dds")));
-	Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Rom.obj", Ball, L"../Textures/Livesey.dds")));
+	Components.push_back(new TriangleComponent(CreateMesh(1.0f, "../Models/Rom.obj", Ball, L"../Textures/Livesey.dds")));*/
 	Components.push_back(Ball);
 
 	std::random_device rd;
@@ -40,7 +40,7 @@ void SolarSystemComponent::Init()
 	//Components.push_back(floor);
 
 	//Components.push_back(Ball);
-	//Ball->pos = { 5.0f, 0.0f, 0.0f };
+	Ball->pos = { 5.0f, -5.0f, 0.0f };
 
 	auto cameraInstance = new Camera(&Ball->pos);
 	cameraInstance->Initialize(

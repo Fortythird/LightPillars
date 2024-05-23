@@ -1,5 +1,5 @@
-static const int DEPTH_CALC_ENABLED = 1;
-static const int PILLAR_ENABLED = 0;
+static const int DEPTH_CALC_ENABLED = 0;
+static const int PILLAR_ENABLED = 1;
 
 struct ConstData
 {
@@ -51,7 +51,7 @@ static const float CRIT_ANGLE_DEG = 5.0f;
 static const float PI = 3.14159265359f;
 static const float ABSORPTION_PARAMETER = 0.02f;
 static const float DEPTH_READING_FREQUENCY = 100.0f;
-static const float PILLAR_WIDTH_FACTOR = 10.0f;
+static const float PILLAR_WIDTH_FACTOR = 30.0f;
 static const float INTENSITY_FACTOR = 2.0f;
 
 float CalculateGaussProt(float d)

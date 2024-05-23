@@ -9,7 +9,7 @@ Game::Game()
 	swapChain = nullptr;
 	rtv = nullptr;
 	debug = nullptr;
-	BGcolor = new float[4] { 0.3f, 0.3f, 0.3f, 1.0f };
+	BGcolor = new float[4] { 0.0f, 0.0f, 0.005f, 1.0f };
 
 	shadowDepthTexture = nullptr;
 	sceneDepthTexture = nullptr;
@@ -31,9 +31,45 @@ void Game::Init()
 
 	display.CreateDisplay(&inputDevice);
 
-	pointLights.push_back(new PointLight(
+	/*pointLights.push_back(new PointLight(
 		DirectX::SimpleMath::Vector3(0, 5.0f, 0),
 		DirectX::SimpleMath::Vector3(0.5f, 0.6f, 0.8f)
+	));*/
+	pointLights.push_back(new PointLight(
+		DirectX::SimpleMath::Vector3(140.0f, 5.0f, -82),
+		DirectX::SimpleMath::Vector3(0.5f, 0.6f, 0.8f)
+	));
+	pointLights.push_back(new PointLight(
+		DirectX::SimpleMath::Vector3(150.0f, 5.0f, 39),
+		DirectX::SimpleMath::Vector3(0.2f, 0.8f, 0.8f)
+	));
+	pointLights.push_back(new PointLight(
+		DirectX::SimpleMath::Vector3(135, 5.0f, -44),
+		DirectX::SimpleMath::Vector3(0.8f, 0.2f, 0.3f)
+	));
+	pointLights.push_back(new PointLight(
+		DirectX::SimpleMath::Vector3(148, 5.0f, 66),
+		DirectX::SimpleMath::Vector3(0.9f, 0.2f, 0.5f)
+	));
+	pointLights.push_back(new PointLight(
+		DirectX::SimpleMath::Vector3(172, 5.0f, -94),
+		DirectX::SimpleMath::Vector3(0.8f, 0.7f, 0.8f)
+	));
+	pointLights.push_back(new PointLight(
+		DirectX::SimpleMath::Vector3(157, 5.0f, 57),
+		DirectX::SimpleMath::Vector3(0.5f, 0.6f, 0.8f)
+	));
+	pointLights.push_back(new PointLight(
+		DirectX::SimpleMath::Vector3(149, 5.0f, -88),
+		DirectX::SimpleMath::Vector3(0.7f, 0.6f, 0.8f)
+	));
+	pointLights.push_back(new PointLight(
+		DirectX::SimpleMath::Vector3(149, 5.0f, -5),
+		DirectX::SimpleMath::Vector3(0.2f, 0.8f, 0.8f)
+	));
+	pointLights.push_back(new PointLight(
+		DirectX::SimpleMath::Vector3(149, 5.0f, -10),
+		DirectX::SimpleMath::Vector3(0.1f, 0.4f, 0.8f)
 	));
 
 	/*std::random_device rd;
