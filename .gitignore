@@ -34,11 +34,9 @@
 *.pdb
 *.ipch
 *.log
-*.db
-*.db-wal
-*.db-shm
-*.testlog
 *.vsidx
+*.suo
+*.db
+*.db-shm
+*.db-wal
 *.opendb
-.vs/CGLab1/v17/Browse.VC.db
-.vs/CGLab1/v17/TestStore/0/000.testlog

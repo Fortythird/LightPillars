@@ -14,7 +14,9 @@ class GameComponent {
 
 		virtual void Draw(ID3D11DeviceContext* context, Camera* camera, ID3D11ShaderResourceView* resView) {};
 
-		virtual void DrawShadow(ID3D11DeviceContext* context, Microsoft::WRL::ComPtr<ID3D11Device> device) {};
+		virtual void DrawShadow(ID3D11DeviceContext* context) {};
+
+		virtual void DrawDepth(ID3D11DeviceContext* context, DirectX::SimpleMath::Matrix viewProjMtrx) {};
 
 		virtual void Update(ID3D11DeviceContext* context, Camera* camera) = 0;
 

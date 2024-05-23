@@ -6,13 +6,7 @@ Camera::Camera(DirectX::SimpleMath::Vector3* _parentPos)
 	parentPos = _parentPos;
 }
 
-void Camera::Initialize(
-	DirectX::SimpleMath::Vector3 pos, 
-	float yawVal, 
-	float pitchVal, 
-	int screenWidth, 
-	int screenHeight, 
-	InputDevice* inputeDeviceInstance) 
+void Camera::Initialize(DirectX::SimpleMath::Vector3 pos, float yawVal, float pitchVal, int screenWidth, int screenHeight, InputDevice* inputeDeviceInstance) 
 {
 	inputDeviceCameraInstance = inputeDeviceInstance;
 	viewMatrix = DirectX::SimpleMath::Matrix::Identity;
@@ -28,7 +22,9 @@ void Camera::Initialize(
 	pitchAxis = pitchVal;
 	position = pos;
 
-	position = { 0.0f, 3.0f, -5.0f };
+	position = { 30.0f, 1.0f, 2.0f };
+	yawAxis = 1.57f;
+	pitchAxis = .7f;
 	
 	if (inputDeviceCameraInstance != nullptr) {
 		inputDeviceCameraInstance->MouseMove.AddRaw(this, &Camera::OnMouseMove);
@@ -66,6 +62,7 @@ void Camera::Update(float deltaTime, int screenWidth, int screenHeight)
 		0.1f,
 		100.0f
 	);
+	transformMatrix = DirectX::SimpleMath::Matrix::CreateWorld(position, position + rotation.Forward(), rotation.Up());
 }
 
 void Camera::OnMouseMove(const MouseMoveEventArgs& args) 

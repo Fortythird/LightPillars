@@ -67,7 +67,7 @@
         "driver": {
           "name": "PREfast",
           "fullName": "PREfast Code Analysis",
-          "version": "14.38.33130.0",
+          "version": "14.37.32826.1",
           "informationUri": "https://aka.ms/cpp/ca"
         }
       },
@@ -104,7 +104,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/gamecomponent.h"
           },
           "hashes": {
-            "sha-256": "73cfa76d7495c58b701c04e5ee81c96ceb3dce10782b221ffc94670709d36049"
+            "sha-256": "40fd21da0d80178ebf693b665a76314543fbecea3824a33c1b9df8683ca1820f"
           }
         },
         {
@@ -160,7 +160,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/camera.h"
           },
           "hashes": {
-            "sha-256": "c87c9a3bbd3b64322d9d0a17f08123abd28236b43bd2b91b66a607a18d8b4aa5"
+            "sha-256": "cef091416270c5a980a5260e9bd46285ed572f2db8d1967387286241ba468eee"
           }
         }
       ]

@@ -8,6 +8,23 @@
       <COLUMN>19</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'TriangleComponent::depthPixelShader' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>TriangleComponent::{ctor}</FUNCTION>
+    <DECORATED>??0TriangleComponent@@QEAA@XZ</DECORATED>
+    <FUNCLINE>5</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>TriangleComponent::depthPixelShader</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+      <FILENAME>TriangleComponent.cpp</FILENAME>
+      <LINE>5</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
     <DESCRIPTION>Variable 'TriangleComponent::texturePath' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>TriangleComponent::{ctor}</FUNCTION>
     <DECORATED>??0TriangleComponent@@QEAA@XZ</DECORATED>
@@ -54,6 +71,23 @@
   <DEFECT>
     <SFA>
       <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+      <FILENAME>TriangleComponent.cpp</FILENAME>
+      <LINE>5</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'TriangleComponent::depthVertexShader' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>TriangleComponent::{ctor}</FUNCTION>
+    <DECORATED>??0TriangleComponent@@QEAA@XZ</DECORATED>
+    <FUNCLINE>5</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>TriangleComponent::depthVertexShader</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
       <FILENAME>TriangleComponent.h</FILENAME>
       <LINE>21</LINE>
       <COLUMN>0</COLUMN>
@@ -65,6 +99,23 @@
     <FUNCLINE>21</FUNCLINE>
     <ADDITIONALINFO>
       <targetSymbol>TriangleComponentParameters::points</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+      <FILENAME>TriangleComponent.h</FILENAME>
+      <LINE>21</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'TriangleComponentParameters::numIndeces' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>TriangleComponentParameters::{ctor}</FUNCTION>
+    <DECORATED>??0TriangleComponentParameters@@QEAA@XZ</DECORATED>
+    <FUNCLINE>21</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>TriangleComponentParameters::numIndeces</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -105,17 +156,17 @@
   <DEFECT>
     <SFA>
       <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-      <FILENAME>TriangleComponent.h</FILENAME>
-      <LINE>21</LINE>
-      <COLUMN>0</COLUMN>
+      <FILENAME>TriangleComponent.cpp</FILENAME>
+      <LINE>48</LINE>
+      <COLUMN>19</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'TriangleComponentParameters::numIndeces' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
-    <FUNCTION>TriangleComponentParameters::{ctor}</FUNCTION>
-    <DECORATED>??0TriangleComponentParameters@@QEAA@XZ</DECORATED>
-    <FUNCLINE>21</FUNCLINE>
+    <DESCRIPTION>Variable 'TriangleComponent::depthPixelShader' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>TriangleComponent::{ctor}</FUNCTION>
+    <DECORATED>??0TriangleComponent@@QEAA@UTriangleComponentParameters@@PEB_W@Z</DECORATED>
+    <FUNCLINE>48</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>TriangleComponentParameters::numIndeces</targetSymbol>
+      <targetSymbol>TriangleComponent::depthPixelShader</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -123,14 +174,14 @@
     <SFA>
       <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
       <FILENAME>TriangleComponent.cpp</FILENAME>
-      <LINE>47</LINE>
+      <LINE>48</LINE>
       <COLUMN>19</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
     <DESCRIPTION>Variable 'TriangleComponent::textureView' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>TriangleComponent::{ctor}</FUNCTION>
     <DECORATED>??0TriangleComponent@@QEAA@UTriangleComponentParameters@@PEB_W@Z</DECORATED>
-    <FUNCLINE>47</FUNCLINE>
+    <FUNCLINE>48</FUNCLINE>
     <ADDITIONALINFO>
       <targetSymbol>TriangleComponent::textureView</targetSymbol>
     </ADDITIONALINFO>
@@ -140,14 +191,48 @@
     <SFA>
       <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
       <FILENAME>TriangleComponent.cpp</FILENAME>
-      <LINE>47</LINE>
+      <LINE>48</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'TriangleComponent::depthVertexShader' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>TriangleComponent::{ctor}</FUNCTION>
+    <DECORATED>??0TriangleComponent@@QEAA@UTriangleComponentParameters@@PEB_W@Z</DECORATED>
+    <FUNCLINE>48</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>TriangleComponent::depthVertexShader</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+      <FILENAME>TriangleComponent.cpp</FILENAME>
+      <LINE>48</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'TriangleComponent::depthConstBuffer' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>TriangleComponent::{ctor}</FUNCTION>
+    <DECORATED>??0TriangleComponent@@QEAA@UTriangleComponentParameters@@PEB_W@Z</DECORATED>
+    <FUNCLINE>48</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>TriangleComponent::depthConstBuffer</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+      <FILENAME>TriangleComponent.cpp</FILENAME>
+      <LINE>48</LINE>
       <COLUMN>19</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
     <DESCRIPTION>Variable 'TriangleComponent::normals' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>TriangleComponent::{ctor}</FUNCTION>
     <DECORATED>??0TriangleComponent@@QEAA@UTriangleComponentParameters@@PEB_W@Z</DECORATED>
-    <FUNCLINE>47</FUNCLINE>
+    <FUNCLINE>48</FUNCLINE>
     <ADDITIONALINFO>
       <targetSymbol>TriangleComponent::normals</targetSymbol>
     </ADDITIONALINFO>

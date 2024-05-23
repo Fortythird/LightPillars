@@ -183,7 +183,7 @@
         "driver": {
           "name": "PREfast",
           "fullName": "PREfast Code Analysis",
-          "version": "14.38.33130.0",
+          "version": "14.37.32826.1",
           "informationUri": "https://aka.ms/cpp/ca"
         }
       },
@@ -201,7 +201,7 @@
             "resultFile"
           ],
           "hashes": {
-            "sha-256": "d4f529ef2300d4cb03ab08fa9900a429d2bbb3482229cb2bff6dc27d02e81579"
+            "sha-256": "cc3f7ba49769f8ca4c54f7d6a89081bbd91926838c07970b62ddc0487eb86a83"
           }
         },
         {
@@ -223,7 +223,7 @@
             "analysisTarget"
           ],
           "hashes": {
-            "sha-256": "8a02d7acb8fb7ebdf8a2655bfa9badf57c84440077f897f625b8f128af18fd18"
+            "sha-256": "d80cab6c02cd2c8a1dd6867253de40215af8e9f504549f4cc64218330f5b4e9d"
           }
         },
         {
@@ -231,7 +231,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/solarsystemcomponent.h"
           },
           "hashes": {
-            "sha-256": "238fdcd2d4f615bd36903b150aa816d359fb468cffd0a70eeb9d297e2890df43"
+            "sha-256": "8882880c277189ce0529e8c67799de8fb97056e484f730f4d632795eb3383ed0"
           }
         },
         {
@@ -503,7 +503,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/game.h"
           },
           "hashes": {
-            "sha-256": "3f01622fbb045f27169ed0470815d54d2e14ded1e6d6e49b9782b29b615ee60c"
+            "sha-256": "79006d07892253248793dffcfacd093ffe051909f5ea2d7943d81d6548e34559"
           }
         },
         {
@@ -535,7 +535,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/gamecomponent.h"
           },
           "hashes": {
-            "sha-256": "73cfa76d7495c58b701c04e5ee81c96ceb3dce10782b221ffc94670709d36049"
+            "sha-256": "40fd21da0d80178ebf693b665a76314543fbecea3824a33c1b9df8683ca1820f"
           }
         },
         {
@@ -543,7 +543,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/camera.h"
           },
           "hashes": {
-            "sha-256": "c87c9a3bbd3b64322d9d0a17f08123abd28236b43bd2b91b66a607a18d8b4aa5"
+            "sha-256": "cef091416270c5a980a5260e9bd46285ed572f2db8d1967387286241ba468eee"
           }
         },
         {
@@ -559,7 +559,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/pointlight.h"
           },
           "hashes": {
-            "sha-256": "06b50978a4ec2a18d428b24e4db292964e91370a013018d065f7049ca6ec8a55"
+            "sha-256": "d28eca8d75ecc27579745d9bea9ed9572a3d2ad740819cc52c798ff1c679794b"
           }
         }
       ]

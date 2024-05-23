@@ -1,6 +1,7 @@
 #include "export.h"
 #include "Game.h"
 #include "TriangleComponent.h"
+#include <random>
 
 Game::Game() 
 {
@@ -8,7 +9,7 @@ Game::Game()
 	swapChain = nullptr;
 	rtv = nullptr;
 	debug = nullptr;
-	BGcolor = new float[4] { 0.0f, 0.0f, 0.0f, 0.0f };
+	BGcolor = new float[4] { 0.0f, 0.0f, 0.005f, 1.0f };
 
 	shadowDepthTexture = nullptr;
 	sceneDepthTexture = nullptr;
@@ -31,9 +32,58 @@ void Game::Init()
 	display.CreateDisplay(&inputDevice);
 
 	pointLights.push_back(new PointLight(
-		DirectX::SimpleMath::Vector3(5.0f, 5.0f, 0),
-		DirectX::SimpleMath::Vector3(0.5f, 0.2f, 0.8f)
+		DirectX::SimpleMath::Vector3(0, 5.0f, 0),
+		DirectX::SimpleMath::Vector3(0.5f, 0.6f, 0.8f)
 	));
+	/*pointLights.push_back(new PointLight(
+		DirectX::SimpleMath::Vector3(140.0f, 5.0f, -82),
+		DirectX::SimpleMath::Vector3(0.5f, 0.6f, 0.8f)
+	));
+	pointLights.push_back(new PointLight(
+		DirectX::SimpleMath::Vector3(150.0f, 5.0f, 39),
+		DirectX::SimpleMath::Vector3(0.2f, 0.8f, 0.8f)
+	));
+	pointLights.push_back(new PointLight(
+		DirectX::SimpleMath::Vector3(135, 5.0f, -44),
+		DirectX::SimpleMath::Vector3(0.8f, 0.2f, 0.3f)
+	));
+	pointLights.push_back(new PointLight(
+		DirectX::SimpleMath::Vector3(148, 5.0f, 66),
+		DirectX::SimpleMath::Vector3(0.9f, 0.2f, 0.5f)
+	));
+	pointLights.push_back(new PointLight(
+		DirectX::SimpleMath::Vector3(172, 5.0f, -94),
+		DirectX::SimpleMath::Vector3(0.8f, 0.7f, 0.8f)
+	));
+	pointLights.push_back(new PointLight(
+		DirectX::SimpleMath::Vector3(157, 5.0f, 57),
+		DirectX::SimpleMath::Vector3(0.5f, 0.6f, 0.8f)
+	));
+	pointLights.push_back(new PointLight(
+		DirectX::SimpleMath::Vector3(149, 5.0f, -88),
+		DirectX::SimpleMath::Vector3(0.7f, 0.6f, 0.8f)
+	));
+	pointLights.push_back(new PointLight(
+		DirectX::SimpleMath::Vector3(149, 5.0f, -5),
+		DirectX::SimpleMath::Vector3(0.2f, 0.8f, 0.8f)
+	));
+	pointLights.push_back(new PointLight(
+		DirectX::SimpleMath::Vector3(149, 5.0f, -10),
+		DirectX::SimpleMath::Vector3(0.1f, 0.4f, 0.8f)
+	));*/
+
+	/*std::random_device rd;
+	std::mt19937 rng(rd());
+	std::uniform_real_distribution<float> pos_uni(-10, 10);
+	std::uniform_real_distribution<float> col_uni(0, 1);
+
+	for (int i = 0; i < 19; i++)
+	{
+		pointLights.push_back(new PointLight(
+			DirectX::SimpleMath::Vector3((float)pos_uni(rng), 5.0f, (float)pos_uni(rng) * 3),
+			DirectX::SimpleMath::Vector3((float)col_uni(rng), (float)col_uni(rng), (float)col_uni(rng))
+		));
+	}*/
 
 	PrepareResources();
 }
@@ -72,6 +122,8 @@ void Game::Run()
 
 int Game::PrepareResources() 
 {
+	perf_FrameCount = -2;
+
 	D3D_FEATURE_LEVEL featureLevel[] = {D3D_FEATURE_LEVEL_11_1};
 
 	DXGI_SWAP_CHAIN_DESC swapDesc = {};
@@ -138,45 +190,37 @@ int Game::PrepareResources()
 	depthTexDesc.Width = 5000;
 	depthTexDesc.Height = 5000;
 	depthTexDesc.SampleDesc = { 1, 0 };
-	res = device->CreateTexture2D(&depthTexDesc, nullptr, &shadowDepthTexture);
+
+	res = device->CreateTexture2D(&depthTexDesc, nullptr, &shadowDepthTexture); //----------1
+	if (FAILED(res)) std::cout << "Error while creating texture 2D" << std::endl;
+
 	depthTexDesc.Width = display.getScreenWidth();
 	depthTexDesc.Height = display.getScreenHeight();
-	res = device->CreateTexture2D(&depthTexDesc, nullptr, &sceneDepthTexture);
 
-	if (FAILED(res))
-	{
-		std::cout << "Error while creating texture 2D" << std::endl;
-	}
+	res = device->CreateTexture2D(&depthTexDesc, nullptr, &sceneDepthTexture); //-------------2
+	if (FAILED(res)) std::cout << "Error while creating texture 2D" << std::endl;
 
 	D3D11_DEPTH_STENCIL_VIEW_DESC depthStenDesc = {};
 	depthStenDesc.Format = DXGI_FORMAT_D32_FLOAT;
 	depthStenDesc.ViewDimension = D3D11_DSV_DIMENSION_TEXTURE2D;
 	depthStenDesc.Texture2D.MipSlice = 0;
-	res = device->CreateDepthStencilView(sceneDepthTexture, &depthStenDesc, &depthView);
 
-	if (FAILED(res))
-	{
-		std::cout << "Error while creating scene depth stencil view" << std::endl;
-	}
+	res = device->CreateDepthStencilView(sceneDepthTexture, &depthStenDesc, &depthView);
+	if (FAILED(res)) std::cout << "Error while creating scene depth stencil view" << std::endl;
 
 	res = device->CreateDepthStencilView(shadowDepthTexture, &depthStenDesc, &shadowDepthView);
-
-	if (FAILED(res))
-	{
-		std::cout << "Error while creating shadow depth stencil view" << std::endl;
-	}
+	if (FAILED(res)) std::cout << "Error while creating shadow depth stencil view" << std::endl;
 
 	D3D11_SHADER_RESOURCE_VIEW_DESC shaderResViewDesc = {};
 	shaderResViewDesc.ViewDimension = D3D11_SRV_DIMENSION_TEXTURE2D;
 	shaderResViewDesc.Format = DXGI_FORMAT_R32_FLOAT;
 	shaderResViewDesc.Texture2D.MipLevels = 1;
-	res = device->CreateShaderResourceView(shadowDepthTexture, &shaderResViewDesc, &resView);
-	res = device->CreateShaderResourceView(sceneDepthTexture, &shaderResViewDesc, &camDepthView);
 
-	if (FAILED(res))
-	{
-		std::cout << "Error while creating shader resource view" << std::endl;
-	}
+	res = device->CreateShaderResourceView(shadowDepthTexture, &shaderResViewDesc, &resView);
+	if (FAILED(res)) std::cout << "Error while creating shader resource view" << std::endl;
+
+	res = device->CreateShaderResourceView(sceneDepthTexture, &shaderResViewDesc, &camDepthView); //----------3
+	if (FAILED(res)) std::cout << "Error while creating shader resource view" << std::endl;
 
 	D3D11_RASTERIZER_DESC drawRenderStateDesc = {};
 	drawRenderStateDesc.CullMode = D3D11_CULL_BACK;
@@ -188,10 +232,7 @@ int Game::PrepareResources()
 	res = swapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (void**)&backTexture);
 	res = device->CreateRenderTargetView(backTexture, nullptr, &rtv);
 
-	for (int i = 0; i < Components.size(); i++)
-	{
-		Components[i]->Init(device, display, res);
-	}
+	for (int i = 0; i < Components.size(); i++) Components[i]->Init(device, display, res);
 
 	ID3DBlob* vertexBC = nullptr;
 	ID3DBlob* errorVertexCode = nullptr;
@@ -208,16 +249,14 @@ int Game::PrepareResources()
 		&errorVertexCode
 	);
 
-	if (FAILED(res)) {
+	if (FAILED(res)) 
+	{
 		if (errorVertexCode)
 		{
 			char* compileErrors = (char*)(errorVertexCode->GetBufferPointer());
 			std::cout << compileErrors << std::endl;
 		}
-		else
-		{
-			MessageBox(display.getHWND(), L"../Shaders/ThirdExampleShader.hlsl", L"Missing Shader File", MB_OK);
-		}
+		else MessageBox(display.getHWND(), L"../Shaders/PillarsShader.hlsl", L"Missing Shader File", MB_OK);
 	}
 
 	ID3DBlob* pixelBC = nullptr;
@@ -235,16 +274,14 @@ int Game::PrepareResources()
 		&errorPixelCode
 	);
 
-	if (FAILED(res)) {
+	if (FAILED(res)) 
+	{
 		if (errorPixelCode)
 		{
 			char* compileErrors = (char*)(errorPixelCode->GetBufferPointer());
 			std::cout << compileErrors << std::endl;
 		}
-		else
-		{
-			MessageBox(display.getHWND(), L"../Shaders/ThirdExampleShader.hlsl", L"Missing Shader File", MB_OK);
-		}
+		else MessageBox(display.getHWND(), L"../Shaders/PillarsShader.hlsl", L"Missing Shader File", MB_OK);
 	}
 
 	device->CreateVertexShader(
@@ -270,10 +307,7 @@ int Game::PrepareResources()
 	constPillarsBufDesc.ByteWidth = sizeof(constPillarsData);
 	HRESULT result = device->CreateBuffer(&constPillarsBufDesc, nullptr, &constPillarsBuffer);
 
-	if (FAILED(result)) 
-	{
-		std::cout << "Error while pillars' const buffer creating...";
-	}
+	if (FAILED(result)) std::cout << "Error while pillars' const buffer creating...";
 
 	D3D11_BUFFER_DESC pointLightBufDesc = {};
 	pointLightBufDesc.Usage = D3D11_USAGE_DYNAMIC;
@@ -284,25 +318,16 @@ int Game::PrepareResources()
 	pointLightBufDesc.ByteWidth = sizeof(PointLightData);
 	result = device->CreateBuffer(&pointLightBufDesc, nullptr, &pointLightBuffer);
 
-	if (FAILED(result))
-	{
-		std::cout << "Error while point light buffer creating...";
-	}
+	if (FAILED(result)) std::cout << "Error while point light buffer creating...";
 
-	for (int i = 0; i < pointLights.size(); i++)
-	{
-		pointLights[i]->PrepareResources(device, camera.at(0)->position);
-	}
+	for (int i = 0; i < pointLights.size(); i++) pointLights[i]->PrepareResources(device, camera.at(0)->position);
 
 	return 0;
 }
 
 void Game::DestroyResources() 
 {
-	for (int i = 0; i < Components.size(); i++) 
-	{
-		Components[i]->DestroyResources();
-	}
+	for (int i = 0; i < Components.size(); i++) Components[i]->DestroyResources();
 
 	if (context != nullptr) 
 	{
@@ -310,75 +335,33 @@ void Game::DestroyResources()
 		context->Release();
 	}
 
-	if (swapChain != nullptr) 
-	{
-		swapChain->Release();
-	}
+	if (swapChain != nullptr) swapChain->Release();
 
-	if (device != nullptr) 
-	{
-		device->Release();
-	}
+	if (device != nullptr) device->Release();
 
-	if (debug != nullptr) 
-	{
-		debug->ReportLiveDeviceObjects(D3D11_RLDO_DETAIL);
-	}
+	if (debug != nullptr) debug->ReportLiveDeviceObjects(D3D11_RLDO_DETAIL);
 
-	if (shadowDepthTexture) 
-	{
-		shadowDepthTexture->Release();
-	}
+	if (shadowDepthTexture) shadowDepthTexture->Release();
 
-	if (sceneDepthTexture)
-	{
-		sceneDepthTexture->Release();
-	}
+	if (sceneDepthTexture) sceneDepthTexture->Release();
 
-	if (depthView != nullptr) 
-	{
-		depthView->Release();
-	}
+	if (depthView != nullptr) depthView->Release();
 
-	if (camDepthView != nullptr)
-	{
-		camDepthView->Release();
-	}
+	if (camDepthView != nullptr) camDepthView->Release();
 	
-	if (shadowDepthView != nullptr) 
-	{
-		shadowDepthView->Release();
-	}
+	if (shadowDepthView != nullptr) shadowDepthView->Release();
 
-	if (vertexPillarsShader != nullptr)
-	{
-		vertexPillarsShader->Release();
-	}
+	if (vertexPillarsShader != nullptr) vertexPillarsShader->Release();
 
-	if (pixelPillarsShader != nullptr)
-	{
-		pixelPillarsShader->Release();
-	}
+	if (pixelPillarsShader != nullptr) pixelPillarsShader->Release();
 
-	if (depthStencilState != nullptr)
-	{
-		depthStencilState->Release();
-	}
+	if (depthStencilState != nullptr) depthStencilState->Release();
 
-	if (constPillarsBuffer != nullptr)
-	{
-		constPillarsBuffer->Release();
-	}
+	if (constPillarsBuffer != nullptr) constPillarsBuffer->Release();
 
-	if (pointLightBuffer != nullptr)
-	{
-		pointLightBuffer->Release();
-	}
+	if (pointLightBuffer != nullptr) pointLightBuffer->Release();
 
-	for (int i = 0; i < pointLights.size(); i++)
-	{
-		pointLights[i]->DestroyResources();
-	}
+	for (int i = 0; i < pointLights.size(); i++) pointLights[i]->DestroyResources();
 }
 
 void Game::PrepareFrame() 
@@ -389,6 +372,9 @@ void Game::PrepareFrame()
 	totalTime += deltaTime;
 	frameCount++;
 
+	perf_FrameCount++;
+	perf_timer += deltaTime;
+
 	if (totalTime > 1.0f) 
 	{
 		float fps = frameCount / totalTime;
@@ -397,6 +383,19 @@ void Game::PrepareFrame()
 		swprintf_s(text, TEXT("FPS: %f"), fps);
 		SetWindowText(display.getHWND(), text);
 		frameCount = 0;
+	}
+
+	if (perf_FrameCount == -1)
+	{
+		perf_FrameCount = 0;
+		perf_timer = 0;
+	}
+
+	if (perf_FrameCount > 5000)
+	{
+		std::cout << "Av. sec. per frame " << (perf_timer / perf_FrameCount) / 1.0f << std::endl;
+		perf_FrameCount = 0;
+		perf_timer = 0;
 	}
 
 	context->ClearState();
@@ -422,11 +421,11 @@ void Game::Update()
 
 void Game::Draw() 
 {
-	camera.at(0)->Update(
+	/*camera.at(0)->Update(
 		deltaTime,
 		display.getScreenWidth(),
 		display.getScreenHeight()
-	);
+	);*/
 	
 	context->ClearRenderTargetView(rtv, BGcolor);
 
@@ -445,23 +444,42 @@ void Game::DrawShadows()
 	ID3D11RenderTargetView* nullrtv[8] = {nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr};
 	context->OMSetRenderTargets(1, nullrtv, shadowDepthView);
 
-	for (int i = 0; i < Components.size(); i++)
-	{
-		Components[i]->DrawShadow(context, device);
-	}	
-	
+	for (int i = 0; i < Components.size(); i++) Components[i]->DrawShadow(context);	
 }
 
 void Game::DrawPillars()
 {
+	context->RSSetViewports(1, &pointLights.at(0)->shadowViewport);
+	ID3D11RenderTargetView* nullrtv[8] = { nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr };
 
 	for (int i = 0; i < pointLights.size(); i++)
 	{
-		pointLights[i]->Update(context, camera.at(0)->position);
+		pointLights[i]->Update(camera.at(0)->position);
+
+		context->ClearDepthStencilView(pointLights[i]->depthStencilViews[2], D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
+		context->ClearDepthStencilView(pointLights[i]->depthStencilViews[4], D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
+
+		context->OMSetRenderTargets(1, nullrtv, pointLights[i]->depthStencilViews[2]);
+
+		for (int j = 0; j < Components.size(); j++)
+		{
+			Components[j]->DrawDepth(context, ((pointLights[i]->viewMtrcs[2]) * pointLights[i]->projectionMtrx));
+		}
+
+		context->OMSetRenderTargets(1, nullrtv, pointLights[i]->depthStencilViews[4]);
+
+		for (int j = 0; j < Components.size(); j++)
+		{
+			Components[j]->DrawDepth(context, ((pointLights[i]->viewMtrcs[4]) * pointLights[i]->projectionMtrx));
+		}
 	}
+
+	context->RSSetViewports(1, &viewport);
+	context->OMSetRenderTargets(1, &rtv, depthView);
 
 	constPillarsData.viewerPos = camera.at(0)->position;
 	constPillarsData.invertedCamViewProjection = (camera.at(0)->viewMatrix * camera.at(0)->projectionMatrix).Transpose().Invert();
+	constPillarsData.invertedCamTransform = (camera.at(0)->transformMatrix).Transpose().Invert();
 	constPillarsData.camViewProjection = camera.at(0)->projectionMatrix.Transpose();
 
 	D3D11_MAPPED_SUBRESOURCE subresourse = {};
@@ -479,25 +497,6 @@ void Game::DrawPillars()
 		sizeof(ConstPillarData)
 	);
 	context->Unmap(constPillarsBuffer, 0);
-
-	pointLightData.lightSourcePosition = DirectX::SimpleMath::Vector4(pointLights[0]->position.x, pointLights[0]->position.y, pointLights[0]->position.z, 1.0f);
-	pointLightData.lightColor = DirectX::SimpleMath::Vector4(pointLights[0]->color.x, pointLights[0]->color.y, pointLights[0]->color.z, 1.0f);
-
-	D3D11_MAPPED_SUBRESOURCE subresourse2 = {};
-	context->Map(
-		pointLightBuffer,
-		0,
-		D3D11_MAP_WRITE_DISCARD,
-		0,
-		&subresourse2
-	);
-
-	memcpy(
-		reinterpret_cast<float*>(subresourse2.pData),
-		&pointLightData,
-		sizeof(PointLightData)
-	);
-	context->Unmap(pointLightBuffer, 0);
 
 	ID3D11BlendState* blendState = nullptr;
 	D3D11_BLEND_DESC blendDesc = {};
@@ -517,7 +516,8 @@ void Game::DrawPillars()
 		&blendState
 	);
 
-	if (FAILED(res)) {
+	if (FAILED(res)) 
+	{
 		std::cout << "Failed creating BlendState" << std::endl;
 	}
 
@@ -548,9 +548,10 @@ void Game::DrawPillars()
 	SamplerDesc.AddressU = D3D11_TEXTURE_ADDRESS_WRAP;
 	SamplerDesc.AddressV = D3D11_TEXTURE_ADDRESS_WRAP;
 	SamplerDesc.AddressW = D3D11_TEXTURE_ADDRESS_WRAP;
-	device->CreateSamplerState(&SamplerDesc, &samplerState);
+	res = device->CreateSamplerState(&SamplerDesc, &samplerState);
 
-	//context->OMSetDepthStencilState(depthStencilState, 1);
+	if (FAILED(res)) std::cout << "Failed creating Sampler state" << std::endl;
+
 	context->OMSetRenderTargets(1, &rtv, nullptr);
 	context->IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP);
 
@@ -558,15 +559,45 @@ void Game::DrawPillars()
 	context->PSSetShader(pixelPillarsShader, nullptr, 0);
 
 	context->PSSetConstantBuffers(0, 1, &constPillarsBuffer);
-	context->PSSetConstantBuffers(1, 1, &pointLightBuffer);
 
 	context->PSSetShaderResources(0, 1, &camDepthView);
-	context->PSSetShaderResources(1, 1, &(pointLights[0]->depthView[2]));
-	context->PSSetShaderResources(2, 1, &(pointLights[0]->depthView[4]));
 	context->PSSetSamplers(0, 1, &samplerState);
-	context->PSSetSamplers(1, 1, &(pointLights[0]->samplerStates[2]));
-	context->PSSetSamplers(2, 1, &(pointLights[0]->samplerStates[4]));
+	context->PSSetSamplers(1, 1, &(pointLights.at(0)->samplerState));
 
 	context->OMSetBlendState(blendState, blendFactor, 0xFFFFFF);
-	context->Draw(4, 0);
+
+
+	for (int i = 0; i < pointLights.size(); i++)
+	{
+		pointLightData.lightSourcePosition = DirectX::SimpleMath::Vector4(pointLights[i]->position.x, pointLights[i]->position.y, pointLights[i]->position.z, 1.0f);
+		pointLightData.lightColor = DirectX::SimpleMath::Vector4(pointLights[i]->color.x, pointLights[i]->color.y, pointLights[i]->color.z, 1.0f);
+		pointLightData.transformMtrx = DirectX::SimpleMath::Matrix::CreateWorld(
+			pointLights[i]->position, 
+			camera.at(0)->position - pointLights[i]->position, 
+			DirectX::SimpleMath::Vector3::Up
+		);
+		pointLightData.frontFaceViewProjection = (pointLights.at(i)->viewMtrcs[2] * pointLights.at(i)->projectionMtrx).Transpose();
+		pointLightData.upperFaceViewProjection = (pointLights.at(i)->viewMtrcs[4] * pointLights.at(i)->projectionMtrx).Transpose();
+
+		D3D11_MAPPED_SUBRESOURCE subresourse2 = {};
+		context->Map(
+			pointLightBuffer,
+			0,
+			D3D11_MAP_WRITE_DISCARD,
+			0,
+			&subresourse2
+		);
+
+		memcpy(
+			reinterpret_cast<float*>(subresourse2.pData),
+			&pointLightData,
+			sizeof(PointLightData)
+		);
+		context->Unmap(pointLightBuffer, 0);
+
+		context->PSSetConstantBuffers(1, 1, &pointLightBuffer);
+		context->PSSetShaderResources(1, 1, &(pointLights.at(i)->depthShaderRes[2]));
+		context->PSSetShaderResources(2, 1, &(pointLights.at(i)->depthShaderRes[4]));
+		context->Draw(4, 0);
+	}
 }
