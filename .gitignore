@@ -40,3 +40,5 @@
 *.testlog
 *.vsidx
 *.opendb
+.vs/CGLab1/v17/Browse.VC.db
+.vs/CGLab1/v17/TestStore/0/000.testlog
