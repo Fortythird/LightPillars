@@ -31,11 +31,11 @@ void Game::Init()
 
 	display.CreateDisplay(&inputDevice);
 
-	/*pointLights.push_back(new PointLight(
+	pointLights.push_back(new PointLight(
 		DirectX::SimpleMath::Vector3(0, 5.0f, 0),
 		DirectX::SimpleMath::Vector3(0.5f, 0.6f, 0.8f)
-	));*/
-	pointLights.push_back(new PointLight(
+	));
+	/*pointLights.push_back(new PointLight(
 		DirectX::SimpleMath::Vector3(140.0f, 5.0f, -82),
 		DirectX::SimpleMath::Vector3(0.5f, 0.6f, 0.8f)
 	));
@@ -70,7 +70,7 @@ void Game::Init()
 	pointLights.push_back(new PointLight(
 		DirectX::SimpleMath::Vector3(149, 5.0f, -10),
 		DirectX::SimpleMath::Vector3(0.1f, 0.4f, 0.8f)
-	));
+	));*/
 
 	/*std::random_device rd;
 	std::mt19937 rng(rd());
