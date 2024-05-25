@@ -36,35 +36,6 @@
         {
           "ruleId": "C26495",
           "message": {
-            "text": "Variable 'Game::viewport' is uninitialized. Always initialize a member variable (type.6)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                },
-                "region": {
-                  "startLine": 6,
-                  "startColumn": 7
-                }
-              },
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Game::{ctor}",
-                  "decoratedName": "??0Game@@QEAA@XZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "targetSymbol": "Game::viewport"
-          }
-        },
-        {
-          "ruleId": "C26495",
-          "message": {
             "text": "Variable 'Game::display' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
@@ -89,6 +60,35 @@
           ],
           "properties": {
             "targetSymbol": "Game::display"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'Game::viewport' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                },
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 7
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Game::{ctor}",
+                  "decoratedName": "??0Game@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "Game::viewport"
           }
         },
         {
@@ -5527,7 +5527,7 @@
             "resultFile"
           ],
           "hashes": {
-            "sha-256": "9d5a2854b467718362ebd46640324138cf13ed01ffbb2d7a680f38568a659e4b"
+            "sha-256": "5423ede7b51daa011aad6a6f836a666c838af940918df470ed5efa3922c3abab"
           }
         },
         {
@@ -5570,7 +5570,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/game.h"
           },
           "hashes": {
-            "sha-256": "79006d07892253248793dffcfacd093ffe051909f5ea2d7943d81d6548e34559"
+            "sha-256": "a194d7db13169165dadb8469aaa865767ac43b6e4f98652611b57f6c2d00e4c5"
           }
         },
         {
@@ -5602,7 +5602,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/gamecomponent.h"
           },
           "hashes": {
-            "sha-256": "40fd21da0d80178ebf693b665a76314543fbecea3824a33c1b9df8683ca1820f"
+            "sha-256": "1313d752a241732b0b13f7b20e2b2dc47deb0877b918a08c5e293e27e192d5cc"
           }
         },
         {
@@ -5610,7 +5610,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/camera.h"
           },
           "hashes": {
-            "sha-256": "cef091416270c5a980a5260e9bd46285ed572f2db8d1967387286241ba468eee"
+            "sha-256": "fc8bb4c71cd306420359775b7bfb0f7b225858459811309298e500c3f32b2d8a"
           }
         },
         {
@@ -5618,7 +5618,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/trianglecomponent.h"
           },
           "hashes": {
-            "sha-256": "cc3f7ba49769f8ca4c54f7d6a89081bbd91926838c07970b62ddc0487eb86a83"
+            "sha-256": "62027a5cc09dd2ddf883104f5133b66095f095003deeadf5d7641775432565ae"
           }
         },
         {

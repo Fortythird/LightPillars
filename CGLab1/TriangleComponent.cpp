@@ -615,6 +615,11 @@ DirectX::SimpleMath::Matrix TriangleComponent::GetModelMatrix()
 	return model;
 }
 
+DirectX::SimpleMath::Vector3 TriangleComponent::GetPos()
+{
+	return pos;
+}
+
 void TriangleComponent::NormalsCalc() {
 	int ind_a, ind_b, ind_c;
 

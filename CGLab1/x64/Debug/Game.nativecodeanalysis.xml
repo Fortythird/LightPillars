@@ -25,12 +25,12 @@
       <COLUMN>6</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'Game::viewport' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'Game::display' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>Game::{ctor}</FUNCTION>
     <DECORATED>??0Game@@QEAA@XZ</DECORATED>
     <FUNCLINE>6</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>Game::viewport</targetSymbol>
+      <targetSymbol>Game::display</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -42,12 +42,12 @@
       <COLUMN>6</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'Game::display' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'Game::viewport' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>Game::{ctor}</FUNCTION>
     <DECORATED>??0Game@@QEAA@XZ</DECORATED>
     <FUNCLINE>6</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>Game::display</targetSymbol>
+      <targetSymbol>Game::viewport</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>

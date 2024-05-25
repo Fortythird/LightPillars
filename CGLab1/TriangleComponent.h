@@ -104,5 +104,6 @@ public:
 	void Update(ID3D11DeviceContext* context, Camera* camera) override;
 	void SetPos(DirectX::SimpleMath::Vector3 _pos) override;
 	void SetRot(DirectX::SimpleMath::Vector3 _rot) override;
+	DirectX::SimpleMath::Vector3 GetPos() override;
 	void NormalsCalc();
 };

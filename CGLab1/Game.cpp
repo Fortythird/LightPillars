@@ -480,7 +480,7 @@ void Game::DrawPillars()
 	constPillarsData.viewerPos = camera.at(0)->position;
 	constPillarsData.invertedCamViewProjection = (camera.at(0)->viewMatrix * camera.at(0)->projectionMatrix).Transpose().Invert();
 	constPillarsData.invertedCamTransform = (camera.at(0)->transformMatrix).Transpose().Invert();
-	constPillarsData.camViewProjection = camera.at(0)->projectionMatrix.Transpose();
+	constPillarsData.camViewProjection = (/*camera.at(0)->viewMatrix do not multiply */ camera.at(0)->projectionMatrix).Transpose();
 
 	D3D11_MAPPED_SUBRESOURCE subresourse = {};
 	context->Map(

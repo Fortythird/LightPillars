@@ -57,7 +57,7 @@ void PointLight::Update(DirectX::SimpleMath::Vector3 viewerPos)
 	viewMtrcs[4] = DirectX::SimpleMath::Matrix::CreateLookAt(
 		position,
 		position + DirectX::SimpleMath::Vector3::Up,
-		-DirectX::SimpleMath::Vector3(viewerPos.x, position.y, viewerPos.z) - position
+		DirectX::SimpleMath::Vector3(viewerPos.x, position.y, viewerPos.z) - position
 	);
 	// Back view
 
@@ -110,7 +110,7 @@ void PointLight::PrepareResources(Microsoft::WRL::ComPtr<ID3D11Device> device, D
 	viewMtrcs[4] = DirectX::SimpleMath::Matrix::CreateLookAt(
 		position,
 		DirectX::SimpleMath::Vector3::Up,
-		position - DirectX::SimpleMath::Vector3(viewerPos.x, position.y, viewerPos.z)
+		DirectX::SimpleMath::Vector3(viewerPos.x, position.y, viewerPos.z) - position
 	);
 	// Back view
 

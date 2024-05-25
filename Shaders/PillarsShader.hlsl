@@ -1,4 +1,4 @@
-static const int DEPTH_CALC_ENABLED = 0;
+static const int DEPTH_CALC_ENABLED = 1;
 static const int PILLAR_ENABLED = 1;
 
 struct ConstData
@@ -251,11 +251,16 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
             
             if (DEPTH_CALC_ENABLED)
             {   
-                float4 camSpacePoint = mul(constData.camViewProjection, float4(Rn.xyz, 1.0f));
+                float4 camSpacePoint = mul(constData.camViewProjection, float4(Rn.xyz, 0));
+                float depthValue = camDepthTexture.SampleLevel(camDepthSampler, float2((NDC.x + 1.0f) / 2, -(NDC.y + 1.0f) / 2), 0).x;
+                if (depthValue <= camSpacePoint.z / camSpacePoint.w && depthValue != 1.0f)
+                    return float4(0, 0, 0, 0);
+                
+                /*float4 camSpacePoint = mul(constData.camViewProjection, float4(Rn.xyz, 1.0f));
                 //float depthValue = camDepthTexture.SampleLevel(camDepthSampler, float2((NDC.x + 1.0f) / 2, -(NDC.y + 1.0f) / 2), 0).x;
                 float depthValue = camDepthTexture.SampleLevel(camDepthSampler, 
-                    float2(camSpacePoint.x / camSpacePoint.z, -camSpacePoint.y / camSpacePoint.z) * 0.5f + 0.5f, 0).x;
-                /*if (depthValue < camSpacePoint.z / camSpacePoint.w && depthValue < 1.0f)
+                    float2(camSpacePoint.x / camSpacePoint.w, -camSpacePoint.y / camSpacePoint.w) * 0.5f + 0.5f, 0).x;
+                if (depthValue < camSpacePoint.z / camSpacePoint.w && depthValue < 1.0f)
                     return float4(0, 0, 0, 0);*/
                 
                 float3 step = (Rf - Rn) / DEPTH_READING_FREQUENCY;

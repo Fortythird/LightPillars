@@ -40,3 +40,6 @@
 *.db-shm
 *.db-wal
 *.opendb
+*.idb
+*.sarif
+*.xml

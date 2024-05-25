@@ -25,12 +25,12 @@
       <COLUMN>19</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'TriangleComponent::texturePath' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'TriangleComponent::topologyType' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>TriangleComponent::{ctor}</FUNCTION>
     <DECORATED>??0TriangleComponent@@QEAA@XZ</DECORATED>
     <FUNCLINE>5</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>TriangleComponent::texturePath</targetSymbol>
+      <targetSymbol>TriangleComponent::topologyType</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -59,12 +59,12 @@
       <COLUMN>19</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'TriangleComponent::topologyType' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'TriangleComponent::texturePath' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>TriangleComponent::{ctor}</FUNCTION>
     <DECORATED>??0TriangleComponent@@QEAA@XZ</DECORATED>
     <FUNCLINE>5</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>TriangleComponent::topologyType</targetSymbol>
+      <targetSymbol>TriangleComponent::texturePath</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -93,12 +93,12 @@
       <COLUMN>0</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'TriangleComponentParameters::points' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'TriangleComponentParameters::numIndeces' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>TriangleComponentParameters::{ctor}</FUNCTION>
     <DECORATED>??0TriangleComponentParameters@@QEAA@XZ</DECORATED>
     <FUNCLINE>21</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>TriangleComponentParameters::points</targetSymbol>
+      <targetSymbol>TriangleComponentParameters::numIndeces</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -110,12 +110,12 @@
       <COLUMN>0</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'TriangleComponentParameters::numIndeces' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'TriangleComponentParameters::numPoints' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>TriangleComponentParameters::{ctor}</FUNCTION>
     <DECORATED>??0TriangleComponentParameters@@QEAA@XZ</DECORATED>
     <FUNCLINE>21</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>TriangleComponentParameters::numIndeces</targetSymbol>
+      <targetSymbol>TriangleComponentParameters::numPoints</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -144,12 +144,12 @@
       <COLUMN>0</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'TriangleComponentParameters::numPoints' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'TriangleComponentParameters::points' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>TriangleComponentParameters::{ctor}</FUNCTION>
     <DECORATED>??0TriangleComponentParameters@@QEAA@XZ</DECORATED>
     <FUNCLINE>21</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>TriangleComponentParameters::numPoints</targetSymbol>
+      <targetSymbol>TriangleComponentParameters::points</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -246,12 +246,12 @@
       <COLUMN>2</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::pPtr' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::Buffer' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>InlineAllocator&lt;32&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$InlineAllocator@$0CA@@@QEAA@XZ</DECORATED>
     <FUNCLINE>409</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::pPtr</targetSymbol>
+      <targetSymbol>InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::Buffer</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -263,12 +263,12 @@
       <COLUMN>2</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::Buffer' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::pPtr' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>InlineAllocator&lt;32&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$InlineAllocator@$0CA@@@QEAA@XZ</DECORATED>
     <FUNCLINE>409</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::Buffer</targetSymbol>
+      <targetSymbol>InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::pPtr</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>

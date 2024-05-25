@@ -21,5 +21,6 @@ class GameComponent {
 		virtual void Update(ID3D11DeviceContext* context, Camera* camera) = 0;
 
 		virtual void SetPos(DirectX::SimpleMath::Vector3 pos) = 0;
+		virtual DirectX::SimpleMath::Vector3 GetPos() {return DirectX::SimpleMath::Vector3::Zero;};
 		virtual void SetRot(DirectX::SimpleMath::Vector3 rot) = 0;
 };
