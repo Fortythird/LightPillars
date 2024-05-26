@@ -1,8 +1,7 @@
-﻿  Game.cpp
-  CGLab1.vcxproj -> C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\x64\Debug\CGLab1.exe
+﻿  CGLab1.vcxproj -> C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\x64\Debug\CGLab1.exe
 C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Camera.cpp(4): warning C26495: Variable 'Camera::inputDeviceCameraInstance' is uninitialized. Always initialize a member variable (type.6).
 C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Delegates.h(409): warning C26495: Variable 'InlineAllocator<32>::<unnamed-tag>::Buffer' is uninitialized. Always initialize a member variable (type.6).
-C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Game.cpp(6): warning C26495: Variable 'Game::shadowViewport' is uninitialized. Always initialize a member variable (type.6).
+C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Game.cpp(6): warning C26495: Variable 'Game::viewport' is uninitialized. Always initialize a member variable (type.6).
 C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Game.cpp(208): warning C6387: 'sceneDepthTexture' could be '0'.
 C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Game.cpp(211): warning C6387: 'shadowDepthTexture' could be '0'.
 C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\Game.cpp(219): warning C6387: 'shadowDepthTexture' could be '0'.

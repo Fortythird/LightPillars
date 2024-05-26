@@ -576,8 +576,8 @@ void Game::DrawPillars()
 			camera.at(0)->position - pointLights[i]->position, 
 			DirectX::SimpleMath::Vector3::Up
 		);
-		pointLightData.frontFaceViewProjection = (pointLights.at(i)->viewMtrcs[2] * pointLights.at(i)->projectionMtrx).Transpose();
-		pointLightData.upperFaceViewProjection = (pointLights.at(i)->viewMtrcs[4] * pointLights.at(i)->projectionMtrx).Transpose();
+		pointLightData.frontFaceViewProjection = (pointLights.at(i)->viewMtrcs[2] * pointLights.at(i)->projectionMtrx);//.Transpose();
+		pointLightData.upperFaceViewProjection = (pointLights.at(i)->viewMtrcs[4] * pointLights.at(i)->projectionMtrx);//.Transpose();
 
 		D3D11_MAPPED_SUBRESOURCE subresourse2 = {};
 		context->Map(

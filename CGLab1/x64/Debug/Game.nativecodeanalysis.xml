@@ -8,6 +8,23 @@
       <COLUMN>6</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Game::viewport' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Game::{ctor}</FUNCTION>
+    <DECORATED>??0Game@@QEAA@XZ</DECORATED>
+    <FUNCLINE>6</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Game::viewport</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
+      <FILENAME>Game.cpp</FILENAME>
+      <LINE>6</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
     <DESCRIPTION>Variable 'Game::shadowViewport' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>Game::{ctor}</FUNCTION>
     <DECORATED>??0Game@@QEAA@XZ</DECORATED>
@@ -31,23 +48,6 @@
     <FUNCLINE>6</FUNCLINE>
     <ADDITIONALINFO>
       <targetSymbol>Game::display</targetSymbol>
-    </ADDITIONALINFO>
-    <PATH></PATH>
-  </DEFECT>
-  <DEFECT>
-    <SFA>
-      <FILEPATH>C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\</FILEPATH>
-      <FILENAME>Game.cpp</FILENAME>
-      <LINE>6</LINE>
-      <COLUMN>6</COLUMN>
-    </SFA>
-    <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'Game::viewport' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
-    <FUNCTION>Game::{ctor}</FUNCTION>
-    <DECORATED>??0Game@@QEAA@XZ</DECORATED>
-    <FUNCLINE>6</FUNCLINE>
-    <ADDITIONALINFO>
-      <targetSymbol>Game::viewport</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -2505,12 +2505,12 @@
       <COLUMN>2</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::pPtr' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::Buffer' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>InlineAllocator&lt;32&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$InlineAllocator@$0CA@@@QEAA@XZ</DECORATED>
     <FUNCLINE>409</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::pPtr</targetSymbol>
+      <targetSymbol>InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::Buffer</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -2522,12 +2522,12 @@
       <COLUMN>2</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::Buffer' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::pPtr' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>InlineAllocator&lt;32&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$InlineAllocator@$0CA@@@QEAA@XZ</DECORATED>
     <FUNCLINE>409</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::Buffer</targetSymbol>
+      <targetSymbol>InlineAllocator&lt;32&gt;::&lt;unnamed-tag&gt;::pPtr</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>

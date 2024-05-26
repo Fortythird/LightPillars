@@ -51,7 +51,7 @@ static const float CRIT_ANGLE_DEG = 5.0f;
 static const float PI = 3.14159265359f;
 static const float ABSORPTION_PARAMETER = 0.02f;
 static const float DEPTH_READING_FREQUENCY = 100.0f;
-static const float PILLAR_WIDTH_FACTOR = 30.0f;
+static const float PILLAR_WIDTH_FACTOR = 10.0f;
 static const float INTENSITY_FACTOR = 2.0f;
 
 float CalculateGaussProt(float d)
@@ -102,8 +102,8 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
         float R0z = (pointLightData.lightSourcePosition.z + constData.viewerPos.z + viewDir.z * shiftY) / 2.0f;
         float3 R0 = float3(
             R0x,
-            viewDir.x == 0 ? constData.viewerPos.y + viewDir.y * (R0z - constData.viewerPos.z) / viewDir.z 
-                : constData.viewerPos.y + viewDir.y * (R0x - constData.viewerPos.x) / viewDir.x,
+            constData.viewerPos.y + viewDir.y * length(float3(R0x - constData.viewerPos.x, 0, R0z - constData.viewerPos.z)) /
+               length(float3(viewDir.x, 0, viewDir.z)),
             R0z
         );
      
@@ -287,7 +287,7 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
                     {
                         lightSpacePos = mul(pointLightData.frontFaceViewProjection, float4(currentPoint.xyz, 1.0f));
                         lightDepthValue = lightFrontFaceDepthTexture.SampleLevel(lightDepthSampler,
-		                    float2(lightSpacePos.x / lightSpacePos.w, -lightSpacePos.y / lightSpacePos.w) * 0.5f + 0.5f, 0).x; // HERE
+		                    float2(lightSpacePos.x / lightSpacePos.w, -lightSpacePos.y / lightSpacePos.w) * 0.5f + 0.5f, 0).x;
                     }
                     else
                     {
@@ -329,7 +329,7 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
                                     directionTest = true;
                             }
                                 
-                            if (length(nR0) < length(nf) && directionTest) // Problem's here?
+                            if (length(nR0) < length(nf) && directionTest)
                             {
                                 N = abs(CalculateGaussIntegral(acos(n1.y) / PI * 180.0f, acos(normal0.y) / PI * 180.0f))
                                     + abs(CalculateGaussIntegral(acos(n2.y) / PI * 180.0f, acos(normal0.y) / PI * 180.0f));
@@ -390,7 +390,7 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
                             directionTest = true;
                     }
                                 
-                    if (length(nR0) < length(nf) && directionTest) // Problem's here?
+                    if (length(nR0) < length(nf) && directionTest)
                     {
                         N = abs(CalculateGaussIntegral(acos(n1.y) / PI * 180.0f, acos(normal0.y) / PI * 180.0f))
                                     + abs(CalculateGaussIntegral(acos(n2.y) / PI * 180.0f, acos(normal0.y) / PI * 180.0f));
@@ -409,12 +409,8 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
                             
                     L += length(currentPoint - startPoint);
                 }
-
-                float intMult = 1.0f;
-                /*if (pos.y > 400 && pos.y < 800)
-                    intMult = ((pos.y + 100/pos.y) / 900);*/
                 
-                intensity *= clamp(L / PILLAR_WIDTH_FACTOR, 0, 1) * INTENSITY_FACTOR * intMult;
+                intensity *= clamp(L / PILLAR_WIDTH_FACTOR, 0, 1) * INTENSITY_FACTOR;
                 
                 return float4(pointLightData.lightColor.xyz * intensity, 1.0f);
             }

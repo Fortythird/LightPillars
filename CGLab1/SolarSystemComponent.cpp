@@ -36,7 +36,7 @@ void SolarSystemComponent::Init()
 	Components.push_back(floor);
 
 	floor = new TriangleComponent(CreateFloor(L"../Textures/ground.dds", 0.1f));
-	floor->pos = { 0.0f, 20.0f, 0 };
+	floor->pos = { 25.0f, 20.0f, 0 };
 	Components.push_back(floor);
 
 	//Components.push_back(Ball);

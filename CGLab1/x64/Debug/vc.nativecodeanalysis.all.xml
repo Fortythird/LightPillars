@@ -38,12 +38,12 @@
       <COLUMN>6</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Variable 'Game::shadowViewport' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <DESCRIPTION>Variable 'Game::viewport' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
     <FUNCTION>Game::{ctor}</FUNCTION>
     <DECORATED>??0Game@@QEAA@XZ</DECORATED>
     <FUNCLINE>6</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>Game::shadowViewport</targetSymbol>
+      <targetSymbol>Game::viewport</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT><DEFECT>

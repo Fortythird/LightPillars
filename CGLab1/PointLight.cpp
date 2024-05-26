@@ -70,7 +70,7 @@ void PointLight::DestroyResources()
 {
 	for (int i = 0; i < 6; i++)
 	{
-		if (i == 2 || i == 4) // Temporary for testing
+		if (i == 2 || i == 4) // For shader resources
 		{
 			depthTextures[i]->Release();
 			depthStencilViews[i]->Release();

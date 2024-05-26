@@ -7,6 +7,35 @@
         {
           "ruleId": "C26495",
           "message": {
+            "text": "Variable 'Game::viewport' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
+                },
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 7
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Game::{ctor}",
+                  "decoratedName": "??0Game@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "Game::viewport"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
             "text": "Variable 'Game::shadowViewport' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
@@ -60,35 +89,6 @@
           ],
           "properties": {
             "targetSymbol": "Game::display"
-          }
-        },
-        {
-          "ruleId": "C26495",
-          "message": {
-            "text": "Variable 'Game::viewport' is uninitialized. Always initialize a member variable (type.6)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Game.cpp"
-                },
-                "region": {
-                  "startLine": 6,
-                  "startColumn": 7
-                }
-              },
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Game::{ctor}",
-                  "decoratedName": "??0Game@@QEAA@XZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "targetSymbol": "Game::viewport"
           }
         },
         {
@@ -5448,35 +5448,6 @@
         {
           "ruleId": "C26495",
           "message": {
-            "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::pPtr' is uninitialized. Always initialize a member variable (type.6)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Delegates.h"
-                },
-                "region": {
-                  "startLine": 409,
-                  "startColumn": 3
-                }
-              },
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "InlineAllocator<32>::{ctor}",
-                  "decoratedName": "??0?$InlineAllocator@$0CA@@@QEAA@XZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::pPtr"
-          }
-        },
-        {
-          "ruleId": "C26495",
-          "message": {
             "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::Buffer' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
@@ -5501,6 +5472,35 @@
           ],
           "properties": {
             "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::Buffer"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::pPtr' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Delegates.h"
+                },
+                "region": {
+                  "startLine": 409,
+                  "startColumn": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "InlineAllocator<32>::{ctor}",
+                  "decoratedName": "??0?$InlineAllocator@$0CA@@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::pPtr"
           }
         }
       ],
@@ -5527,7 +5527,7 @@
             "resultFile"
           ],
           "hashes": {
-            "sha-256": "5423ede7b51daa011aad6a6f836a666c838af940918df470ed5efa3922c3abab"
+            "sha-256": "c1fca8cf481c4102b27923a3c2dbbae853220e4a667c54d5302929c19102002c"
           }
         },
         {
@@ -5570,7 +5570,7 @@
             "uri": "file:///c:/users/evgen/onedrive/документы/github/lightpillars/cglab1/game.h"
           },
           "hashes": {
-            "sha-256": "a194d7db13169165dadb8469aaa865767ac43b6e4f98652611b57f6c2d00e4c5"
+            "sha-256": "2b9ab79240ecb91ac7d41210f743d4f237edb51a36e393f3ebad3f30b280d5fe"
           }
         },
         {
