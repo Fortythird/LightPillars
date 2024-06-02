@@ -7,6 +7,35 @@
         {
           "ruleId": "C26495",
           "message": {
+            "text": "Variable 'Camera::yawAxis' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Camera.cpp"
+                },
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 9
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Camera::{ctor}",
+                  "decoratedName": "??0Camera@@QEAA@PEAUVector3@SimpleMath@DirectX@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "Camera::yawAxis"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
             "text": "Variable 'Camera::inputDeviceCameraInstance' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
@@ -65,30 +94,30 @@
         {
           "ruleId": "C26495",
           "message": {
-            "text": "Variable 'Camera::yawAxis' is uninitialized. Always initialize a member variable (type.6)."
+            "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::pPtr' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Camera.cpp"
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Delegates.h"
                 },
                 "region": {
-                  "startLine": 4,
-                  "startColumn": 9
+                  "startLine": 409,
+                  "startColumn": 3
                 }
               },
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Camera::{ctor}",
-                  "decoratedName": "??0Camera@@QEAA@PEAUVector3@SimpleMath@DirectX@@@Z",
+                  "fullyQualifiedName": "InlineAllocator<32>::{ctor}",
+                  "decoratedName": "??0?$InlineAllocator@$0CA@@@QEAA@XZ",
                   "kind": "function"
                 }
               ]
             }
           ],
           "properties": {
-            "targetSymbol": "Camera::yawAxis"
+            "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::pPtr"
           }
         },
         {
@@ -119,35 +148,6 @@
           "properties": {
             "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::Buffer"
           }
-        },
-        {
-          "ruleId": "C26495",
-          "message": {
-            "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::pPtr' is uninitialized. Always initialize a member variable (type.6)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Delegates.h"
-                },
-                "region": {
-                  "startLine": 409,
-                  "startColumn": 3
-                }
-              },
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "InlineAllocator<32>::{ctor}",
-                  "decoratedName": "??0?$InlineAllocator@$0CA@@@QEAA@XZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::pPtr"
-          }
         }
       ],
       "tool": {
@@ -173,7 +173,7 @@
             "resultFile"
           ],
           "hashes": {
-            "sha-256": "83b5c9e70c46d8105e7cdd750b03a1524191413a00805d848950f099d02b1739"
+            "sha-256": "91f520ba648a379553faa3eb4197543cb200ddeae54e15b23e48bf97639d24e5"
           }
         },
         {

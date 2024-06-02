@@ -7,7 +7,7 @@
         {
           "ruleId": "C26495",
           "message": {
-            "text": "Variable 'TriangleComponent::depthPixelShader' is uninitialized. Always initialize a member variable (type.6)."
+            "text": "Variable 'TriangleComponent::depthVertexShader' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
             {
@@ -30,7 +30,7 @@
             }
           ],
           "properties": {
-            "targetSymbol": "TriangleComponent::depthPixelShader"
+            "targetSymbol": "TriangleComponent::depthVertexShader"
           }
         },
         {
@@ -94,6 +94,35 @@
         {
           "ruleId": "C26495",
           "message": {
+            "text": "Variable 'TriangleComponent::depthPixelShader' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/TriangleComponent.cpp"
+                },
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 20
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TriangleComponent::{ctor}",
+                  "decoratedName": "??0TriangleComponent@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "TriangleComponent::depthPixelShader"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
             "text": "Variable 'TriangleComponent::texturePath' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
@@ -118,35 +147,6 @@
           ],
           "properties": {
             "targetSymbol": "TriangleComponent::texturePath"
-          }
-        },
-        {
-          "ruleId": "C26495",
-          "message": {
-            "text": "Variable 'TriangleComponent::depthVertexShader' is uninitialized. Always initialize a member variable (type.6)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/TriangleComponent.cpp"
-                },
-                "region": {
-                  "startLine": 5,
-                  "startColumn": 20
-                }
-              },
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TriangleComponent::{ctor}",
-                  "decoratedName": "??0TriangleComponent@@QEAA@XZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "targetSymbol": "TriangleComponent::depthVertexShader"
           }
         },
         {
@@ -268,7 +268,7 @@
         {
           "ruleId": "C26495",
           "message": {
-            "text": "Variable 'TriangleComponent::depthPixelShader' is uninitialized. Always initialize a member variable (type.6)."
+            "text": "Variable 'TriangleComponent::depthVertexShader' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
             {
@@ -291,7 +291,7 @@
             }
           ],
           "properties": {
-            "targetSymbol": "TriangleComponent::depthPixelShader"
+            "targetSymbol": "TriangleComponent::depthVertexShader"
           }
         },
         {
@@ -326,7 +326,7 @@
         {
           "ruleId": "C26495",
           "message": {
-            "text": "Variable 'TriangleComponent::depthVertexShader' is uninitialized. Always initialize a member variable (type.6)."
+            "text": "Variable 'TriangleComponent::depthPixelShader' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
             {
@@ -349,7 +349,7 @@
             }
           ],
           "properties": {
-            "targetSymbol": "TriangleComponent::depthVertexShader"
+            "targetSymbol": "TriangleComponent::depthPixelShader"
           }
         },
         {
@@ -413,35 +413,6 @@
         {
           "ruleId": "C26495",
           "message": {
-            "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::Buffer' is uninitialized. Always initialize a member variable (type.6)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Delegates.h"
-                },
-                "region": {
-                  "startLine": 409,
-                  "startColumn": 3
-                }
-              },
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "InlineAllocator<32>::{ctor}",
-                  "decoratedName": "??0?$InlineAllocator@$0CA@@@QEAA@XZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::Buffer"
-          }
-        },
-        {
-          "ruleId": "C26495",
-          "message": {
             "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::pPtr' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
@@ -466,6 +437,35 @@
           ],
           "properties": {
             "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::pPtr"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'InlineAllocator<32>::<unnamed-tag>::Buffer' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/evgen/OneDrive/Документы/GitHub/LightPillars/CGLab1/Delegates.h"
+                },
+                "region": {
+                  "startLine": 409,
+                  "startColumn": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "InlineAllocator<32>::{ctor}",
+                  "decoratedName": "??0?$InlineAllocator@$0CA@@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "InlineAllocator<32>::<unnamed-tag>::Buffer"
           }
         }
       ],
@@ -492,7 +492,7 @@
             "resultFile"
           ],
           "hashes": {
-            "sha-256": "39f500e3d9bd1b831f0afc7f2b1a6605a57f9fc56ed3548dfdb978cce22f9852"
+            "sha-256": "fe1a9d0f7df7160c7f7ec9d9e1c74bd9266af7a566fa8af919030f94b6e35df5"
           }
         },
         {

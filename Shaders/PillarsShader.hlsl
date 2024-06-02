@@ -133,6 +133,8 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
                 float b = 2 * cos(CRIT_ANGLE_RAD) * workingPlane.B * workingPlane.C;
                 float c = pow(cos(CRIT_ANGLE_RAD), 2) * pow(workingPlane.B, 2) - pow(sin(CRIT_ANGLE_RAD), 2) * pow(workingPlane.A, 2);
                 float D = pow(b, 2) - 4 * a * c;
+                
+                if (D < 0) return float4(0, 0, 0, 0);
 
                 float n1z = (-b + sqrt(D)) / 2.0f / a;
                 n1 = normalize(float3(
@@ -154,6 +156,8 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
                 float b = 2 * cos(CRIT_ANGLE_RAD) * workingPlane.A * workingPlane.B;
                 float c = pow(cos(CRIT_ANGLE_RAD), 2) * pow(workingPlane.B, 2) - pow(sin(CRIT_ANGLE_RAD), 2) * pow(workingPlane.C, 2);
                 float D = pow(b, 2) - 4 * a * c;
+                
+                if (D < 0) return float4(0, 0, 0, 0);
 
                 float n1x = (-b + sqrt(D)) / 2.0f / a;
                 n1 = normalize(float3(
@@ -194,6 +198,7 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
                 else
                     k = (viewDir.y * constData.viewerPos.x + viewDir.x * pointLightData.lightSourcePosition.y 
                     - viewDir.x * constData.viewerPos.y - viewDir.y * pointLightData.lightSourcePosition.x) / (viewDir.y * reflectionDir1.x - viewDir.x * reflectionDir1.y);
+                
             }
             else if (viewDir.z != 0)
             {
@@ -253,15 +258,11 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
             {   
                 float4 camSpacePoint = mul(constData.camViewProjection, float4(Rn.xyz, 0));
                 float depthValue = camDepthTexture.SampleLevel(camDepthSampler, float2((NDC.x + 1.0f) / 2, -(NDC.y + 1.0f) / 2), 0).x;
-                if (depthValue <= camSpacePoint.z / camSpacePoint.w && depthValue != 1.0f)
-                    return float4(0, 0, 0, 0);
                 
-                /*float4 camSpacePoint = mul(constData.camViewProjection, float4(Rn.xyz, 1.0f));
-                //float depthValue = camDepthTexture.SampleLevel(camDepthSampler, float2((NDC.x + 1.0f) / 2, -(NDC.y + 1.0f) / 2), 0).x;
-                float depthValue = camDepthTexture.SampleLevel(camDepthSampler, 
-                    float2(camSpacePoint.x / camSpacePoint.w, -camSpacePoint.y / camSpacePoint.w) * 0.5f + 0.5f, 0).x;
-                if (depthValue < camSpacePoint.z / camSpacePoint.w && depthValue < 1.0f)
-                    return float4(0, 0, 0, 0);*/
+                //float depthValue = camDepthTexture.SampleLevel(camDepthSampler, 
+                    //float2(camSpacePoint.x / camSpacePoint.w, -camSpacePoint.y / camSpacePoint.w) * 0.5f + 0.5f, 0).x;
+                if (depthValue < camSpacePoint.z / camSpacePoint.w && depthValue != 1.0f)
+                    return float4(0, 0, 0, 0);
                 
                 float3 step = (Rf - Rn) / DEPTH_READING_FREQUENCY;
             
@@ -296,7 +297,7 @@ float4 PSMain(float4 pos : SV_POSITION) : SV_TARGET
 		                    float2(lightSpacePos.x / lightSpacePos.w, -lightSpacePos.y / lightSpacePos.w) * 0.5f + 0.5f, 0).x;
                     }
                     
-                    if (lightDepthValue < lightSpacePos.z / lightSpacePos.w && depthValue < 1.0f)
+                    if (lightDepthValue < lightSpacePos.z / lightSpacePos.w && lightDepthValue < 1.0f)
                     {
                         if (isDepthTestPassed)
                         {

@@ -15,7 +15,7 @@ void Camera::Initialize(DirectX::SimpleMath::Vector3 pos, float yawVal, float pi
 		((float) PI) / 2.0f,
 		(float) screenWidth / screenHeight, 
 		0.1f,
-		50.0f
+		500.0f
 	); 
 	
 	yawAxis = yawVal;

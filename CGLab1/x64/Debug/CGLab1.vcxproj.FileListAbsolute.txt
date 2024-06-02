@@ -2,5 +2,3 @@ C:\Users\evgen\OneDrive\Документы\GitHub\RTCG\CG_SolarSystem\x64\Debug\
 C:\Users\evgen\OneDrive\Документы\GitHub\RTCG\CG_SolarSystem\CGLab1\x64\Debug\NativeCodeAnalysis.read.1.tlog
 C:\Users\evgen\OneDrive\Документы\GitHub\RTCG\CG_Katamari\x64\Debug\CGLab1.exe.lastcodeanalysissucceeded
 C:\Users\evgen\OneDrive\Документы\GitHub\RTCG\CG_Katamari\CGLab1\x64\Debug\NativeCodeAnalysis.read.1.tlog
-C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\x64\Debug\CGLab1.exe.lastcodeanalysissucceeded
-C:\Users\evgen\OneDrive\Документы\GitHub\LightPillars\CGLab1\x64\Debug\NativeCodeAnalysis.read.1.tlog

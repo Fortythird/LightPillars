@@ -23,6 +23,10 @@ Game::Game()
 	vertexPillarsShader = nullptr;
 	pixelPillarsShader = nullptr;
 	constPillarsBuffer = nullptr;
+
+	vertexSkyboxShader = nullptr;
+	pixelSkyboxShader = nullptr;
+	skyboxTextureBuffer = nullptr;
 }
 
 void Game::Init() 
@@ -32,7 +36,7 @@ void Game::Init()
 	display.CreateDisplay(&inputDevice);
 
 	pointLights.push_back(new PointLight(
-		DirectX::SimpleMath::Vector3(0, 5.0f, 0),
+		DirectX::SimpleMath::Vector3(0, 10.0f, 0),
 		DirectX::SimpleMath::Vector3(0.5f, 0.6f, 0.8f)
 	));
 	/*pointLights.push_back(new PointLight(
@@ -112,6 +116,7 @@ void Game::Run()
 		Update();
 		DrawShadows();
 		Draw();
+		//DrawSkybox();
 		DrawPillars();
 		
 		swapChain->Present(1, 0);
@@ -320,6 +325,76 @@ int Game::PrepareResources()
 
 	if (FAILED(result)) std::cout << "Error while point light buffer creating...";
 
+	ID3DBlob* vertexSBBC = nullptr;
+	ID3DBlob* errorVertexSBCode = nullptr;
+
+	res = D3DCompileFromFile(
+		L"../Shaders/SkyboxShader.hlsl",
+		nullptr,
+		nullptr,
+		"VSMain",
+		"vs_5_0",
+		D3DCOMPILE_DEBUG | D3DCOMPILE_SKIP_OPTIMIZATION,
+		0,
+		&vertexSBBC,
+		&errorVertexSBCode
+	);
+
+	if (FAILED(res))
+	{
+		if (errorVertexSBCode)
+		{
+			char* compileErrors = (char*)(errorVertexSBCode->GetBufferPointer());
+			std::cout << compileErrors << std::endl;
+		}
+		else MessageBox(display.getHWND(), L"../Shaders/SkyboxShader.hlsl", L"Missing Shader File", MB_OK);
+	}
+
+	ID3DBlob* pixelSBBC = nullptr;
+	ID3DBlob* errorPixelSBCode = nullptr;
+
+	res = D3DCompileFromFile(
+		L"../Shaders/SkyboxShader.hlsl",
+		nullptr,
+		nullptr,
+		"PSMain",
+		"ps_5_0",
+		D3DCOMPILE_DEBUG | D3DCOMPILE_SKIP_OPTIMIZATION,
+		0,
+		&pixelSBBC,
+		&errorPixelSBCode
+	);
+
+	if (FAILED(res))
+	{
+		if (errorPixelSBCode)
+		{
+			char* compileErrors = (char*)(errorPixelSBCode->GetBufferPointer());
+			std::cout << compileErrors << std::endl;
+		}
+		else MessageBox(display.getHWND(), L"../Shaders/SkyboxShader.hlsl", L"Missing Shader File", MB_OK);
+	}
+
+	device->CreateVertexShader(
+		vertexSBBC->GetBufferPointer(),
+		vertexSBBC->GetBufferSize(),
+		nullptr,
+		&vertexSkyboxShader
+	);
+
+	device->CreatePixelShader(
+		pixelSBBC->GetBufferPointer(),
+		pixelSBBC->GetBufferSize(),
+		nullptr,
+		&pixelSkyboxShader
+	);
+
+	result = CreateDDSTextureFromFile(device.Get(), L"../Textures/Skybox.dds", &skyboxTextureBuffer, &skyboxShaderResView);
+
+	if (FAILED(result)) {
+		std::cout << "\nError while creating DDS texture..\n";
+	}
+
 	for (int i = 0; i < pointLights.size(); i++) pointLights[i]->PrepareResources(device, camera.at(0)->position);
 
 	return 0;
@@ -355,11 +430,17 @@ void Game::DestroyResources()
 
 	if (pixelPillarsShader != nullptr) pixelPillarsShader->Release();
 
+	if (vertexSkyboxShader != nullptr) vertexSkyboxShader->Release();
+
+	if (pixelSkyboxShader != nullptr) pixelSkyboxShader->Release();
+
 	if (depthStencilState != nullptr) depthStencilState->Release();
 
 	if (constPillarsBuffer != nullptr) constPillarsBuffer->Release();
 
 	if (pointLightBuffer != nullptr) pointLightBuffer->Release();
+	
+	if (skyboxTextureBuffer != nullptr) skyboxTextureBuffer->Release();
 
 	for (int i = 0; i < pointLights.size(); i++) pointLights[i]->DestroyResources();
 }
@@ -370,6 +451,7 @@ void Game::PrepareFrame()
 	deltaTime = std::chrono::duration_cast<std::chrono::microseconds>(curTime - prevTime).count() / 1000000.0f;
 	prevTime = curTime;
 	totalTime += deltaTime;
+	time += deltaTime;
 	frameCount++;
 
 	perf_FrameCount++;
@@ -389,6 +471,7 @@ void Game::PrepareFrame()
 	{
 		perf_FrameCount = 0;
 		perf_timer = 0;
+		time = 0;
 	}
 
 	if (perf_FrameCount > 5000)
@@ -442,9 +525,42 @@ void Game::DrawShadows()
 {
 	context->RSSetViewports(1, &shadowViewport);
 	ID3D11RenderTargetView* nullrtv[8] = {nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr};
+
 	context->OMSetRenderTargets(1, nullrtv, shadowDepthView);
 
 	for (int i = 0; i < Components.size(); i++) Components[i]->DrawShadow(context);	
+}
+
+void Game::DrawSkybox()
+{
+	D3D11_DEPTH_STENCIL_DESC depthStencilStateDesc;
+	depthStencilStateDesc.DepthWriteMask = D3D11_DEPTH_WRITE_MASK_ALL;
+	depthStencilStateDesc.DepthFunc = D3D11_COMPARISON_LESS_EQUAL;
+	depthStencilStateDesc.StencilReadMask = 0xFF;
+	depthStencilStateDesc.StencilWriteMask = 0xFF;
+	device->CreateDepthStencilState(
+		&depthStencilStateDesc,
+		&depthStencilState
+	);
+
+	D3D11_SAMPLER_DESC SamplerDesc = {};
+	SamplerDesc.Filter = D3D11_FILTER_MIN_MAG_MIP_LINEAR;
+	SamplerDesc.AddressU = D3D11_TEXTURE_ADDRESS_WRAP;
+	SamplerDesc.AddressV = D3D11_TEXTURE_ADDRESS_WRAP;
+	SamplerDesc.AddressW = D3D11_TEXTURE_ADDRESS_WRAP;
+	HRESULT res = device->CreateSamplerState(&SamplerDesc, &samplerState);
+
+	if (FAILED(res)) std::cout << "Failed creating Sampler state" << std::endl;
+
+	context->IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP);
+	context->OMSetRenderTargets(1, &rtv, depthView);
+
+	context->VSSetShader(vertexSkyboxShader, nullptr, 0);
+	context->PSSetShader(pixelSkyboxShader, nullptr, 0);
+
+	context->PSSetShaderResources(0, 1, &skyboxShaderResView);
+	context->PSSetSamplers(0, 1, &samplerState);
+	context->Draw(4, 0);
 }
 
 void Game::DrawPillars()
@@ -578,6 +694,12 @@ void Game::DrawPillars()
 		);
 		pointLightData.frontFaceViewProjection = (pointLights.at(i)->viewMtrcs[2] * pointLights.at(i)->projectionMtrx);//.Transpose();
 		pointLightData.upperFaceViewProjection = (pointLights.at(i)->viewMtrcs[4] * pointLights.at(i)->projectionMtrx);//.Transpose();
+
+		//DirectX::SimpleMath::Vector4 v = XMVector4Transform(DirectX::SimpleMath::Vector4(
+		//	camera.at(0)->position.x, camera.at(0)->position.y, camera.at(0)->position.z, 1.0f),
+		//	pointLightData.upperFaceViewProjection);
+
+		//std::cout << v.x / v.w << " " << v.y / v.w << " " << v.z / v.w << " " << v.w/v.w << std::endl;
 
 		D3D11_MAPPED_SUBRESOURCE subresourse2 = {};
 		context->Map(

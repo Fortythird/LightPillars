@@ -36,7 +36,7 @@ void SolarSystemComponent::Init()
 	Components.push_back(floor);
 
 	floor = new TriangleComponent(CreateFloor(L"../Textures/ground.dds", 0.1f));
-	floor->pos = { 25.0f, 20.0f, 0 };
+	floor->pos = { -10.0f, 20.0f, 0 };
 	Components.push_back(floor);
 
 	//Components.push_back(Ball);
@@ -73,26 +73,9 @@ void SolarSystemComponent::Update()
 		Game::display.getScreenHeight()
 	);
 
-	angle += 0.1f;
+	floor->pos = DirectX::SimpleMath::Vector3(10 * cos(time * 0.4f), 20 + 15 * abs(cos(time * 0.0238f)), 10 * sin(time * 0.4f));
 	
 	for (int i = 0; i < Components.size(); i++) Components[i]->Update(Game::context, Game::camera.at(0));
-
-	DirectX::SimpleMath::Vector3 deltaPos = DirectX::SimpleMath::Vector3::Zero;
-
-	deltaPos.Normalize();
-	deltaPos /= 20;
-
-	Ball->pos += deltaPos;
-
-	float distance = deltaPos.Length();
-	float ang = distance;
-	if (distance) 
-	{
-		DirectX::SimpleMath::Vector3 deltaRotationAxis = DirectX::SimpleMath::Vector3(0.0f, 0.0f, 1.0f).Cross(deltaPos);
-		deltaRotationAxis.Normalize();
-
-		Ball->rotate *= DirectX::SimpleMath::Quaternion::CreateFromAxisAngle(deltaRotationAxis, ang);
-	}
 }
 
 
@@ -377,6 +360,39 @@ TriangleComponent SolarSystemComponent::CreateFloor(const wchar_t* _texturePath,
 	TriangleComponent Floor(_floor, _texturePath);
 
 	return Floor;
+}
+
+TriangleComponent SolarSystemComponent::CreateSkybox(const wchar_t* _texturePath)
+{
+	TriangleComponentParameters _sb;
+
+	_sb.numPoints = 16;
+	_sb.numIndeces = 36;
+
+	float scale = 10;
+
+	_sb.points = new TriangleComponentParameters::Vertex[_sb.numPoints]{
+		DirectX::SimpleMath::Vector4(20.0 * scale, 20.0 * scale, 20.0 * scale, 1.0),	DirectX::SimpleMath::Vector2(1.0, 1.0),		DirectX::SimpleMath::Vector4(0.0, 1.0, 0.0, 1.0),
+		DirectX::SimpleMath::Vector4(20.0 * scale, 20.0 * scale, -20.0 * scale, 1.0),	DirectX::SimpleMath::Vector2(1.0, -1.0),	DirectX::SimpleMath::Vector4(0.0, 1.0, 0.0, 1.0),
+		DirectX::SimpleMath::Vector4(-20.0 * scale, 20.0 * scale, -20.0 * scale, 1.0),	DirectX::SimpleMath::Vector2(-1.0, -1.0),	DirectX::SimpleMath::Vector4(0.0, 1.0, 0.0, 1.0),
+		DirectX::SimpleMath::Vector4(-20.0 * scale, 20.0 * scale, 20.0 * scale, 1.0),	DirectX::SimpleMath::Vector2(-1.0, 1.0),	DirectX::SimpleMath::Vector4(0.0, 1.0, 0.0, 1.0),
+		DirectX::SimpleMath::Vector4(20.0 * scale, -20.0 * scale, 20.0 * scale, 1.0),	DirectX::SimpleMath::Vector2(1.0, 1.0),		DirectX::SimpleMath::Vector4(0.0, -1.0, 0.0, 1.0),
+		DirectX::SimpleMath::Vector4(20.0 * scale, -20.0 * scale, -20.0 * scale, 1.0),	DirectX::SimpleMath::Vector2(1.0, 1.0),		DirectX::SimpleMath::Vector4(0.0, -1.0, 0.0, 1.0),
+		DirectX::SimpleMath::Vector4(-20.0 * scale, -20.0 * scale, -20.0 * scale, 1.0), DirectX::SimpleMath::Vector2(1.0, 1.0),		DirectX::SimpleMath::Vector4(0.0, -1.0, 0.0, 1.0),
+		DirectX::SimpleMath::Vector4(-20.0 * scale, -20.0 * scale, 20.0 * scale, 1.0),	DirectX::SimpleMath::Vector2(1.0, 1.0),		DirectX::SimpleMath::Vector4(0.0, -1.0, 0.0, 1.0)
+	};
+	_sb.indeces = new int[_sb.numIndeces] {
+		0, 1, 2, 2, 3, 0,
+			4, 5, 6, 6, 7, 4,
+			0, 4, 5, 5, 1, 0,
+			1, 5, 6, 6, 2, 1,
+			2, 6, 7, 7, 3, 2,
+			3, 7, 4, 4, 0, 3
+		};
+
+	TriangleComponent Skybox(_sb, _texturePath);
+
+	return Skybox;
 }
 
 TriangleComponent SolarSystemComponent::CreateMesh(float _radius, const std::string& _modelPath, TriangleComponent* _parent, const wchar_t* _texturePath)

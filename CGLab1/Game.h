@@ -47,16 +47,19 @@ public:
 	ID3D11DepthStencilView* shadowDepthView;
 	ID3D11ShaderResourceView* resView;
 	ID3D11ShaderResourceView* camDepthView;
+	ID3D11ShaderResourceView* skyboxShaderResView;
 	ID3D11DepthStencilState* depthState;
 	ID3D11SamplerState* samplerState;
 	ID3D11RasterizerState* drawRastState;
 	ID3D11RasterizerState* shadowRastState;
 	ID3D11Buffer* lightViewProjBuffer;
+	ID3D11Resource* skyboxTextureBuffer;
 
 	std::chrono::time_point<std::chrono::steady_clock> prevTime;
 
 	float deltaTime;
 	float totalTime = 0;
+	float time = 0;
 	unsigned int frameCount = 0;
 
 	void Init();
@@ -66,6 +69,7 @@ public:
 	void Draw();
 	void DrawShadows();
 	void DrawPillars();
+	void DrawSkybox();
 
 	float CalculateGaussProt(float d);
 
@@ -81,6 +85,9 @@ public:
 	PointLightData pointLightData;
 
 	ID3D11DepthStencilState* depthStencilState;
+
+	ID3D11VertexShader* vertexSkyboxShader;
+	ID3D11PixelShader* pixelSkyboxShader;
 
 	std::vector <Camera*> camera;
 

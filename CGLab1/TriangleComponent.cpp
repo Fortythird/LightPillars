@@ -52,7 +52,7 @@ TriangleComponent::TriangleComponent(TriangleComponentParameters param, const wc
 	parameters.numPoints = param.numPoints;
 	parameters.numIndeces = param.numIndeces;
 
-	compPosition = param.compPosition;
+	parameters.compPosition = param.compPosition;
 
 	pos = { 0.0f, 0.0f, 0.0f };
 	offset = { 0.0f, 0.0f, 0.0f };
@@ -593,6 +593,9 @@ void TriangleComponent::DrawDepth(ID3D11DeviceContext* context, DirectX::SimpleM
 void TriangleComponent::SetPos(DirectX::SimpleMath::Vector3 _pos)
 {
 	pos = _pos;
+	parameters.compPosition = _pos;
+	std::cout << parameters.compPosition.x << ' ' << parameters.compPosition.y << ' '  << parameters.compPosition.z << std::endl;
+	//std::cout << pos.x << ' ' << pos.y << ' '  << pos.z << std::endl;
 }
 
 void TriangleComponent::SetRot(DirectX::SimpleMath::Vector3 _rot)
@@ -617,7 +620,8 @@ DirectX::SimpleMath::Matrix TriangleComponent::GetModelMatrix()
 
 DirectX::SimpleMath::Vector3 TriangleComponent::GetPos()
 {
-	return pos;
+	//return pos;
+	return parameters.compPosition;
 }
 
 void TriangleComponent::NormalsCalc() {
